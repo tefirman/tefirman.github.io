@@ -1,3 +1,12 @@
+
+<style>
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+
 # tefirman.github.io
 
 Not sure if this works...
