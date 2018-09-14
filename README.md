@@ -2,6 +2,8 @@
 
 Not sure if this works...
 
+<img src="KGJ_rookie.jpg" alt="KGJ" width="500" height="333">
+
 ## Hello World
 I'm hosted with GitHub Pages. This is a test...
 
