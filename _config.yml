@@ -1,4 +1,4 @@
-remote_theme: massively
+theme: jekyll-theme-minimal
 
 title: Taylor Firman's Blog
 description: Data Scientist, Biophysics PhD
