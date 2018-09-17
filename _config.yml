@@ -1,7 +1,63 @@
-theme: jekyll-theme-minimal
+# Site
+title:              Taylor Firman
+bio:                'Data Scientist, Biophysics PhD'
+description:        "Just a repository for the occasional statistical stumble..."
+locale:             en_US
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
 
-title: Taylor Firman's Blog
-description: Data Scientist, Biophysics PhD
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    permalink: "/blog/:title/"
+    layout: post
+    author:
 
-logo: Headshot.png
+# Jekyll
+permalink:          /blog/:title/
+markdown:           kramdown
+highlighter:        rouge
+kramdown:
+  auto_ids:         true
+  footnote_nr:      1
+  entity_output:    as_char
+  toc_levels:       1..6
+  enable_coderay:   false
+mathjax:            true
+sass:
+  sass_dir:         _sass
+  style:            compressed
 
+# Comments
+disqus_shortname:   tefirman
+
+# Social
+analytics-id:       "tefirman"
+twitter:            "tefirman51"
+facebook:           "tfirman"
+instagram:          "tefirman51"
+github:             "tefirman"
+
+# personal
+location:           Denver, CO
+phone:              555-555-5555
+email:              tefirman@gmail.com
+
+# Gems
+gems:
+  - jekyll-mentions
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+
+paginate: 6
+paginate_path: "/blog/page:num/"
+
+jekyll-mentions:
+    base_url: https://github.com
+
+# Exclude list
+exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile, old]
