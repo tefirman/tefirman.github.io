@@ -1,4 +1,410 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-09-15T23:50:45-06:00</updated><id>/</id><title type="html">Taylor Firman</title><subtitle>Just a repository for the occasional statistical stumble...</subtitle><entry><title type="html">Riddler Submission</title><link href="/blog/RockPaperScissorsHop/" rel="alternate" type="text/html" title="Riddler Submission" /><published>2018-09-15T00:00:00-06:00</published><updated>2018-09-15T00:00:00-06:00</updated><id>/blog/RockPaperScissorsHop</id><content type="html" xml:base="/blog/RockPaperScissorsHop/">&lt;p&gt;As you will come to notice throughout the course of this blog, I am a big fan of the website &lt;a href=&quot;https://fivethirtyeight.com&quot;&gt;FiveThirtyEight&lt;/a&gt; and one weekly segment called &lt;a href=&quot;https://fivethirtyeight.com/tag/the-riddler/&quot;&gt;The Riddler&lt;/a&gt; edited by &lt;a href=&quot;https://twitter.com/ollie&quot;&gt;Oliver Roeder&lt;/a&gt;. Every Friday, it challenges its readers to two math/probability/logic puzzles, one shorter, more accessible problem and one longer, more time-consuming problem for the hardcore puzzle nerds. It’s a fun way to end the week while stretching your brain and maybe picking up a computational tool or two while you’re at it.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-10-04T14:52:39-06:00</updated><id>/</id><title type="html">Taylor Firman</title><subtitle>Just a repository for the occasional statistical stumble...</subtitle><entry><title type="html">The (Un)Luckiest Season of All</title><link href="/blog/TheUnLuckiestSeason/" rel="alternate" type="text/html" title="The (Un)Luckiest Season of All" /><published>2018-10-04T00:00:00-06:00</published><updated>2018-10-04T00:00:00-06:00</updated><id>/blog/TheUnLuckiestSeason</id><content type="html" xml:base="/blog/TheUnLuckiestSeason/">&lt;p&gt;On September 19th, the Seattle Mariners were 84-68, a record that in any other season would send even the ficklest Seattle fan clamoring for their suddenly fashionable Griffey jerseys gathering dust in the back of their closets. But in this logic-defying year of baseball, their season was effectively over despite being a game or less behind four of the ten available playoff spots. With the A?s and Astros streaking into October, what would normally amount to at least a playoff chase was reduced to nothing more than consolation games.&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;image right&quot;&gt;&lt;img src=&quot;/images/RealVsPythagHeatMap.pdf&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;But before we dive too far into self-pity, Mariners fans should probably be thankful that they even got this far considering the team?s performance in terms of runs. The easiest stat to point to is run differential where, despite having won more games than lost, the M?s allowed 34 more runs than they scored. But the far more interesting stat is the &lt;a href=&quot;https://en.wikipedia.org/wiki/Pythagorean_expectation&quot;&gt;Pythagorean Win Expectancy (PWE)&lt;/a&gt;. According to this metric, they should be sitting at a .478 win percentage, a season-long difference of 12 games compared to the Mariners? final .549 pace. Obviously, credit has to be given to the Herculean effort of Edwin Diaz and his 57 saves, but a little bit of luck had to have been involved, considering that only nine other teams since the deadball era have ever outperformed their PWE by more. (One notable example of these outperformers is the &lt;a href=&quot;https://en.wikipedia.org/wiki/1981_Cincinnati_Reds_season&quot;&gt;1981 Reds&lt;/a&gt;, who actually got shafted much harder than this year?s M?s due to a strike-shortened season. Despite having the best overall record in the NL, a midseason strike reset the standings, leaving Ken Griffey Sr. out in the cold.)&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;image left&quot;&gt;&lt;img src=&quot;/images/PlayoffProbHist.pdf&quot; alt=&quot;&quot; /&gt;&lt;/span&gt; Just to give you an idea of how unlucky/lucky this season has been, a team with 89 wins (as the Mariners ended up with) makes the playoffs about 70% of the time according to a logistic regression run by &lt;a href=&quot;https://fivethirtyeight.com/features/the-seattle-mariners-cant-catch-a-postseason-break/&quot;&gt;FiveThirtyEight&lt;/a&gt;. But a team with just 77 wins (as the M’s PWE projects them to have) makes the playoffs less than 1% of the time. The bottom line is that while we should have a better view of the mythical land of playoff baseball, the fact that we’re within a nautical mile is a miracle in itself.&lt;/p&gt;
+
+&lt;p&gt;But that doesn’t take away any of the sting, does it? Why is a franchise that has had notoriously terrible playoff luck in recent years getting clubbed over the head by the baseball gods once again? In 2016, &lt;a href=&quot;https://twitter.com/No_Little_Plans&quot;&gt;Rob Arthur&lt;/a&gt; &lt;a href=&quot;https://fivethirtyeight.com/features/the-seattle-mariners-cant-catch-a-postseason-break/&quot;&gt;unsurprisingly crowned&lt;/a&gt; the Seattle Mariners the “Unluckiest MLB Franchise Since 1998” by comparing the number of actual and expected playoff appearances based on regular season records. If we update this to include the last two seasons, it gets even worse. Based on their records, the Mariners should have been to the playoffs an additional three times in the last two decades, almost twice as many as the nearest franchise. Even if we utilize the PWE instead of the actual win percentage to calculate expected playoff appearances, the M’s remain the unluckiest team by almost an entire playoff berth.&lt;/p&gt;
+
+&lt;style&gt;
+table {
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    line-height: 1
+}
+
+th {
+    cursor: pointer;
+}
+
+th, td {
+    text-align: left;
+    padding: 0px;
+    vertical-align: middle;
+    min-height: 1px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+&lt;/style&gt;
+
+&lt;h3&gt;Playoff Karma By MLB Franchise&lt;/h3&gt;
+&lt;table id=&quot;myTable&quot;&gt;
+  &lt;tr height=&quot;50&quot;&gt;
+   &lt;!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:--&gt;  
+    &lt;th onclick=&quot;sortTable(0)&quot;&gt;Franchise&lt;/th&gt;
+    &lt;th onclick=&quot;sortTableNumber(1)&quot;&gt;Actual&lt;/th&gt;
+    &lt;th onclick=&quot;sortTableNumber(2)&quot;&gt;Expected&lt;/th&gt;
+    &lt;th onclick=&quot;sortTableNumber(3)&quot;&gt;Difference&lt;/th&gt;
+    &lt;th onclick=&quot;sortTableNumber(4)&quot;&gt;Expected (PWE)&lt;/th&gt;
+    &lt;th onclick=&quot;sortTableNumber(5)&quot;&gt;Difference (PWE)&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;Seattle Mariners&lt;/td&gt;
+    &lt;td&gt;2&lt;/td&gt;
+    &lt;td&gt;5.27&lt;/td&gt;
+    &lt;td&gt;3.27&lt;/td&gt;
+    &lt;td&gt;4.91&lt;/td&gt;
+    &lt;td&gt;2.91&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;Boston Red Sox&lt;/td&gt;
+    &lt;td&gt;12&lt;/td&gt;
+    &lt;td&gt;13.44&lt;/td&gt;
+    &lt;td&gt;1.44&lt;/td&gt;
+    &lt;td&gt;13.35&lt;/td&gt;
+    &lt;td&gt;1.35&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;Tampa Bay Rays&lt;/td&gt;
+    &lt;td&gt;4&lt;/td&gt;
+    &lt;td&gt;5.26&lt;/td&gt;
+    &lt;td&gt;1.26&lt;/td&gt;
+    &lt;td&gt;4.64&lt;/td&gt;
+    &lt;td&gt;0.64&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;Los Angeles Angels&lt;/td&gt;
+    &lt;td&gt;7&lt;/td&gt;
+    &lt;td&gt;8.24&lt;/td&gt;
+    &lt;td&gt;1.24&lt;/td&gt;
+    &lt;td&gt;6.05&lt;/td&gt;
+    &lt;td&gt;-0.95&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;San Francisco Giants&lt;/td&gt;
+    &lt;td&gt;7&lt;/td&gt;
+    &lt;td&gt;8.06&lt;/td&gt;
+    &lt;td&gt;1.06&lt;/td&gt;
+    &lt;td&gt;7.6&lt;/td&gt;
+    &lt;td&gt;0.6&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;Toronto Blue Jays&lt;/td&gt;
+    &lt;td&gt;2&lt;/td&gt;
+    &lt;td&gt;2.72&lt;/td&gt;
+    &lt;td&gt;0.72&lt;/td&gt;
+    &lt;td&gt;4.02&lt;/td&gt;
+    &lt;td&gt;2.02&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;Chicago White Sox&lt;/td&gt;
+    &lt;td&gt;3&lt;/td&gt;
+    &lt;td&gt;3.67&lt;/td&gt;
+    &lt;td&gt;0.67&lt;/td&gt;
+    &lt;td&gt;3.38&lt;/td&gt;
+    &lt;td&gt;0.38&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;Cincinnati Reds&lt;/td&gt;
+    &lt;td&gt;3&lt;/td&gt;
+    &lt;td&gt;3.56&lt;/td&gt;
+    &lt;td&gt;0.56&lt;/td&gt;
+    &lt;td&gt;3.8&lt;/td&gt;
+    &lt;td&gt;0.8&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;Cleveland Indians&lt;/td&gt;
+    &lt;td&gt;8&lt;/td&gt;
+    &lt;td&gt;8.53&lt;/td&gt;
+    &lt;td&gt;0.53&lt;/td&gt;
+    &lt;td&gt;8.19&lt;/td&gt;
+    &lt;td&gt;0.19&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;Washington Nationals&lt;/td&gt;
+    &lt;td&gt;4&lt;/td&gt;
+    &lt;td&gt;4.5&lt;/td&gt;
+    &lt;td&gt;0.5&lt;/td&gt;
+    &lt;td&gt;5.73&lt;/td&gt;
+    &lt;td&gt;1.73&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;Oakland Athletics&lt;/td&gt;
+    &lt;td&gt;9&lt;/td&gt;
+    &lt;td&gt;9.24&lt;/td&gt;
+    &lt;td&gt;0.24&lt;/td&gt;
+    &lt;td&gt;8.82&lt;/td&gt;
+    &lt;td&gt;-0.18&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;New York Mets&lt;/td&gt;
+    &lt;td&gt;5&lt;/td&gt;
+    &lt;td&gt;5.21&lt;/td&gt;
+    &lt;td&gt;0.21&lt;/td&gt;
+    &lt;td&gt;4.38&lt;/td&gt;
+    &lt;td&gt;-0.62&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;Kansas City Royals&lt;/td&gt;
+    &lt;td&gt;2&lt;/td&gt;
+    &lt;td&gt;2.09&lt;/td&gt;
+    &lt;td&gt;0.09&lt;/td&gt;
+    &lt;td&gt;1.4&lt;/td&gt;
+    &lt;td&gt;-0.6&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;Miami Marlins&lt;/td&gt;
+    &lt;td&gt;1&lt;/td&gt;
+    &lt;td&gt;1.04&lt;/td&gt;
+    &lt;td&gt;0.04&lt;/td&gt;
+    &lt;td&gt;0.32&lt;/td&gt;
+    &lt;td&gt;-0.68&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;Milwaukee Brewers&lt;/td&gt;
+    &lt;td&gt;3&lt;/td&gt;
+    &lt;td&gt;3.02&lt;/td&gt;
+    &lt;td&gt;0.02&lt;/td&gt;
+    &lt;td&gt;2.18&lt;/td&gt;
+    &lt;td&gt;-0.82&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;Detroit Tigers&lt;/td&gt;
+    &lt;td&gt;5&lt;/td&gt;
+    &lt;td&gt;4.98&lt;/td&gt;
+    &lt;td&gt;-0.02&lt;/td&gt;
+    &lt;td&gt;3.73&lt;/td&gt;
+    &lt;td&gt;-1.27&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;Baltimore Orioles&lt;/td&gt;
+    &lt;td&gt;3&lt;/td&gt;
+    &lt;td&gt;2.91&lt;/td&gt;
+    &lt;td&gt;-0.09&lt;/td&gt;
+    &lt;td&gt;1.59&lt;/td&gt;
+    &lt;td&gt;-1.41&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;Philadelphia Phillies&lt;/td&gt;
+    &lt;td&gt;5&lt;/td&gt;
+    &lt;td&gt;4.86&lt;/td&gt;
+    &lt;td&gt;-0.14&lt;/td&gt;
+    &lt;td&gt;5.13&lt;/td&gt;
+    &lt;td&gt;0.13&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;Texas Rangers&lt;/td&gt;
+    &lt;td&gt;7&lt;/td&gt;
+    &lt;td&gt;6.8&lt;/td&gt;
+    &lt;td&gt;-0.2&lt;/td&gt;
+    &lt;td&gt;4.49&lt;/td&gt;
+    &lt;td&gt;-2.51&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;Pittsburgh Pirates&lt;/td&gt;
+    &lt;td&gt;3&lt;/td&gt;
+    &lt;td&gt;2.62&lt;/td&gt;
+    &lt;td&gt;-0.38&lt;/td&gt;
+    &lt;td&gt;2.03&lt;/td&gt;
+    &lt;td&gt;-0.97&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;San Diego Padres&lt;/td&gt;
+    &lt;td&gt;3&lt;/td&gt;
+    &lt;td&gt;2.5&lt;/td&gt;
+    &lt;td&gt;-0.5&lt;/td&gt;
+    &lt;td&gt;2.3&lt;/td&gt;
+    &lt;td&gt;-0.7&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;Arizona Diamondbacks&lt;/td&gt;
+    &lt;td&gt;6&lt;/td&gt;
+    &lt;td&gt;5.48&lt;/td&gt;
+    &lt;td&gt;-0.52&lt;/td&gt;
+    &lt;td&gt;5.04&lt;/td&gt;
+    &lt;td&gt;-0.96&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;Los Angeles Dodgers&lt;/td&gt;
+    &lt;td&gt;10&lt;/td&gt;
+    &lt;td&gt;9.28&lt;/td&gt;
+    &lt;td&gt;-0.72&lt;/td&gt;
+    &lt;td&gt;8.24&lt;/td&gt;
+    &lt;td&gt;-1.76&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;New York Yankees&lt;/td&gt;
+    &lt;td&gt;17&lt;/td&gt;
+    &lt;td&gt;16.14&lt;/td&gt;
+    &lt;td&gt;-0.86&lt;/td&gt;
+    &lt;td&gt;14.26&lt;/td&gt;
+    &lt;td&gt;-2.74&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;Houston Astros&lt;/td&gt;
+    &lt;td&gt;8&lt;/td&gt;
+    &lt;td&gt;6.89&lt;/td&gt;
+    &lt;td&gt;-1.11&lt;/td&gt;
+    &lt;td&gt;7.83&lt;/td&gt;
+    &lt;td&gt;-0.17&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;Atlanta Braves&lt;/td&gt;
+    &lt;td&gt;12&lt;/td&gt;
+    &lt;td&gt;10.83&lt;/td&gt;
+    &lt;td&gt;-1.17&lt;/td&gt;
+    &lt;td&gt;11.51&lt;/td&gt;
+    &lt;td&gt;-0.49&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;St. Louis Cardinals&lt;/td&gt;
+    &lt;td&gt;12&lt;/td&gt;
+    &lt;td&gt;10.79&lt;/td&gt;
+    &lt;td&gt;-1.21&lt;/td&gt;
+    &lt;td&gt;11.34&lt;/td&gt;
+    &lt;td&gt;-0.66&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;Colorado Rockies&lt;/td&gt;
+    &lt;td&gt;4&lt;/td&gt;
+    &lt;td&gt;2.71&lt;/td&gt;
+    &lt;td&gt;-1.29&lt;/td&gt;
+    &lt;td&gt;2.09&lt;/td&gt;
+    &lt;td&gt;-1.91&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;Chicago Cubs&lt;/td&gt;
+    &lt;td&gt;8&lt;/td&gt;
+    &lt;td&gt;6.57&lt;/td&gt;
+    &lt;td&gt;-1.43&lt;/td&gt;
+    &lt;td&gt;6.49&lt;/td&gt;
+    &lt;td&gt;-1.51&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;Minnesota Twins&lt;/td&gt;
+    &lt;td&gt;7&lt;/td&gt;
+    &lt;td&gt;5.07&lt;/td&gt;
+    &lt;td&gt;-1.93&lt;/td&gt;
+    &lt;td&gt;2.86&lt;/td&gt;
+    &lt;td&gt;-4.14&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;script&gt;
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById(&quot;myTable&quot;);
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = &quot;desc&quot;; 
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i &lt; (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName(&quot;TD&quot;)[n];
+      y = rows[i + 1].getElementsByTagName(&quot;TD&quot;)[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == &quot;asc&quot;) {
+        if (x.innerHTML.toLowerCase() &gt; y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == &quot;desc&quot;) {
+        if (x.innerHTML.toLowerCase() &lt; y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is &quot;asc&quot;,
+      set the direction to &quot;desc&quot; and run the while loop again.*/
+      if (switchcount == 0 &amp;&amp; dir == &quot;asc&quot;) {
+        dir = &quot;desc&quot;;
+        switching = true;
+      }
+    }
+  }
+}
+
+function sortTableNumber(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById(&quot;myTable&quot;);
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = &quot;desc&quot;; 
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i &lt; (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName(&quot;TD&quot;)[n];
+      y = rows[i + 1].getElementsByTagName(&quot;TD&quot;)[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == &quot;asc&quot;) {
+        if (Number(x.innerHTML) &gt; Number(y.innerHTML)) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == &quot;desc&quot;) {
+        if (Number(x.innerHTML) &lt; Number(y.innerHTML)) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is &quot;asc&quot;,
+      set the direction to &quot;desc&quot; and run the while loop again.*/
+      if (switchcount == 0 &amp;&amp; dir == &quot;desc&quot;) {
+        dir = &quot;asc&quot;;
+        switching = true;
+      }
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;p&gt;So why can’t the M’s catch a break after seventeen long years of frustration? Well, for a couple reasons: (1) &lt;a href=&quot;https://en.wikipedia.org/wiki/Gambler%27s_fallacy&quot;&gt;That’s not how probability works.&lt;/a&gt; Past outcomes do not affect future probabilities. If I flip a coin and get ten heads in a row, the odds of getting heads an eleventh time are still 50-50. A baseball doesn’t remember previous seasons and then adjust its path accordingly. (2) As many of you may have seen by now, the AL has a &lt;a href=&quot;https://fivethirtyeight.com/features/the-orioles-and-royals-could-at-least-still-beat-a-triple-a-team-right/&quot;&gt;parity (read: tanking) problem&lt;/a&gt;, where bad teams appear worse and good teams appear better. The standard deviation of win percentages in the AL is the largest in either league since 1962 and the range is the largest since 1954 (thanks Baltimore). This wide spread means that just being good won’t cut it. Only absurd 97-win seasons will keep you in the running, a feat that was achieved by the second wild card Oakland Athletics.&lt;/p&gt;
+
+&lt;p&gt;So to mentally put this season to bed, the 2018 Mariners are either extremely lucky or unlucky based on what statistics you look at. I choose to see it in a positive light as a lucky one, but all of this analysis boils down to the age-old philosophical question of whether your beer is half empty or half full. Regardless, order another one because professional sports’ longest playoff drought is lasting at least another year and the A’s and Astros are playing in October.&lt;/p&gt;
+
+&lt;h6&gt;MLB season-by-season data was provided by &lt;a href=&quot;https://www.retrosheet.org/gamelogs/index.html&quot;&gt;Retrosheets&lt;/a&gt; and &lt;a href=&quot;https://www.baseball-reference.com/leagues/MLB/2018-standings.shtml&quot;&gt;Baseball-Reference&lt;/a&gt;, and the Python code used to process this data is available &lt;a href=&quot;https://github.com/tefirman/StatisticalStumbles/blob/master/RecordAnalysis.py&quot;&gt;here&lt;/a&gt; on &lt;a href=&quot;https://github.com/tefirman&quot;&gt;my Github page&lt;/a&gt;.
+
+
+&lt;/h6&gt;</content><summary type="html">Depending on which statistics you look at, the Seattle Mariners had either the luckiest or unluckiest season in recent memory...</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/images/DiazPuzzled.jpg" /></entry><entry><title type="html">Riddler Submission</title><link href="/blog/RockPaperScissorsHop/" rel="alternate" type="text/html" title="Riddler Submission" /><published>2018-09-15T00:00:00-06:00</published><updated>2018-09-15T00:00:00-06:00</updated><id>/blog/RockPaperScissorsHop</id><content type="html" xml:base="/blog/RockPaperScissorsHop/">&lt;p&gt;As you will come to notice throughout the course of this blog, I am a big fan of the website &lt;a href=&quot;https://fivethirtyeight.com&quot;&gt;FiveThirtyEight&lt;/a&gt; and one weekly segment called &lt;a href=&quot;https://fivethirtyeight.com/tag/the-riddler/&quot;&gt;The Riddler&lt;/a&gt; edited by &lt;a href=&quot;https://twitter.com/ollie&quot;&gt;Oliver Roeder&lt;/a&gt;. Every Friday, it challenges its readers to two math/probability/logic puzzles, one shorter, more accessible problem and one longer, more time-consuming problem for the hardcore puzzle nerds. It’s a fun way to end the week while stretching your brain and maybe picking up a computational tool or two while you’re at it.&lt;/p&gt;
 
 &lt;p&gt;After getting hooked and submitting answers for a few months, I started itching to submit a &lt;i&gt;question&lt;/i&gt; for the Riddler community. It took a little while, but a problem worthy of this esteemed group came to me a couple of weeks ago, and much to my surprise, it was actually &lt;a href=&quot;https://fivethirtyeight.com/features/how-many-hoops-will-kids-jump-through-to-play-rock-paper-scissors/&quot;&gt;published!&lt;/a&gt; At the time, the following video of a unique schoolyard game had been making the rounds on Facebook and it seemed like a fun thing to model:&lt;/p&gt;
 
