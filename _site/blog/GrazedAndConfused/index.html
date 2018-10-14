@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-<title>Riddler Submission</title>
+<title>Riddler Answer: Grazed and Confused</title>
 <meta name="description" content="">
 
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/apple-touch-icon.png">
@@ -60,87 +60,63 @@
 				<div id="main">
           <section class="post">
     				<header class="major">
-      				<span class="date">15 Sep 2018</span>
-      				<h1>Riddler Submission</h1>
-      				<p>Got a riddle published in the Riddler: Life goal complete! Try your hand at a game I call 'Rock-Paper-Scissors-Hop'...</p>
+      				<span class="date">13 Oct 2018</span>
+      				<h1>Riddler Answer: Grazed and Confused</h1>
+      				<p>This week's Riddler asks us to provide some restraint for an overeating goat before they graze a farmer out of business...</p>
       			</header>
-            <div class="image main"><img src="/images/RockPaperScissorsHop.gif" alt=""></div>
+            <div class="image main"><img src="/images/BabyGoat.jpg" alt=""></div>
       			<p></p>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@tefirman51">
 <meta name="twitter:site" content="@tefirman51">
-<meta name="twitter:title" content="Riddler Submission">
-<meta name="twitter:description" content="Got a riddle published in the Riddler: Life goal complete! Try your hand at a game I call 'Rock-Paper-Scissors-Hop'...">
-<meta name="twitter:image:src" content="https://tefirman.github.io/images/RockPaperScissorsHop.gif">
+<meta name="twitter:title" content="Riddler Answer: Grazed and Confused">
+<meta name="twitter:description" content="This week's Riddler asks us to provide some restraint for an overeating goat before they graze a farmer out of business...">
+<meta name="twitter:image:src" content="https://tefirman.github.io/images/BabyGoat.jpg">
 <meta name="twitter:image:width" content="280">
 <meta name="twitter:image:height" content="150">
 
 
-<p>As you will come to notice throughout the course of this blog, I am a big fan of the website <a href="https://fivethirtyeight.com">FiveThirtyEight</a> and one weekly segment called <a href="https://fivethirtyeight.com/tag/the-riddler/">The Riddler</a> edited by <a href="https://twitter.com/ollie">Oliver Roeder</a>. Every Friday, it challenges its readers to two math/probability/logic puzzles, one shorter, more accessible problem and one longer, more time-consuming problem for the hardcore puzzle nerds. It’s a fun way to end the week while stretching your brain and maybe picking up a computational tool or two while you’re at it.</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async=""></script>
 
-<p>After getting hooked and submitting answers for a few months, I started itching to submit a <i>question</i> for the Riddler community. It took a little while, but a problem worthy of this esteemed group came to me a couple of weeks ago, and much to my surprise, it was actually <a href="https://fivethirtyeight.com/features/how-many-hoops-will-kids-jump-through-to-play-rock-paper-scissors/">published!</a> At the time, the following video of a unique schoolyard game had been making the rounds on Facebook and it seemed like a fun thing to model:</p>
-
-<div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/PcIord7RNAI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></div>
-
-<p></p>
-<h2 id="idealized-rules-of-rock-paper-scissors-hop">Idealized Rules of Rock-Paper-Scissors-Hop</h2>
-
-<ul>
-	<li>Kids stand at either end of N hoops.</li>
-	<li>At the start of the game (t = 0), one kid from each end starts hopping at a speed of v = 1 hoop per second until they run into each other, either in adjacent hoops or if they land in the same hoop.</li>
-	<li>At that point, they play rock-paper-scissors at a rate of 1 game per second until one of the kids wins.</li>
-	<li>The loser goes back to their end of the hoops, a new kid steps up at that end, and the winner and the new player hop until they run into each other.</li>
-	<li>This process continues until someone reaches the opposing end and that player wins!</li>
-</ul>
-
-<p>Now, imagine you are a gym teacher having a bad day and you want to make sure the kids stay occupied for the entire class. If I put down 8 hoops, how long on average will the game last? How many hoops should I put down if I want the game to last for the entire 30 minute period on average?</p>
+<p><span class="image right"><img src="/images/GoatGrazing.gif" alt=""></span>On this week’s <a href="https://fivethirtyeight.com/features/so-you-want-to-tether-your-goat-now-what/">edition</a> of the Riddler, Moritz Hesse introduces us to a farmer that owns a circular field of radius <script type="math/tex">R</script> and a particularly hungry goat. Growing tired of the kid running amok, the farmer decides to tie the goat up to a post on the fence surrounding the field, but needs to ensure that the goat doesn’t graze the entire field. The question posed is this: How long does the goat’s tether need to be to ensure that the goat only eats half of the circular field? To better visualize this agricultural quandry, see the gif shown to the right. At shorter tether lengths, the more limiting factor is the actual tether restricting the goat from running free within the circle, but as it gets longer, the fence is really the only thing limiting the goat’s appetite.</p>
 
 <h2 id="solution">Solution</h2>
 
-<p>Obviously, I had to have a solution in order to submit the problem (and I’ll get into that in a second), but I was flabbergasted at the kinds of the <a href="https://fivethirtyeight.com/features/the-new-national-pastime-competitive-coin-flipping/">solutions</a> that were submitted. Multiple solvers had code that was <a href="https://github.com/zsegel/538riddler/blob/master/riddler_RPS_hop.py">far</a> <a href="https://gist.github.com/mrichards42/7c63d2ea209081f75dedfaaa08f87e86">more</a> <a href="https://github.com/Saehry/Riddler/blob/master/2018-08-24.py">elegant</a> than mine and the analytical solutions from <a href="https://laurentlessard.com/bookproofs/hoop-hop-showdown/">Laurent Lessard</a> and <a href="http://math.uchicago.edu/~timblack/blog/hoops.html">Tim Black</a> (which cleverly involved a hyper-intelligent firefly) were mind-blowing. So please be warned ahead of time that my solution is not as pretty as those ones, but it still works… #AforEffort #YesIKnowHashtagsDontWorkInBlogs <a href="https://twitter.com/search?q=%23OrDoThey&amp;src=typd">#OrDoThey</a></p>
+<p><span class="image right"><img src="/images/GeometryDemo1.pdf" alt=""><img src="/images/GeometryDemo2.pdf" alt=""></span>To find the correct tether length, we really just need a bit of clever geometry. The grazing area covered by a tether of length <script type="math/tex">L</script> can be split into two regions shown in the diagram to the right: the area swept out by the tether if the goat is pulling it taut, which we will call <script type="math/tex">A_1</script>, and the pizza crust looking areas to the sides of the post that the goat is tied to, which we will call <script type="math/tex">A_2</script>. Let’s start by focusing on <script type="math/tex">A_1</script> and laying things out a bit more clearly. In the second diagram, I define <script type="math/tex">\theta</script> as the angle from vertical that the goat can reach with a taut leash until hitting the fence. This can be calculated in terms of <script type="math/tex">R</script> and <script type="math/tex">L</script> as</p>
 
-<p>The easiest solution is definitely a <a href="https://en.wikipedia.org/wiki/Monte_Carlo_method">Monte Carlo</a> simulation. My coding language of choice is Python, but this can easily been done using pretty much any language:</p>
+<script type="math/tex; mode=display">\theta = \cos^{-1}\frac{L/2}{R}.</script>
+
+<p>This quickly leads us to the area of <script type="math/tex">A_1</script> as</p>
+
+<script type="math/tex; mode=display">A_1 = \theta L^2.</script>
+
+<p>The area of <script type="math/tex">A_2</script> is a bit more complicated, but I compared them to pizza crust for a reason. We can calculate <script type="math/tex">A_2</script> by cutting out a slice of pizza out of the circular field of angle <script type="math/tex">\pi - 2\theta</script> and subtracting away the cheesy triangular portion with all the toppings. This leads us to</p>
+
+<script type="math/tex; mode=display">A_2 = (\pi/2 - \theta) R^2 - \frac{L}{2} R \sin \theta</script>
+
+<p>Finally, we can combine these areas to calculate the entire grazing area as</p>
+
+<script type="math/tex; mode=display">A_g = A_1 + 2 A_2 = \theta L^2 + 2 \left[ (\pi/2 - \theta) R^2 - \frac{L}{2} R \sin \theta \right]</script>
+
+<p>Setting <script type="math/tex">A_g = \pi R^2</script> and algebraically solving for <script type="math/tex">L</script> would prove difficult/impossible so I decided to use a <a href="https://en.wikipedia.org/wiki/Nelder%E2%80%93Mead_method">Nelder-Mead simplex algorithm</a> to numerically solve for <script type="math/tex">L</script> in the following Python script:</p>
 
 <pre><code>import numpy as np
+from scipy.optimize import minimize
 
-numHoops = 8
-leftWinProb = 1.0/3.0
-rightWinProb = 1.0/3.0
-hopTime = 1
-rpsTime = 1
+targetPortion = 0.5
 
-timeVals = []
-for numTry in range(1000000):
-	if (numTry + 1)%1000 == 0:
-		print('Try #' + str(numTry + 1))
-	timeVals.append(hopTime)
-	leftPos = 0
-	rightPos = numHoops - 1
-	while rightPos - leftPos &gt; 1:
-		timeVals[-1] += hopTime
-		leftPos += 1
-		rightPos -= 1
-	while leftPos &lt; numHoops and rightPos &gt;= 0:
-		timeVals[-1] += rpsTime
-		rockPaperScissors = np.random.rand()
-		while rockPaperScissors &gt;= leftWinProb + rightWinProb:
-			timeVals[-1] += rpsTime
-			rockPaperScissors = np.random.rand()
-		timeVals[-1] += hopTime
-		if rockPaperScissors &lt; leftWinProb:
-			leftPos += 1
-			rightPos = numHoops - 1
-		elif rockPaperScissors &lt; leftWinProb + rightWinProb:
-			leftPos = 0
-			rightPos -= 1
-		while np.all([rightPos - leftPos &gt; 1,leftPos &lt; numHoops,rightPos &gt;= 0]):
-			timeVals[-1] += hopTime
-			leftPos += 1
-			rightPos -= 1
-del numTry
+def grazing_area(tether):
+    global targetPortion
+    ### Assuming field radius is 1 for ease of calculation ###
+    theta = np.arccos(tether/2)
+    area = (theta*(tether**2) + 2*((np.pi/2 - theta) - tether/2*np.sin(theta)))/np.pi
+    return (area - targetPortion)**2
+
+res = minimize(grazing_area,0.5,method='nelder-mead',tol=1e-6)
+print(str(round(100*targetPortion,1))[:-2] + '% grazing at L = ' + str(round(res['x'][0],4)) + 'R')
 </code></pre>
 
-<p>I also made an <a href="https://github.com/tefirman/RiddlerCode/blob/master/RockPaperScissorsHop.py">analytical solution</a> that calculates the time and probability of every possible path of a game and it works, but it’s a bit overkill and definitely impractical for larger hoop numbers. I honestly think the most original part of my code is the segment that generates a sample gif of a single game to demonstrate how the dynamics work. Despite my answer’s lack of elegance, I’m ultimately proud of coming up with the question and inspired by everyone’s answers. Thanks for tuning in, gang!</p>
+<p><span class="image right"><img src="/images/TetherLengthVsGrazing.pdf" alt=""></span>This <a href="https://github.com/tefirman/RiddlerCode/blob/master/GoatTether.py">code</a> advises us that in order to restrict the goat to half of the grazing area, we must tie up the ravenous kid with a tether of length <script type="math/tex">L = 1.1587R</script>. In fact, just in case the local veterinarian recommends increasing or decreasing the goat’s diet, we can vary the target portion of the grazing area to produce the dependency as shown in the graph to the right. Hope this explanation was reasonably clear! Stay classy, Riddler Nation!</p>
 
 
       		</section>
@@ -154,8 +130,8 @@ del numTry
                */
 
               var disqus_config = function () {
-                  this.page.url = '/blog/RockPaperScissorsHop/';  /*Replace PAGE_URL with your page's canonical URL variable*/
-                  this.page.identifier = '/blog/RockPaperScissorsHop/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
+                  this.page.url = '/blog/GrazedAndConfused/';  /*Replace PAGE_URL with your page's canonical URL variable*/
+                  this.page.identifier = '/blog/GrazedAndConfused/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
               };
 
               (function() {  /* dont endit below this line */
