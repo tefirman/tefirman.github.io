@@ -2,7 +2,7 @@
 layout: post
 title:  "When Red Becomes Purple"
 date:   2018-11-23
-excerpt: "The Colorado 6th Congressional District is a perfect example of why every turf matters..."
+excerpt: "Colorado's 6th Congressional District is a perfect example of why every turf matters..."
 image: "/images/DougCoPurple.png"
 ---
 
@@ -11,7 +11,7 @@ image: "/images/DougCoPurple.png"
 <meta name="twitter:creator" content="@tefirman51">
 <meta name="twitter:site" content="@tefirman51">
 <meta name="twitter:title" content="When Red Becomes Purple">
-<meta name="twitter:description" content="TThe Colorado 6th Congressional District is a perfect example of why every turf matters...">
+<meta name="twitter:description" content="Colorado's 6th Congressional District is a perfect example of why every turf matters...">
 <meta name="twitter:image:src" content="https://tefirman.github.io/images/DougCoPurple.png">
 <meta name="twitter:image:width" content="280">
 <meta name="twitter:image:height" content="150">
