@@ -23,7 +23,7 @@ image: "/images/BabyGoat.jpg"
 
 ## Solution
 
-<span class="image right"><img src="{{ "/images/GeometryDemo1.pdf" | absolute_url }}" alt="" /><img src="{{ "/images/GeometryDemo2.pdf" | absolute_url }}" alt="" /></span>To find the correct tether length, we really just need a bit of clever geometry. The grazing area covered by a tether of length $$L$$ can be split into two regions shown in the diagram to the right: the area swept out by the tether if the goat is pulling it taut, which we will call $$A_1$$, and the pizza crust looking areas to the sides of the post that the goat is tied to, which we will call $$A_2$$. Let's start by focusing on $$A_1$$ and laying things out a bit more clearly. In the second diagram, I define $$\theta$$ as the angle from vertical that the goat can reach with a taut leash until hitting the fence. This can be calculated in terms of $$R$$ and $$L$$ as
+<span class="image right"><img src="{{ "/images/GeometryDemo1.png" | absolute_url }}" alt="" /><img src="{{ "/images/GeometryDemo2.png" | absolute_url }}" alt="" /></span>To find the correct tether length, we really just need a bit of clever geometry. The grazing area covered by a tether of length $$L$$ can be split into two regions shown in the diagram to the right: the area swept out by the tether if the goat is pulling it taut, which we will call $$A_1$$, and the pizza crust looking areas to the sides of the post that the goat is tied to, which we will call $$A_2$$. Let's start by focusing on $$A_1$$ and laying things out a bit more clearly. In the second diagram, I define $$\theta$$ as the angle from vertical that the goat can reach with a taut leash until hitting the fence. This can be calculated in terms of $$R$$ and $$L$$ as
 
 $$\theta = \cos^{-1}\frac{L/2}{R}.$$
 
@@ -57,6 +57,6 @@ res = minimize(grazing_area,0.5,method='nelder-mead',tol=1e-6)
 print(str(round(100*targetPortion,1))[:-2] + '% grazing at L = ' + str(round(res['x'][0],4)) + 'R')
 </code></pre>
 
-<span class="image right"><img src="{{ "/images/TetherLengthVsGrazing.pdf" | absolute_url }}" alt="" /></span>This <a href="https://github.com/tefirman/RiddlerCode/blob/master/GoatTether.py">code</a> advises us that in order to restrict the goat to half of the grazing area, we must tie up the ravenous kid with a tether of length $$L = 1.1587R$$. In fact, just in case the local veterinarian recommends increasing or decreasing the goat's diet, we can vary the target portion of the grazing area to produce the dependency as shown in the graph to the right. Hope this explanation was reasonably clear! Stay classy, Riddler Nation!
+<span class="image right"><img src="{{ "/images/TetherLengthVsGrazing.png" | absolute_url }}" alt="" /></span>This <a href="https://github.com/tefirman/RiddlerCode/blob/master/GoatTether.py">code</a> advises us that in order to restrict the goat to half of the grazing area, we must tie up the ravenous kid with a tether of length $$L = 1.1587R$$. In fact, just in case the local veterinarian recommends increasing or decreasing the goat's diet, we can vary the target portion of the grazing area to produce the dependency as shown in the graph to the right. Hope this explanation was reasonably clear! Stay classy, Riddler Nation!
 
 
