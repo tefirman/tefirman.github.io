@@ -1,0 +1,1095 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+  Jekyll integration by somiibo.com
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+--><html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+<title>Uneven Democracy</title>
+<meta name="description" content="">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icon/favicon-16x16.png">
+<link rel="manifest" href="/assets/icon/manifest.json">
+<link rel="mask-icon" href="/assets/icon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icon/favicon.ico">
+<meta name="msapplication-config" content="/assets/icon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<noscript><link rel="stylesheet" href="/assets/css/noscript.css"></noscript>
+
+	</head>
+	<body class="is-loading">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Header -->
+        <header id="header">
+          <a href="/" class="logo">Taylor Firman</a>
+        </header>
+
+				<!-- Nav -->
+					<nav id="nav">
+
+            <ul class="links">
+  <li class=""><a href="/">Home</a></li>
+  <li class=""><a href="/about/">About</a></li>
+  <li class=" active "><a href="/blog/">Blog</a></li>
+  <li class=""><a href="/publications/">Publications</a></li>
+</ul>
+
+
+						<ul class="icons">
+              <li><a href="https://twitter.com/tefirman51" class="icon fa-twitter" rel="nofollow"><span class="label">Twitter</span></a></li>
+              <li><a href="https://facebook.com/tfirman" class="icon fa-facebook" rel="nofollow"><span class="label">Facebook</span></a></li>
+              <li><a href="https://instagram.com/tefirman51" class="icon fa-instagram" rel="nofollow"><span class="label">Instagram</span></a></li>
+              <li><a href="https://github.com/tefirman" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+				<div id="main">
+          <section class="post">
+    				<header class="major">
+      				<span class="date">04 Feb 2019</span>
+      				<h1>Uneven Democracy</h1>
+      				<p>Based on how the American government was designed, not all votes are created equal...</p>
+      			</header>
+            <div class="image main"><img src="/images/TippedScales.png" alt=""></div>
+      			<p></p>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@tefirman51">
+<meta name="twitter:site" content="@tefirman51">
+<meta name="twitter:title" content="Uneven Democracy">
+<meta name="twitter:description" content="Not all votes are created equal...">
+<meta name="twitter:image:src" content="https://tefirman.github.io/images/TippedScales.png">
+<meta name="twitter:image:width" content="280">
+<meta name="twitter:image:height" content="150">
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async=""></script>
+
+<p>Americans pride themselves on their democracy, on the idea that everyone has an equal voice in our government, and to be honest, I’m pretty proud of it too (less so in recent years). But if anyone tells you that every citizen truly has an <i>equal</i> voice in our system, they possess one of two things: 1. a misunderstanding of how our government is designed and operated, or 2. a loose definition of the term “equal”. In an ideal scenario, each person’s voice would be equally valued and political representation on a macroscopic level would be proportional to the views of the American public. As a simple example, a group of 1800 Democrats and 1200 Republicans could be represented by 9 Democrats and 6 Republicans, giving each voter a representative power of 1/200 or 0.005. But let’s say that a neighboring group of 900 Republicans and 600 Democrats was represented by 9 Republicans and 6 Democrats. Locally, this is proportional and fair, but macroscopically, we now have equal representation (15-15) for unequal populations (2400-2100) because the second group has twice the representative power (1/100 or 0.01).</p>
+
+<p>This may seem like an unrealistic example, but this is basically how the United States Senate has operated since 1789 thanks to the <a href="https://en.wikipedia.org/wiki/Connecticut_Compromise">Connecticut Compromise</a> and gerrymandering has led to similar (but less extreme) situations in the House of Representatives. To illustrate this, we can calculate the representative power of each state or congressional district by dividing the number of representatives/senators they have by the number of voters who participated. Just to clarify units, we will define a 1 representative to 1 voter ratio as a “rep” which would make 1 representative to 1,000,000 voters a “microrep” or μrep. Also, since there are 435 representatives in the House and 100 in the Senate, we will define “Total Power” as 4.35*(Senate Power) + (House Power).</p>
+
+<style>
+table {
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    line-height: 1
+}
+
+th {
+    cursor: pointer;
+}
+
+th, td {
+    text-align: left;
+    padding: 0px;
+    vertical-align: middle;
+    min-height: 1px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+</style>
+
+<h3>Representative Power By State in 2016 (microreps)</h3>
+<table id="myTable">
+  <tr height="50">
+   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+    <th onclick="sortTable(0)">State</th>
+    <th onclick="sortTableNumber(1)">House Power</th>
+    <th onclick="sortTableNumber(2)">Senate Power</th>
+    <th onclick="sortTableNumber(3)">Total Power</th>
+  </tr>
+<tr height="5">
+  <td>Alabama</td>
+  <td>3.7</td>
+  <td>1.38</td>
+  <td>9.7</td>
+</tr>
+<tr height="5">
+  <td>Alaska</td>
+  <td>3.24</td>
+  <td>6.74</td>
+  <td>32.5</td>
+</tr>
+<tr height="5">
+  <td>Arizona</td>
+  <td>3.73</td>
+  <td>0.84</td>
+  <td>7.4</td>
+</tr>
+<tr height="5">
+  <td>Arkansas</td>
+  <td>3.74</td>
+  <td>2.05</td>
+  <td>12.6</td>
+</tr>
+<tr height="5">
+  <td>California</td>
+  <td>3.95</td>
+  <td>0.16</td>
+  <td>4.7</td>
+</tr>
+<tr height="5">
+  <td>Colorado</td>
+  <td>2.59</td>
+  <td>0.84</td>
+  <td>6.2</td>
+</tr>
+<tr height="5">
+  <td>Connecticut</td>
+  <td>3.17</td>
+  <td>1.29</td>
+  <td>8.8</td>
+</tr>
+<tr height="5">
+  <td>Delaware</td>
+  <td>2.38</td>
+  <td>6.31</td>
+  <td>29.8</td>
+</tr>
+<tr height="5">
+  <td>Florida</td>
+  <td>3.06</td>
+  <td>0.23</td>
+  <td>4.0</td>
+</tr>
+<tr height="5">
+  <td>Georgia</td>
+  <td>3.71</td>
+  <td>0.62</td>
+  <td>6.4</td>
+</tr>
+<tr height="5">
+  <td>Hawaii</td>
+  <td>4.84</td>
+  <td>3.33</td>
+  <td>19.3</td>
+</tr>
+<tr height="5">
+  <td>Idaho</td>
+  <td>2.93</td>
+  <td>3.58</td>
+  <td>18.5</td>
+</tr>
+<tr height="5">
+  <td>Illinois</td>
+  <td>3.43</td>
+  <td>0.44</td>
+  <td>5.3</td>
+</tr>
+<tr height="5">
+  <td>Indiana</td>
+  <td>3.39</td>
+  <td>0.76</td>
+  <td>6.7</td>
+</tr>
+<tr height="5">
+  <td>Iowa</td>
+  <td>2.64</td>
+  <td>1.5</td>
+  <td>9.2</td>
+</tr>
+<tr height="5">
+  <td>Kansas</td>
+  <td>3.41</td>
+  <td>1.96</td>
+  <td>11.9</td>
+</tr>
+<tr height="5">
+  <td>Kentucky</td>
+  <td>3.4</td>
+  <td>1.2</td>
+  <td>8.6</td>
+</tr>
+<tr height="5">
+  <td>Louisiana</td>
+  <td>3.33</td>
+  <td>1.17</td>
+  <td>8.4</td>
+</tr>
+<tr height="5">
+  <td>Maine</td>
+  <td>2.69</td>
+  <td>3.07</td>
+  <td>16.0</td>
+</tr>
+<tr height="5">
+  <td>Maryland</td>
+  <td>2.95</td>
+  <td>0.75</td>
+  <td>6.2</td>
+</tr>
+<tr height="5">
+  <td>Massachusetts</td>
+  <td>3.06</td>
+  <td>0.76</td>
+  <td>6.4</td>
+</tr>
+<tr height="5">
+  <td>Michigan</td>
+  <td>3.0</td>
+  <td>0.51</td>
+  <td>5.2</td>
+</tr>
+<tr height="5">
+  <td>Minnesota</td>
+  <td>2.8</td>
+  <td>0.83</td>
+  <td>6.4</td>
+</tr>
+<tr height="5">
+  <td>Mississippi</td>
+  <td>3.38</td>
+  <td>2.14</td>
+  <td>12.7</td>
+</tr>
+<tr height="5">
+  <td>Missouri</td>
+  <td>2.91</td>
+  <td>0.72</td>
+  <td>6.1</td>
+</tr>
+<tr height="5">
+  <td>Montana</td>
+  <td>1.97</td>
+  <td>4.67</td>
+  <td>22.3</td>
+</tr>
+<tr height="5">
+  <td>Nebraska</td>
+  <td>3.81</td>
+  <td>3.01</td>
+  <td>16.9</td>
+</tr>
+<tr height="5">
+  <td>Nevada</td>
+  <td>3.71</td>
+  <td>1.9</td>
+  <td>12.0</td>
+</tr>
+<tr height="5">
+  <td>New Hampshire</td>
+  <td>2.79</td>
+  <td>3.26</td>
+  <td>17.0</td>
+</tr>
+<tr height="5">
+  <td>New Jersey</td>
+  <td>3.46</td>
+  <td>0.76</td>
+  <td>6.8</td>
+</tr>
+<tr height="5">
+  <td>New Mexico</td>
+  <td>3.85</td>
+  <td>3.1</td>
+  <td>17.3</td>
+</tr>
+<tr height="5">
+  <td>New York</td>
+  <td>3.79</td>
+  <td>0.19</td>
+  <td>4.6</td>
+</tr>
+<tr height="5">
+  <td>North Carolina</td>
+  <td>2.83</td>
+  <td>0.53</td>
+  <td>5.1</td>
+</tr>
+<tr height="5">
+  <td>North Dakota</td>
+  <td>2.95</td>
+  <td>6.03</td>
+  <td>29.2</td>
+</tr>
+<tr height="5">
+  <td>Ohio</td>
+  <td>3.07</td>
+  <td>0.37</td>
+  <td>4.7</td>
+</tr>
+<tr height="5">
+  <td>Oklahoma</td>
+  <td>4.41</td>
+  <td>1.76</td>
+  <td>12.1</td>
+</tr>
+<tr height="5">
+  <td>Oregon</td>
+  <td>2.62</td>
+  <td>1.17</td>
+  <td>7.7</td>
+</tr>
+<tr height="5">
+  <td>Pennsylvania</td>
+  <td>3.12</td>
+  <td>0.34</td>
+  <td>4.6</td>
+</tr>
+<tr height="5">
+  <td>Rhode Island</td>
+  <td>4.63</td>
+  <td>5.44</td>
+  <td>28.3</td>
+</tr>
+<tr height="5">
+  <td>South Carolina</td>
+  <td>3.43</td>
+  <td>1.22</td>
+  <td>8.7</td>
+</tr>
+<tr height="5">
+  <td>South Dakota</td>
+  <td>2.7</td>
+  <td>6.16</td>
+  <td>29.5</td>
+</tr>
+<tr height="5">
+  <td>Tennessee</td>
+  <td>3.76</td>
+  <td>1.08</td>
+  <td>8.5</td>
+</tr>
+<tr height="5">
+  <td>Texas</td>
+  <td>4.22</td>
+  <td>0.32</td>
+  <td>5.6</td>
+</tr>
+<tr height="5">
+  <td>Utah</td>
+  <td>3.59</td>
+  <td>1.88</td>
+  <td>11.8</td>
+</tr>
+<tr height="5">
+  <td>Vermont</td>
+  <td>3.39</td>
+  <td>6.59</td>
+  <td>32.1</td>
+</tr>
+<tr height="5">
+  <td>Virginia</td>
+  <td>2.91</td>
+  <td>0.67</td>
+  <td>5.8</td>
+</tr>
+<tr height="5">
+  <td>Washington</td>
+  <td>3.18</td>
+  <td>0.63</td>
+  <td>5.9</td>
+</tr>
+<tr height="5">
+  <td>West Virginia</td>
+  <td>4.37</td>
+  <td>3.59</td>
+  <td>20.0</td>
+</tr>
+<tr height="5">
+  <td>Wisconsin</td>
+  <td>2.88</td>
+  <td>0.67</td>
+  <td>5.8</td>
+</tr>
+<tr height="5">
+  <td>Wyoming</td>
+  <td>3.97</td>
+  <td>9.68</td>
+  <td>46.1</td>
+</tr>
+</table>
+
+<script>
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("myTable");
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = "desc"; 
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+      if (switchcount == 0 && dir == "desc") {
+        dir = "asc";
+        switching = true;
+      }
+    }
+  }
+}
+
+function sortTableNumber(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("myTable");
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = "desc"; 
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == "asc") {
+        if (Number(x.innerHTML) > Number(y.innerHTML)) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (Number(x.innerHTML) < Number(y.innerHTML)) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+      if (switchcount == 0 && dir == "desc") {
+        dir = "asc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
+
+<p>Taking a look at the two extremes, we can see a pretty shocking disparity in representation. A voter in Wyoming has more representative power than a Floridian, a Pennsylvanian, a New Yorker, and a Californian <i>combined</i>. This is purely due to the fact that while each of these five states are represented by two senators, only 400,000 voters pick those two people in Wyoming while over 10,000,000 pick them in each of the other four states. Using state-by-state voter demographics, we can expand the scope of our power metric to compare the average representative power of different demographics to see if any group in particular benefits from this arrangement. Comparisons based on sex and age show fairly similar representation between different groups, but race, political affiliation, and urban/rural delineation produce very unbalanced playing fields. As seen in the tables below, white voters have about 10% more representative power than non-white voters, Republican voters have 28% more than Democratic voters, and rural voters (based on <a href="https://github.com/theatlantic/citylab-data/blob/master/citylab-congress/citylab_cdi.csv">CityLab’s classification</a>) have 40% more than urban voters. This is again due to the disparate proportioning of representatives in the Senate and highlights the inherent representative inequity in our country’s democracy.</p>
+
+<h3>Representative Power By Race in 2016 (microreps)</h3>
+<table id="myTable2">
+  <tr height="50">
+   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+    <th onclick="sortTable2(0)">Race</th>
+    <th onclick="sortTableNumber2(1)">House Power</th>
+    <th onclick="sortTableNumber2(2)">Senate Power</th>
+    <th onclick="sortTableNumber2(3)">Total Power</th>
+  </tr>
+  <tr height="5">
+    <td>White</td>
+    <td>3.36</td>
+    <td>0.79</td>
+    <td>6.79</td>
+  </tr>
+  <tr height="5">
+    <td>Black</td>
+    <td>3.40</td>
+    <td>0.65</td>
+    <td>6.25</td>
+  </tr>
+  <tr height="5">
+    <td>Asian</td>
+    <td>3.63</td>
+    <td>0.62</td>
+    <td>6.32</td>
+  </tr>
+  <tr height="5">
+    <td>Hispanic</td>
+    <td>3.61</td>
+    <td>0.49</td>
+    <td>5.76</td>
+  </tr>
+</table>
+
+<script>
+function sortTable2(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("myTable2");
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = "desc"; 
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+      if (switchcount == 0 && dir == "desc") {
+        dir = "asc";
+        switching = true;
+      }
+    }
+  }
+}
+
+function sortTableNumber2(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("myTable2");
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = "desc"; 
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == "asc") {
+        if (Number(x.innerHTML) > Number(y.innerHTML)) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (Number(x.innerHTML) < Number(y.innerHTML)) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+      if (switchcount == 0 && dir == "desc") {
+        dir = "asc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
+
+<h3> Representative Power By Political Party in 2016 (microreps)</h3>
+<table id="myTable3">
+  <tr height="50">
+   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+    <th onclick="sortTable3(0)">Party</th>
+    <th onclick="sortTableNumber3(1)">House Power</th>
+    <th onclick="sortTableNumber3(2)">Senate Power</th>
+    <th onclick="sortTableNumber3(3)">Total Power</th>
+  </tr>
+  <tr height="5">
+    <td>Republican</td>
+    <td>3.85</td>
+    <td>1.00</td>
+    <td>8.19</td>
+  </tr>
+  <tr height="5">
+    <td>Democratic</td>
+    <td>3.16</td>
+    <td>0.74</td>
+    <td>6.39</td>
+  </tr>
+  <tr height="5">
+    <td>Other</td>
+    <td>0.00</td>
+    <td>0.43</td>
+    <td>1.88</td>
+  </tr>
+</table>
+
+<script>
+function sortTable3(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("myTable3");
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = "desc"; 
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+      if (switchcount == 0 && dir == "desc") {
+        dir = "asc";
+        switching = true;
+      }
+    }
+  }
+}
+
+function sortTableNumber3(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("myTable3");
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = "desc"; 
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == "asc") {
+        if (Number(x.innerHTML) > Number(y.innerHTML)) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (Number(x.innerHTML) < Number(y.innerHTML)) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+      if (switchcount == 0 && dir == "desc") {
+        dir = "asc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
+
+<h3> Representative Power By Urban, Suburban, and Rural Classification in 2016 (microreps)</h3>
+<table id="myTable4">
+  <tr height="50">
+   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+    <th onclick="sortTable4(0)">Party</th>
+    <th onclick="sortTableNumber4(1)">House Power</th>
+    <th onclick="sortTableNumber4(2)">Senate Power</th>
+    <th onclick="sortTableNumber4(3)">Total Power</th>
+  </tr>
+  <tr height="5">
+    <td>Rural</td>
+    <td>3.29</td>
+    <td>1.17</td>
+    <td>8.39</td>
+  </tr>
+  <tr height="5">
+    <td>Suburban</td>
+    <td>3.26</td>
+    <td>0.69</td>
+    <td>6.25</td>
+  </tr>
+  <tr height="5">
+    <td>Urban</td>
+    <td>3.90</td>
+    <td>0.48</td>
+    <td>5.97</td>
+  </tr>
+</table>
+
+<script>
+function sortTable4(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("myTable4");
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = "desc"; 
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+      if (switchcount == 0 && dir == "desc") {
+        dir = "asc";
+        switching = true;
+      }
+    }
+  }
+}
+
+function sortTableNumber4(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("myTable4");
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = "desc"; 
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == "asc") {
+        if (Number(x.innerHTML) > Number(y.innerHTML)) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (Number(x.innerHTML) < Number(y.innerHTML)) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+      if (switchcount == 0 && dir == "desc") {
+        dir = "asc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
+
+<p>On a macroscopic scale, this leads to representation that is disproportionate to the actual populations they represent.<span class="image right"><img src="/images/HouseResultsByYear_Overall.png" alt=""><img src="/images/SenateResultsByYear_Cumulative.png" alt=""></span> Look at the percentages of elected congressional representatives in each party compared to the number of voters who actually voted for that party shown in the first figure. Wins and votes in the House of Representatives have generally been proportional because the number of representatives is allocated based on population – until 2010 that is when congressional districts were conveniently redrawn by state governments. Can we talk about 2012 please? Democrats received more votes in aggregate during that election and only received 45% of the delegates. The equivalent graph applied to the Senate is even worse. For each year, we can add up the vote totals for each senator’s most recent election (e.g. for 2016, a senator elected in 2014 would contribute their 2014 vote totals) and again compare votes by party to wins by party. As you can see in the second figure, the relationship between these two values is loose at best. Since 2004, the percentage of votes cast for Republican candidates has never exceeded that of Democratic candidates, and yet, four of the seven congresses have had as many or more Republican Senators as Democratic Senators. That doesn’t exactly seem fair to me…</p>
+
+<p>So what does this imbalance of representative power lead to? Unpopular ideas becoming law and popular ideas getting ignored. More on this to come…</p>
+
+<!-- Congress after congress of old white dudes rather than the melting pot that America so eagerly describes itself as.
+
+So why does this happen and what can we do to fix it? Lack of voter participation, voter suppression, gerrymandering...
+
+The framers were very intentional in their preambular word choice of forming a <i>more perfect</i> union, implying a good start but plenty of room to improve.
+
+Yes, we have definitely improved upon dictatorships and monarchies, but that's a fairly low bar...
+
+settling for a form of democracy that fulfills the Churchillian addage that "democracy is the worst form of government... except for all the others." -->
+
+
+      		</section>
+
+          <!-- <div class="comments-wrapper">
+          <div id="disqus_thread"></div>
+          <script>
+              /**
+               *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+               *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+               */
+
+              var disqus_config = function () {
+                  this.page.url = '/blog/UnequalRepresentation/';  /*Replace PAGE_URL with your page's canonical URL variable*/
+                  this.page.identifier = '/blog/UnequalRepresentation/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
+              };
+
+              (function() {  /* dont endit below this line */
+                  var d = document, s = d.createElement('script');
+
+                  s.src = 'https://tefirman.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+              })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </div> -->
+
+
+					<!-- Footer -->
+						<footer>
+              <ul class="actions">
+                <li><a href="/blog/" class="button">Blog</a></li>
+              </ul>
+						</footer>
+					</div>
+
+				<!-- Footer -->
+        <footer id="footer">
+  <section>
+    <form method="POST" action="https://formspree.io/tefirman@gmail.com">
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email">
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="3"></textarea>
+      </div>
+      <ul class="actions">
+        <li><input type="submit" value="Send Message"></li>
+      </ul>
+    </form>
+  </section>
+  <section class="split contact">
+    <section class="alt">
+      <h3>Location</h3>
+      <p>Denver, CO</p>
+    </section>
+    <section>
+      <h3>Phone</h3>
+      <p><a href="tel:253-740-3456">253-740-3456</a></p>
+    </section>
+    <section>
+      <h3>Email</h3>
+      <p><a href="mailto:tefirman@gmail.com">tefirman@gmail.com</a></p>
+    </section>
+    <section>
+      <h3>Social</h3>
+      <ul class="icons alt">
+        <li><a href="https://twitter.com/tefirman51" class="icon fa-twitter" rel="nofollow"><span class="label">Twitter</span></a></li>
+        <li><a href="https://facebook.com/tfirman" class="icon fa-facebook" rel="nofollow"><span class="label">Facebook</span></a></li>
+        <li><a href="https://instagram.com/tefirman51" class="icon fa-instagram" rel="nofollow"><span class="label">Instagram</span></a></li>
+        <li><a href="https://github.com/tefirman" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a></li>
+      </ul>
+    </section>
+  </section>
+</footer>
+<!-- Copyright -->
+<div id="copyright">
+  <ul>
+<li>© HTML5 UP</li>
+<li>Design by <a href="https://html5up.net" rel="nofollow">HTML5 UP</a>
+</li>
+<li>Jekyll Integration by <a href="https://soundgrail.com">SoundGrail</a>
+</li>
+</ul>
+</div>
+
+
+			</div>
+
+      <!-- Scripts -->
+  		<!-- DYN -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.scrollex.min.js"></script>
+<script src="/assets/js/jquery.scrolly.min.js"></script>
+<script src="/assets/js/skel.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+			<script async src="https://www.googletagmanager.com/gtag/js?id=tefirman"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'tefirman');
+</script>
+
+
+	</body>
+</html>
