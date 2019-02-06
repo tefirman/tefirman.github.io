@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Uneven Democracy"
-date:   2019-02-04
+date:   2019-02-05
 excerpt: "Based on how the American government was designed, not all votes are created equal..."
 image: "/images/TippedScales.png"
 ---
@@ -905,19 +905,17 @@ function sortTableNumber4(n) {
 
 On a macroscopic scale, this leads to representation that is disproportionate to the actual populations they represent.<span class="image right"><img src="{{ "/images/HouseResultsByYear_Overall.png" | absolute_url }}" alt="" /><img src="{{ "/images/SenateResultsByYear_Cumulative.png" | absolute_url }}" alt="" /></span> Look at the percentages of elected congressional representatives in each party compared to the number of voters who actually voted for that party shown in the first figure. Wins and votes in the House of Representatives have generally been proportional because the number of representatives is allocated based on population -- until 2010 that is when congressional districts were conveniently redrawn by state governments. Can we talk about 2012 please? Democrats received more votes in aggregate during that election and only received 45% of the delegates. The equivalent graph applied to the Senate is even worse. For each year, we can add up the vote totals for each senator's most recent election (e.g. for 2016, a senator elected in 2014 would contribute their 2014 vote totals) and again compare votes by party to wins by party. As you can see in the second figure, the relationship between these two values is loose at best. Since 2004, the percentage of votes cast for Republican candidates has never exceeded that of Democratic candidates, and yet, four of the seven congresses have had as many or more Republican Senators as Democratic Senators. That doesn't exactly seem fair to me...
 
-So what does this imbalance of representative power lead to? Unpopular ideas becoming law and popular ideas getting ignored. More on this to come...
+So what does this imbalance of representative power lead to? Unpopular ideas becoming law and popular ideas getting ignored. Despite being <a href="https://www.washingtonpost.com/news/the-fix/wp/2017/07/28/republicans-obamacare-repeal-was-never-really-that-popular/?utm_term=.3e02025c1297">very unpopular amongst the general public</a>, the attempted "skinny repeal" of Obamacare in 2017 almost passed in the Senate with votes from Senators representing only 39.8% of American voters, and it would have, were it not for the dramatic thumbs down of the late Senator John McCain. What did become law was the 2017 Tax Cuts and Jobs Act, <a href="https://news.gallup.com/poll/243611/disapprove-approve-2017-tax-cuts.aspx">another unpopular bill</a> which only needed the votes from Senators representing 40.2% of the electorate. The Supreme Court confirmations of both Neil Gorsuch and Brett Kavanaugh were pushed through by Senators elected by less than 42% of the electorate. Even ignoring actual politics, why does such a diverse country elect congress after congress of old white dudes rather than the melting pot that America so eagerly describes itself as?
 
-<!-- Congress after congress of old white dudes rather than the melting pot that America so eagerly describes itself as.
+So why does this happen and what can we do to fix it? Lack of voter participation, voter suppression, gerrymandering... More on this to come...
 
-So why does this happen and what can we do to fix it? Lack of voter participation, voter suppression, gerrymandering...
-
-The framers were very intentional in their preambular word choice of forming a <i>more perfect</i> union, implying a good start but plenty of room to improve.
+<!-- The framers were very intentional in their preambular word choice of forming a <i>more perfect</i> union, implying a good start but plenty of room to improve.
 
 Yes, we have definitely improved upon dictatorships and monarchies, but that's a fairly low bar...
 
 settling for a form of democracy that fulfills the Churchillian addage that "democracy is the worst form of government... except for all the others." -->
 
-
+<h6>All statistics presented here were calculated using <a href="https://transition.fec.gov/pubrec/electionresults.shtml">official election results from the FEC</a>. The <a href="https://github.com/tefirman/StatisticalStumbles/tree/master/ElectionResults">relevant data</a> and <a href="https://github.com/tefirman/StatisticalStumbles/blob/master/ElectionResults.py">python code</a> used to calculate them are available on <a href="https://github.com/tefirman">my GitHub page</a>.
 
 
 
