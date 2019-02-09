@@ -60,7 +60,7 @@
 				<div id="main">
           <section class="post">
     				<header class="major">
-      				<span class="date">05 Feb 2019</span>
+      				<span class="date">08 Feb 2019</span>
       				<h1>Uneven Democracy</h1>
       				<p>Based on how the American government was designed, not all votes are created equal...</p>
       			</header>
@@ -85,6 +85,32 @@
 <p><span class="image fit"><img src="/images/PowerMapsFigure.png" alt=""></span></p>
 
 <p>Taking a look at the two extremes, we can see a pretty shocking disparity in representation. A voter in Wyoming has more representative power than a Floridian, a Pennsylvanian, a New Yorker, and a Californian <i>combined</i>. This is purely due to the fact that while each of these five states are represented by two senators, only 400,000 voters pick those two people in Wyoming while over 10,000,000 pick them in each of the other four states. Using state-by-state voter demographics, we can expand the scope of our power metric to compare the average representative power of different demographics to see if any group in particular benefits from this arrangement. Comparisons based on sex and age show fairly similar representation between different groups, but race, political affiliation, and urban/rural delineation produce very unbalanced playing fields. As seen in the tables below, white voters have about 10% more representative power than non-white voters, Republican voters have 28% more than Democratic voters, and rural voters (based on <a href="https://github.com/theatlantic/citylab-data/blob/master/citylab-congress/citylab_cdi.csv">CityLab’s classification</a>) have 40% more than urban voters. This is again due to the disparate proportioning of representatives in the Senate and highlights the inherent representative inequity in our country’s democracy.</p>
+
+<style>
+table {
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    line-height: 1
+}
+
+th {
+    cursor: pointer;
+}
+
+th, td {
+    text-align: left;
+    padding: 0px;
+    vertical-align: middle;
+    min-height: 1px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+</style>
 
 <h3>Representative Power By Race in 2016 (microreps)</h3>
 <table id="myTable2">
