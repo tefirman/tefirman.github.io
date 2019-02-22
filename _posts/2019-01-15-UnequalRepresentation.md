@@ -12,7 +12,7 @@ image: "/images/TippedScales.png"
 <meta name="twitter:site" content="@tefirman51">
 <meta name="twitter:title" content="Uneven Democracy">
 <meta name="twitter:description" content="Not all votes are created equal...">
-<meta name="twitter:image:src" content="https://tefirman.github.io/images/PowerMapCard.png">
+<meta name="twitter:image:src" content="https://tefirman.github.io/images/TippedScales.png">
 <meta name="twitter:image:width" content="280">
 <meta name="twitter:image:height" content="150">
 </head>
