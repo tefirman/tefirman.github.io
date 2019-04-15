@@ -85,6 +85,11 @@ $(function(){
   $("#includedContent2").load("/images/HouseSenateResultsByYear_Alternates.html"); 
 });
 </script> 
+<script> 
+$(function(){
+  $("#includedContent3").load("/images/TotalPowerMap_Large.html"); 
+});
+</script> 
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async=""></script>
@@ -93,7 +98,10 @@ $(function(){
 
 <p>This may seem like an unrealistic example, but this is basically how the United States Senate has operated since 1789 thanks to the <a href="https://en.wikipedia.org/wiki/Connecticut_Compromise">Connecticut Compromise</a>. Gerrymandering has led to similar (but less extreme) situations in the House of Representatives. To illustrate this, we can calculate the representative power of each state or congressional district by dividing the number of representatives/senators they have by the number of voters who participated. Just to clarify units, we will define a 1 representative to 1 voter ratio as a “rep” which would make 1 representative to 1,000,000 voters a “microrep” or μrep. Furthermore, since there are 435 representatives in the House and 100 in the Senate, we will define “Total Power” as 4.35*(Senate Power) + (House Power). The figures shown here illustrate darker colors as higher representative powers, but if you would like to check out the exact values for each state and district, check them out <a href="https://github.com/tefirman/StatisticalStumbles/blob/master/ElectionResults/OverallResults_ByYearAndState.csv">here</a> and <a href="https://github.com/tefirman/StatisticalStumbles/blob/master/ElectionResults/OverallResults_ByYearAndDistrict.csv">here</a>.</p>
 
-<p><span class="image fit"><img src="/images/PowerMapsFigure.png" alt=""></span></p>
+<div align="center"><div id="includedContent3"></div></div>
+<p><br>
+<!-- <span class="image fit"><img src="/images/PowerMapsFigure.png" alt="" /></span> -->
+<!-- <a onclick="alert('Hello world!')" class="button special">Special</a> --></p>
 
 <p>Taking a look at the two extremes, we can see a pretty shocking disparity in representation. A voter in Wyoming has more representative power than a Floridian, a Pennsylvanian, a New Yorker, and a Californian <i>combined</i>. This is purely due to the fact that while each of these five states are represented by two senators, only 400,000 voters pick those two people in Wyoming while over 10,000,000 pick them in each of the other four states. Using state-by-state voter demographics, we can expand the scope of our power metric to compare the average representative power of different demographics to see if any group in particular benefits from this arrangement. Comparisons based on sex and age show fairly similar representation between different groups, but race, political affiliation, and urban/rural delineation produce very unbalanced playing fields. As seen in the tables below, white voters have about 10% more representative power than non-white voters, Republican voters have 28% more than Democratic voters, and rural voters (based on <a href="https://github.com/theatlantic/citylab-data/blob/master/citylab-congress/citylab_cdi.csv">CityLab’s classification</a>) have 40% more than urban voters. This is again due to the disparate proportioning of representatives in the Senate and highlights the inherent representative inequity in our country’s democracy.</p>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-04-07T13:23:26-06:00</updated><id>/</id><title type="html">Taylor Firman</title><subtitle>Just a repository for the occasional statistical stumble...</subtitle><entry><title type="html">Uneven Democracy</title><link href="/blog/UnequalRepresentation/" rel="alternate" type="text/html" title="Uneven Democracy" /><published>2019-02-22T00:00:00-07:00</published><updated>2019-02-22T00:00:00-07:00</updated><id>/blog/UnequalRepresentation</id><content type="html" xml:base="/blog/UnequalRepresentation/">&lt;head&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-04-15T07:48:59-06:00</updated><id>/</id><title type="html">Taylor Firman</title><subtitle>Just a repository for the occasional statistical stumble...</subtitle><entry><title type="html">Uneven Democracy</title><link href="/blog/UnequalRepresentation/" rel="alternate" type="text/html" title="Uneven Democracy" /><published>2019-02-22T00:00:00-07:00</published><updated>2019-02-22T00:00:00-07:00</updated><id>/blog/UnequalRepresentation</id><content type="html" xml:base="/blog/UnequalRepresentation/">&lt;head&gt;
 &lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; /&gt;
 &lt;meta name=&quot;twitter:creator&quot; content=&quot;@tefirman51&quot; /&gt;
 &lt;meta name=&quot;twitter:site&quot; content=&quot;@tefirman51&quot; /&gt;
@@ -18,6 +18,11 @@ $(function(){
   $(&quot;#includedContent2&quot;).load(&quot;/images/HouseSenateResultsByYear_Alternates.html&quot;); 
 });
 &lt;/script&gt; 
+&lt;script&gt; 
+$(function(){
+  $(&quot;#includedContent3&quot;).load(&quot;/images/TotalPowerMap_Large.html&quot;); 
+});
+&lt;/script&gt; 
 &lt;/head&gt;
 
 &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML&quot; async=&quot;&quot;&gt;&lt;/script&gt;
@@ -26,7 +31,10 @@ $(function(){
 
 &lt;p&gt;This may seem like an unrealistic example, but this is basically how the United States Senate has operated since 1789 thanks to the &lt;a href=&quot;https://en.wikipedia.org/wiki/Connecticut_Compromise&quot;&gt;Connecticut Compromise&lt;/a&gt;. Gerrymandering has led to similar (but less extreme) situations in the House of Representatives. To illustrate this, we can calculate the representative power of each state or congressional district by dividing the number of representatives/senators they have by the number of voters who participated. Just to clarify units, we will define a 1 representative to 1 voter ratio as a “rep” which would make 1 representative to 1,000,000 voters a “microrep” or μrep. Furthermore, since there are 435 representatives in the House and 100 in the Senate, we will define “Total Power” as 4.35*(Senate Power) + (House Power). The figures shown here illustrate darker colors as higher representative powers, but if you would like to check out the exact values for each state and district, check them out &lt;a href=&quot;https://github.com/tefirman/StatisticalStumbles/blob/master/ElectionResults/OverallResults_ByYearAndState.csv&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://github.com/tefirman/StatisticalStumbles/blob/master/ElectionResults/OverallResults_ByYearAndDistrict.csv&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;span class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/PowerMapsFigure.png&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;div id=&quot;includedContent3&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;!-- &lt;span class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/PowerMapsFigure.png&quot; alt=&quot;&quot; /&gt;&lt;/span&gt; --&gt;
+&lt;!-- &lt;a onclick=&quot;alert('Hello world!')&quot; class=&quot;button special&quot;&gt;Special&lt;/a&gt; --&gt;&lt;/p&gt;
 
 &lt;p&gt;Taking a look at the two extremes, we can see a pretty shocking disparity in representation. A voter in Wyoming has more representative power than a Floridian, a Pennsylvanian, a New Yorker, and a Californian &lt;i&gt;combined&lt;/i&gt;. This is purely due to the fact that while each of these five states are represented by two senators, only 400,000 voters pick those two people in Wyoming while over 10,000,000 pick them in each of the other four states. Using state-by-state voter demographics, we can expand the scope of our power metric to compare the average representative power of different demographics to see if any group in particular benefits from this arrangement. Comparisons based on sex and age show fairly similar representation between different groups, but race, political affiliation, and urban/rural delineation produce very unbalanced playing fields. As seen in the tables below, white voters have about 10% more representative power than non-white voters, Republican voters have 28% more than Democratic voters, and rural voters (based on &lt;a href=&quot;https://github.com/theatlantic/citylab-data/blob/master/citylab-congress/citylab_cdi.csv&quot;&gt;CityLab’s classification&lt;/a&gt;) have 40% more than urban voters. This is again due to the disparate proportioning of representatives in the Senate and highlights the inherent representative inequity in our country’s democracy.&lt;/p&gt;
 
