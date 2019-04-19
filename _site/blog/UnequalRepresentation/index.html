@@ -96,14 +96,14 @@ $(function(){
 
 <p>Americans pride themselves on their democracy, on the idea that everyone has an equal voice in our government, and to be honest, I’m pretty proud of it too (less so in recent years). But if anyone tells you that every citizen truly has an <i>equal</i> voice in our system, they possess one of two things: 1. a misunderstanding of how our government is designed and operated, or 2. a loose definition of the term “equal”. In an ideal scenario, each person’s voice would be equally valued and political representation on a macroscopic level would be proportional to the views of the American public. As a simple example, a group of 1800 Democrats and 1200 Republicans could be represented by 9 Democrats and 6 Republicans, giving each voter a representative power of 1/200 or 0.005. But let’s say that a neighboring group of 900 Republicans and 600 Democrats was represented by 9 Republicans and 6 Democrats. Locally, this is proportional and fair, but macroscopically, we now have equal representation (15-15) for unequal populations (2400-2100) because the second group has twice the representative power (1/100 or 0.01).</p>
 
-<p>This may seem like an unrealistic example, but this is basically how the United States Senate has operated since 1789 thanks to the <a href="https://en.wikipedia.org/wiki/Connecticut_Compromise">Connecticut Compromise</a>. Gerrymandering has led to similar (but less extreme) situations in the House of Representatives. To illustrate this, we can calculate the representative power of each state or congressional district by dividing the number of representatives/senators they have by the number of voters who participated. Just to clarify units, we will define a 1 representative to 1 voter ratio as a “rep” which would make 1 representative to 1,000,000 voters a “microrep” or μrep. Furthermore, since there are 435 representatives in the House and 100 in the Senate, we will define “Total Power” as 4.35*(Senate Power) + (House Power). The figures shown here illustrate darker colors as higher representative powers, but if you would like to check out the exact values for each state and district, check them out <a href="https://github.com/tefirman/StatisticalStumbles/blob/master/ElectionResults/OverallResults_ByYearAndState.csv">here</a> and <a href="https://github.com/tefirman/StatisticalStumbles/blob/master/ElectionResults/OverallResults_ByYearAndDistrict.csv">here</a>.</p>
+<p>This may seem like an unrealistic example, but this is basically how the United States Senate has operated since 1789 thanks to the <a href="https://en.wikipedia.org/wiki/Connecticut_Compromise">Connecticut Compromise</a>. Gerrymandering has led to similar (but less extreme) situations in the House of Representatives. To illustrate this, we can calculate the representative power of each state or congressional district by dividing the number of representatives/senators they have by the number of voters who participated. Just to clarify units, we will define a 1 representative to 1 voter ratio as a “rep” which would make 1 representative to 1,000,000 voters a “microrep” or μrep. Furthermore, since there are 435 representatives in the House and 100 in the Senate, we will define “Total Power” as 4.35*(Senate Power) + (House Power). The map below illustrates darker colors as higher representative powers and shows the exact values for a congressional district when you hover over it.</p>
 
 <div align="center"><div id="includedContent3"></div></div>
 <p><br>
 <!-- <span class="image fit"><img src="/images/PowerMapsFigure.png" alt="" /></span> -->
 <!-- <a onclick="alert('Hello world!')" class="button special">Special</a> --></p>
 
-<p>Taking a look at the two extremes, we can see a pretty shocking disparity in representation. A voter in Wyoming has more representative power than a Floridian, a Pennsylvanian, a New Yorker, and a Californian <i>combined</i>. This is purely due to the fact that while each of these five states are represented by two senators, only 400,000 voters pick those two people in Wyoming while over 10,000,000 pick them in each of the other four states. Using state-by-state voter demographics, we can expand the scope of our power metric to compare the average representative power of different demographics to see if any group in particular benefits from this arrangement. Comparisons based on sex and age show fairly similar representation between different groups, but race, political affiliation, and urban/rural delineation produce very unbalanced playing fields. As seen in the tables below, white voters have about 10% more representative power than non-white voters, Republican voters have 28% more than Democratic voters, and rural voters (based on <a href="https://github.com/theatlantic/citylab-data/blob/master/citylab-congress/citylab_cdi.csv">CityLab’s classification</a>) have 40% more than urban voters. This is again due to the disparate proportioning of representatives in the Senate and highlights the inherent representative inequity in our country’s democracy.</p>
+<p>Taking a look at the two extremes, we can see a pretty shocking disparity in representation. A voter in Wyoming has more representative power than a Floridian, a Pennsylvanian, a New Yorker, a Californian, an Ohioan, a North Carolinian, a Michigander, an Illinoisan, and a Texan <i>combined</i>. This is purely due to the fact that while each of these five states are represented by two senators, only 200,000 voters pick those two people in Wyoming while multiple millions of voters pick them in each of the other four states. Using state-by-state voter demographics, we can expand the scope of our power metric to compare the average representative power of different demographics to see if any group in particular benefits from this arrangement. Comparisons based on sex and age show fairly similar representation between different groups, but race, political affiliation, and urban/rural delineation produce very unbalanced playing fields. As seen in the tables below, white voters have about 10% more representative power than non-white voters, Republican voters have 29% more than Democratic voters, and rural voters (based on <a href="https://github.com/theatlantic/citylab-data/blob/master/citylab-congress/citylab_cdi.csv">CityLab’s classification</a>) have 39% more than urban voters. This is again due to the disparate proportioning of representatives in the Senate and highlights the inherent representative inequity in our country’s democracy.</p>
 
 <style>
 table {
@@ -144,25 +144,25 @@ tr:nth-child(even) {
     <td>White</td>
     <td>3.36</td>
     <td>0.79</td>
-    <td>6.79</td>
+    <td>6.81</td>
   </tr>
   <tr height="5">
     <td>Black</td>
     <td>3.40</td>
-    <td>0.65</td>
-    <td>6.25</td>
+    <td>0.66</td>
+    <td>6.26</td>
   </tr>
   <tr height="5">
     <td>Asian</td>
     <td>3.63</td>
-    <td>0.62</td>
-    <td>6.32</td>
+    <td>0.72</td>
+    <td>6.77</td>
   </tr>
   <tr height="5">
     <td>Hispanic</td>
     <td>3.61</td>
-    <td>0.49</td>
-    <td>5.76</td>
+    <td>0.50</td>
+    <td>5.79</td>
   </tr>
 </table>
 
@@ -296,8 +296,8 @@ function sortTableNumber2(n) {
   <tr height="5">
     <td>Democratic</td>
     <td>3.16</td>
-    <td>0.74</td>
-    <td>6.39</td>
+    <td>0.73</td>
+    <td>6.33</td>
   </tr>
   <tr height="5">
     <td>Other</td>
@@ -431,8 +431,8 @@ function sortTableNumber3(n) {
   <tr height="5">
     <td>Rural</td>
     <td>3.29</td>
-    <td>1.17</td>
-    <td>8.39</td>
+    <td>1.18</td>
+    <td>8.42</td>
   </tr>
   <tr height="5">
     <td>Suburban</td>
@@ -443,8 +443,8 @@ function sortTableNumber3(n) {
   <tr height="5">
     <td>Urban</td>
     <td>3.90</td>
-    <td>0.48</td>
-    <td>5.97</td>
+    <td>0.49</td>
+    <td>6.05</td>
   </tr>
 </table>
 
@@ -574,7 +574,7 @@ function sortTableNumber4(n) {
 
 <p>I realize that the founding fathers established our government this way for a reason, that the Connecticut Compromise was necessary to get smaller states to ratify the Constitution, and that, like the Electoral College, it helps to guard against the <a href="https://en.wikipedia.org/wiki/Tyranny_of_the_majority">tyranny of the majority</a>. But right now, it feels a hell of a lot like we’re at risk of the opposite. A congressional majority elected by a minority of Americans is enabling an unpopular president (also elected by a minority of Americans) to enact legislation opposed by a majority of Americans. The framers were very intentional in their preambular word choice of forming a <i>more perfect</i> union, implying a good start but plenty of room to improve. Maybe it’s time to start thinking about making Congress a bit more perfect in terms of representation.</p>
 
-<h6>All statistics presented here were calculated using <a href="https://transition.fec.gov/pubrec/electionresults.shtml">official election results from the FEC</a>. The <a href="https://github.com/tefirman/StatisticalStumbles/tree/master/ElectionResults">relevant data</a> and <a href="https://github.com/tefirman/StatisticalStumbles/blob/master/ElectionResults.py">python code</a> used to calculate them are available on <a href="https://github.com/tefirman">my GitHub page</a>.
+<h6>All statistics presented here were calculated using <a href="https://transition.fec.gov/pubrec/electionresults.shtml">official election results from the FEC</a>. The <a href="https://github.com/tefirman/StatisticalStumbles/tree/master/ElectionResults">relevant data</a> and <a href="https://github.com/tefirman/StatisticalStumbles/blob/master/ElectionResults.ipynb">python code</a> used to calculate them are available on <a href="https://github.com/tefirman">my GitHub page</a>.
 
 
 
