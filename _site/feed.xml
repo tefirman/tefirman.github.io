@@ -1,4 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-04-19T10:30:38-06:00</updated><id>/</id><title type="html">Taylor Firman</title><subtitle>Just a repository for the occasional statistical stumble...</subtitle><entry><title type="html">Uneven Democracy</title><link href="/blog/UnequalRepresentation/" rel="alternate" type="text/html" title="Uneven Democracy" /><published>2019-02-22T00:00:00-07:00</published><updated>2019-02-22T00:00:00-07:00</updated><id>/blog/UnequalRepresentation</id><content type="html" xml:base="/blog/UnequalRepresentation/">&lt;head&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-05-25T11:16:46-06:00</updated><id>/</id><title type="html">Taylor Firman</title><subtitle>Just a repository for the occasional statistical stumble...</subtitle><entry><title type="html">Riddler Submission: ¡Lotería!</title><link href="/blog/Loteria/" rel="alternate" type="text/html" title="Riddler Submission: ¡Loter&amp;iacute;a!" /><published>2019-05-25T00:00:00-06:00</published><updated>2019-05-25T00:00:00-06:00</updated><id>/blog/Loteria</id><content type="html" xml:base="/blog/Loteria/">&lt;head&gt;
+&lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; /&gt;
+&lt;meta name=&quot;twitter:creator&quot; content=&quot;@tefirman51&quot; /&gt;
+&lt;meta name=&quot;twitter:site&quot; content=&quot;@tefirman51&quot; /&gt;
+&lt;meta name=&quot;twitter:title&quot; content=&quot;Riddler Submission: ¡Loter&amp;iacute;a!&quot; /&gt;
+&lt;meta name=&quot;twitter:description&quot; content=&quot;Learn Spanish and gamble all at the same time!!!&quot; /&gt;
+&lt;meta name=&quot;twitter:image:src&quot; content=&quot;https://tefirman.github.io/images/Loteria.jpg&quot; /&gt;
+&lt;meta name=&quot;twitter:image:width&quot; content=&quot;280&quot; /&gt;
+&lt;meta name=&quot;twitter:image:height&quot; content=&quot;150&quot; /&gt;
+&lt;script src=&quot;/assets/js/jquery.min.js&quot;&gt;&lt;/script&gt; 
+&lt;script&gt; 
+$(function(){
+  $(&quot;#includedContent&quot;).load(&quot;/images/Loteria_ZeroMatches.html&quot;); 
+});
+&lt;/script&gt;
+&lt;script&gt; 
+$(function(){
+  $(&quot;#includedContent2&quot;).load(&quot;/images/Loteria_Slidebar.html&quot;); 
+});
+&lt;/script&gt; 
+&lt;/head&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML&quot; async=&quot;&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Loter%C3%ADa&quot;&gt;Lotería&lt;/a&gt; is a traditional Mexican game of chance akin to bingo. Each player receives a 4-by-4 grid of images. Instead of the comically large rotating bin of numbered balls, the caller randomly draws a card from a deck containing all 54 possible images. If a player has that image on their grid, they mark off the corresponding location with a corn kernel or pinto bean. Exact rules can vary, but in the version I was taught, the game ends when one of the players fills their entire card (and screams “¡Lotería!”). Each of the 54 possible images can only show up once on each card, but other than that restriction, let’s assume image selection and placement on each player grid is random.&lt;/p&gt;
+
+&lt;p&gt;One beautiful day, you and your friend Christina decide to play a friendly game of Loteria. What is the probability that either of you end the game with an empty grid, i.e. none of your images were called? How does this probability change if there were more/fewer unique images? Larger/smaller player grids?&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;The inspiration for this problem actually comes from reality: while on vacation, a friend of mine ended a game with zero matching images and I seemed to be the only one flabbergasted by the odds. To illustrate that I wasn’t crazy (or perhaps confirm that I was), I set out to calculate the exact odds of such a thing happening. First, the two grids cannot have any overlap. If any of the images on the first card are also on the second, the first card cannot possibly cover all its images without covering one on the second. With &lt;script type=&quot;math/tex&quot;&gt;G = 16&lt;/script&gt; images on each grid and &lt;script type=&quot;math/tex&quot;&gt;D = 54&lt;/script&gt; possible images, there are &lt;script type=&quot;math/tex&quot;&gt;\frac{D!}{G!(D - G)!} = \frac{54!}{16!38!}&lt;/script&gt; possible grids that either player could have. Regardless of which images are on the first player’s grid, the second grid now only has &lt;script type=&quot;math/tex&quot;&gt;D - G = 38&lt;/script&gt; images to choose from, hence leaving &lt;script type=&quot;math/tex&quot;&gt;\frac{(D - G)!}{G!(D - 2G)!} = \frac{38!}{16!22!}&lt;/script&gt; non-overlap grids. Thus, the probability of the two grids having no overlap is&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P_{d} = \frac{(D - G)!}{G!(D - 2G)!} \times \frac{G!(D - G)!}{D!} = \frac{(D - G)!(D - G)!}{(D - 2G)!D!} = \frac{38!38!}{22!54!} = 0.00105428&lt;/script&gt;
+
+&lt;p&gt;Second, we need the order of the deck to be such that all of one player’s images will come up before any of the other player’s images. After &lt;script type=&quot;math/tex&quot;&gt;N&lt;/script&gt; cards are revealed from the deck, there are &lt;script type=&quot;math/tex&quot;&gt;\frac{D!}{N!(D - N)!} = \frac{54!}{N!(54 - N)!}&lt;/script&gt; possible card combinations that could be revealed and &lt;script type=&quot;math/tex&quot;&gt;N!&lt;/script&gt; possible orderings of those cards, giving us a total of&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;Q = \frac{D!}{N!(D - N)!} \times N! = \frac{D!}{(D - N)!} = \frac{54!}{(54 - N)!}\text{ possible outcomes.}&lt;/script&gt;
+
+&lt;p&gt;How many of the possible outcomes result in the first player getting their sixteenth and final match on the &lt;script type=&quot;math/tex&quot;&gt;N^{\text{th}}&lt;/script&gt; card and the second player getting no matches at all? Out of the &lt;script type=&quot;math/tex&quot;&gt;N&lt;/script&gt; cards revealed, &lt;script type=&quot;math/tex&quot;&gt;G = 16&lt;/script&gt; of them have to match, but the remaining &lt;script type=&quot;math/tex&quot;&gt;N - G&lt;/script&gt; cards can’t match any image on either grid. This suggests &lt;script type=&quot;math/tex&quot;&gt;\frac{(D - 2G)!}{(N - G)!(D - G - N)!} = \frac{22!}{(N - 16)!(38 - N)!}&lt;/script&gt; possible combinations of non-matching cards to come up. Furthermore, the first &lt;script type=&quot;math/tex&quot;&gt;N - 1&lt;/script&gt; cards can be in any order they want, giving us &lt;script type=&quot;math/tex&quot;&gt;(N - 1)!&lt;/script&gt; possible orderings, but the &lt;script type=&quot;math/tex&quot;&gt;N^{\text{th}}&lt;/script&gt; card has to be one of the G = 16 matching cards, resulting in G possible endings. This produces&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;W = \frac{(D - 2G)!}{(N - G)!(D - G - N)!} \times (N - 1)! \times G = \frac{22!(N - 1)!16}{(N - 16)!(38 - N)!}\text{ possible winning outcomes.}&lt;/script&gt;
+
+&lt;p&gt;With all possible outcomes being equally probable, we can calculate the probability of one player winning and the other remaining at zero after revealing &lt;script type=&quot;math/tex&quot;&gt;N&lt;/script&gt; cards as&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P_{w}(N) = \frac{W}{Q} = \frac{(D - 2G)!(N - 1)!G}{(N - G)!(D - G - N)!} \times \frac{(D - N)!}{D!} = \frac{22!(N - 1)!16}{(N - 16)!(38 - N)!} \times \frac{(54 - N)!}{54!}.&lt;/script&gt;
+
+&lt;p&gt;Next, let’s put these two probability functions together. Since either player can be the winner or loser, the probability of a game ending with either player having an empty grid after &lt;script type=&quot;math/tex&quot;&gt;N&lt;/script&gt; turns is&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P_{z}(N) = 2 \times P_{d} \times P_{w}(N) = 2 \times \frac{(D - G)!(D - G)!}{(D - 2G)!D!} \times \frac{(D - 2G)!(N - 1)!G}{(N - G)!(D - G - N)!} \times \frac{(D - N)!}{D!}&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P_{z}(N) = \frac{2(D - G)!(D - G)!(N - 1)!G(D - N)!}{D!(N - G)!(D - G - N)!D!} = \frac{38!38!(N - 1)!(54 - N)!32}{54!(N - 16)!(38 - N)!54!}.&lt;/script&gt;
+
+&lt;p&gt;Finally, we can plot this function as shown below and sum up over all possible values of &lt;script type=&quot;math/tex&quot;&gt;N&lt;/script&gt; to calculate a total probability of&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P_{tot} = \sum_{N = G}^{D - G} P_{z}(N) = 3.508 \times 10^{-12}.&lt;/script&gt;
+
+&lt;div align=&quot;center&quot;&gt;&lt;div id=&quot;includedContent&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Think about that for a second. That means that even if we played three billion times, we would still only have about a 1% chance of a zero match game occurring. And yet it happened to us in real life. I would say that we should have bought a lottery ticket, but sadly that’s not how random variables work. As for the second part of the question, we can easily calculate the zero match probability for larger/smaller grid sizes or more/fewer unique images simply by varying &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt; respectively in the same equations above. As your intuition might have guessed, more unique images and smaller grids produce higher zero match probabilities, but play around with the interactive graph below to see exactly how it varies. Hope everyone has as much “divertido” with this as I did!&lt;/p&gt;
+
+&lt;div align=&quot;center&quot;&gt;&lt;div id=&quot;includedContent2&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h6&gt;The &lt;a href=&quot;https://github.com/tefirman/StatisticalStumbles/blob/master/Riddler_Loteria.py&quot;&gt;python code&lt;/a&gt; used to generate the values and figures above are available on &lt;a href=&quot;https://github.com/tefirman&quot;&gt;my GitHub page&lt;/a&gt;. &lt;a href=&quot;https://github.com/tefirman/StatisticalStumbles/blob/master/LoteriaSimulations.csv&quot;&gt;Simulations&lt;/a&gt; that validate the equations above are also available.
+
+
+&lt;/h6&gt;</content><summary type="html">Learn Spanish and gamble all at the same time!!!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/images/Loteria.jpg" /></entry><entry><title type="html">Uneven Democracy</title><link href="/blog/UnequalRepresentation/" rel="alternate" type="text/html" title="Uneven Democracy" /><published>2019-02-22T00:00:00-07:00</published><updated>2019-02-22T00:00:00-07:00</updated><id>/blog/UnequalRepresentation</id><content type="html" xml:base="/blog/UnequalRepresentation/">&lt;head&gt;
 &lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; /&gt;
 &lt;meta name=&quot;twitter:creator&quot; content=&quot;@tefirman51&quot; /&gt;
 &lt;meta name=&quot;twitter:site&quot; content=&quot;@tefirman51&quot; /&gt;

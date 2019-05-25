@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+  Jekyll integration by somiibo.com
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+--><html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+<title>Riddler Submission: ¡Lotería!</title>
+<meta name="description" content="">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icon/favicon-16x16.png">
+<link rel="manifest" href="/assets/icon/manifest.json">
+<link rel="mask-icon" href="/assets/icon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icon/favicon.ico">
+<meta name="msapplication-config" content="/assets/icon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<noscript><link rel="stylesheet" href="/assets/css/noscript.css"></noscript>
+
+	</head>
+	<body class="is-loading">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Header -->
+        <header id="header">
+          <a href="/" class="logo">Taylor Firman</a>
+        </header>
+
+				<!-- Nav -->
+					<nav id="nav">
+
+            <ul class="links">
+  <li class=""><a href="/">Home</a></li>
+  <li class=""><a href="/about/">About</a></li>
+  <li class=" active "><a href="/blog/">Blog</a></li>
+  <li class=""><a href="/publications/">Publications</a></li>
+</ul>
+
+
+						<ul class="icons">
+              <li><a href="https://twitter.com/tefirman51" class="icon fa-twitter" rel="nofollow"><span class="label">Twitter</span></a></li>
+              <li><a href="https://facebook.com/tfirman" class="icon fa-facebook" rel="nofollow"><span class="label">Facebook</span></a></li>
+              <li><a href="https://instagram.com/tefirman51" class="icon fa-instagram" rel="nofollow"><span class="label">Instagram</span></a></li>
+              <li><a href="https://github.com/tefirman" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+				<div id="main">
+          <section class="post">
+    				<header class="major">
+      				<span class="date">25 May 2019</span>
+      				<h1>Riddler Submission: ¡Lotería!</h1>
+      				<p>Learn Spanish and gamble all at the same time!!!</p>
+      			</header>
+            <div class="image main"><img src="/images/Loteria.jpg" alt=""></div>
+      			<p></p>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@tefirman51">
+<meta name="twitter:site" content="@tefirman51">
+<meta name="twitter:title" content="Riddler Submission: ¡Lotería!">
+<meta name="twitter:description" content="Learn Spanish and gamble all at the same time!!!">
+<meta name="twitter:image:src" content="https://tefirman.github.io/images/Loteria.jpg">
+<meta name="twitter:image:width" content="280">
+<meta name="twitter:image:height" content="150">
+<script src="/assets/js/jquery.min.js"></script> 
+<script> 
+$(function(){
+  $("#includedContent").load("/images/Loteria_ZeroMatches.html"); 
+});
+</script>
+<script> 
+$(function(){
+  $("#includedContent2").load("/images/Loteria_Slidebar.html"); 
+});
+</script> 
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async=""></script>
+
+<p><a href="https://en.wikipedia.org/wiki/Loter%C3%ADa">Lotería</a> is a traditional Mexican game of chance akin to bingo. Each player receives a 4-by-4 grid of images. Instead of the comically large rotating bin of numbered balls, the caller randomly draws a card from a deck containing all 54 possible images. If a player has that image on their grid, they mark off the corresponding location with a corn kernel or pinto bean. Exact rules can vary, but in the version I was taught, the game ends when one of the players fills their entire card (and screams “¡Lotería!”). Each of the 54 possible images can only show up once on each card, but other than that restriction, let’s assume image selection and placement on each player grid is random.</p>
+
+<p>One beautiful day, you and your friend Christina decide to play a friendly game of Loteria. What is the probability that either of you end the game with an empty grid, i.e. none of your images were called? How does this probability change if there were more/fewer unique images? Larger/smaller player grids?</p>
+
+<h2 id="solution">Solution</h2>
+
+<p>The inspiration for this problem actually comes from reality: while on vacation, a friend of mine ended a game with zero matching images and I seemed to be the only one flabbergasted by the odds. To illustrate that I wasn’t crazy (or perhaps confirm that I was), I set out to calculate the exact odds of such a thing happening. First, the two grids cannot have any overlap. If any of the images on the first card are also on the second, the first card cannot possibly cover all its images without covering one on the second. With <script type="math/tex">G = 16</script> images on each grid and <script type="math/tex">D = 54</script> possible images, there are <script type="math/tex">\frac{D!}{G!(D - G)!} = \frac{54!}{16!38!}</script> possible grids that either player could have. Regardless of which images are on the first player’s grid, the second grid now only has <script type="math/tex">D - G = 38</script> images to choose from, hence leaving <script type="math/tex">\frac{(D - G)!}{G!(D - 2G)!} = \frac{38!}{16!22!}</script> non-overlap grids. Thus, the probability of the two grids having no overlap is</p>
+
+<script type="math/tex; mode=display">P_{d} = \frac{(D - G)!}{G!(D - 2G)!} \times \frac{G!(D - G)!}{D!} = \frac{(D - G)!(D - G)!}{(D - 2G)!D!} = \frac{38!38!}{22!54!} = 0.00105428</script>
+
+<p>Second, we need the order of the deck to be such that all of one player’s images will come up before any of the other player’s images. After <script type="math/tex">N</script> cards are revealed from the deck, there are <script type="math/tex">\frac{D!}{N!(D - N)!} = \frac{54!}{N!(54 - N)!}</script> possible card combinations that could be revealed and <script type="math/tex">N!</script> possible orderings of those cards, giving us a total of</p>
+
+<script type="math/tex; mode=display">Q = \frac{D!}{N!(D - N)!} \times N! = \frac{D!}{(D - N)!} = \frac{54!}{(54 - N)!}\text{ possible outcomes.}</script>
+
+<p>How many of the possible outcomes result in the first player getting their sixteenth and final match on the <script type="math/tex">N^{\text{th}}</script> card and the second player getting no matches at all? Out of the <script type="math/tex">N</script> cards revealed, <script type="math/tex">G = 16</script> of them have to match, but the remaining <script type="math/tex">N - G</script> cards can’t match any image on either grid. This suggests <script type="math/tex">\frac{(D - 2G)!}{(N - G)!(D - G - N)!} = \frac{22!}{(N - 16)!(38 - N)!}</script> possible combinations of non-matching cards to come up. Furthermore, the first <script type="math/tex">N - 1</script> cards can be in any order they want, giving us <script type="math/tex">(N - 1)!</script> possible orderings, but the <script type="math/tex">N^{\text{th}}</script> card has to be one of the G = 16 matching cards, resulting in G possible endings. This produces</p>
+
+<script type="math/tex; mode=display">W = \frac{(D - 2G)!}{(N - G)!(D - G - N)!} \times (N - 1)! \times G = \frac{22!(N - 1)!16}{(N - 16)!(38 - N)!}\text{ possible winning outcomes.}</script>
+
+<p>With all possible outcomes being equally probable, we can calculate the probability of one player winning and the other remaining at zero after revealing <script type="math/tex">N</script> cards as</p>
+
+<script type="math/tex; mode=display">P_{w}(N) = \frac{W}{Q} = \frac{(D - 2G)!(N - 1)!G}{(N - G)!(D - G - N)!} \times \frac{(D - N)!}{D!} = \frac{22!(N - 1)!16}{(N - 16)!(38 - N)!} \times \frac{(54 - N)!}{54!}.</script>
+
+<p>Next, let’s put these two probability functions together. Since either player can be the winner or loser, the probability of a game ending with either player having an empty grid after <script type="math/tex">N</script> turns is</p>
+
+<script type="math/tex; mode=display">P_{z}(N) = 2 \times P_{d} \times P_{w}(N) = 2 \times \frac{(D - G)!(D - G)!}{(D - 2G)!D!} \times \frac{(D - 2G)!(N - 1)!G}{(N - G)!(D - G - N)!} \times \frac{(D - N)!}{D!}</script>
+
+<script type="math/tex; mode=display">P_{z}(N) = \frac{2(D - G)!(D - G)!(N - 1)!G(D - N)!}{D!(N - G)!(D - G - N)!D!} = \frac{38!38!(N - 1)!(54 - N)!32}{54!(N - 16)!(38 - N)!54!}.</script>
+
+<p>Finally, we can plot this function as shown below and sum up over all possible values of <script type="math/tex">N</script> to calculate a total probability of</p>
+
+<script type="math/tex; mode=display">P_{tot} = \sum_{N = G}^{D - G} P_{z}(N) = 3.508 \times 10^{-12}.</script>
+
+<div align="center"><div id="includedContent"></div></div>
+
+<p>Think about that for a second. That means that even if we played three billion times, we would still only have about a 1% chance of a zero match game occurring. And yet it happened to us in real life. I would say that we should have bought a lottery ticket, but sadly that’s not how random variables work. As for the second part of the question, we can easily calculate the zero match probability for larger/smaller grid sizes or more/fewer unique images simply by varying <script type="math/tex">G</script> and <script type="math/tex">D</script> respectively in the same equations above. As your intuition might have guessed, more unique images and smaller grids produce higher zero match probabilities, but play around with the interactive graph below to see exactly how it varies. Hope everyone has as much “divertido” with this as I did!</p>
+
+<div align="center"><div id="includedContent2"></div></div>
+
+<p><br></p>
+<h6>The <a href="https://github.com/tefirman/StatisticalStumbles/blob/master/Riddler_Loteria.py">python code</a> used to generate the values and figures above are available on <a href="https://github.com/tefirman">my GitHub page</a>. <a href="https://github.com/tefirman/StatisticalStumbles/blob/master/LoteriaSimulations.csv">Simulations</a> that validate the equations above are also available.
+
+
+</h6>
+
+      		</section>
+
+          <!-- <div class="comments-wrapper">
+          <div id="disqus_thread"></div>
+          <script>
+              /**
+               *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+               *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+               */
+
+              var disqus_config = function () {
+                  this.page.url = '/blog/Loteria/';  /*Replace PAGE_URL with your page's canonical URL variable*/
+                  this.page.identifier = '/blog/Loteria/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
+              };
+
+              (function() {  /* dont endit below this line */
+                  var d = document, s = d.createElement('script');
+
+                  s.src = 'https://tefirman.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+              })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </div> -->
+
+
+					<!-- Footer -->
+						<footer>
+              <ul class="actions">
+                <li><a href="/blog/" class="button">Blog</a></li>
+              </ul>
+						</footer>
+					</div>
+
+				<!-- Footer -->
+        <footer id="footer">
+  <section>
+    <form method="POST" action="https://formspree.io/tefirman@gmail.com">
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email">
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="3"></textarea>
+      </div>
+      <ul class="actions">
+        <li><input type="submit" value="Send Message"></li>
+      </ul>
+    </form>
+  </section>
+  <section class="split contact">
+    <section class="alt">
+      <h3>Location</h3>
+      <p>Denver, CO</p>
+    </section>
+    <section>
+      <h3>Phone</h3>
+      <p><a href="tel:253-740-3456">253-740-3456</a></p>
+    </section>
+    <section>
+      <h3>Email</h3>
+      <p><a href="mailto:tefirman@gmail.com">tefirman@gmail.com</a></p>
+    </section>
+    <section>
+      <h3>Social</h3>
+      <ul class="icons alt">
+        <li><a href="https://twitter.com/tefirman51" class="icon fa-twitter" rel="nofollow"><span class="label">Twitter</span></a></li>
+        <li><a href="https://facebook.com/tfirman" class="icon fa-facebook" rel="nofollow"><span class="label">Facebook</span></a></li>
+        <li><a href="https://instagram.com/tefirman51" class="icon fa-instagram" rel="nofollow"><span class="label">Instagram</span></a></li>
+        <li><a href="https://github.com/tefirman" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a></li>
+      </ul>
+    </section>
+  </section>
+</footer>
+<!-- Copyright -->
+<div id="copyright">
+  <ul>
+<li>© HTML5 UP</li>
+<li>Design by <a href="https://html5up.net" rel="nofollow">HTML5 UP</a>
+</li>
+<li>Jekyll Integration by <a href="https://soundgrail.com">SoundGrail</a>
+</li>
+</ul>
+</div>
+
+
+			</div>
+
+      <!-- Scripts -->
+  		<!-- DYN -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.scrollex.min.js"></script>
+<script src="/assets/js/jquery.scrolly.min.js"></script>
+<script src="/assets/js/skel.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+			<script async src="https://www.googletagmanager.com/gtag/js?id=tefirman"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'tefirman');
+</script>
+
+
+	</body>
+</html>
