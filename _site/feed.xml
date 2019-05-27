@@ -1,4 +1,248 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-05-25T11:42:49-06:00</updated><id>/</id><title type="html">Taylor Firman</title><subtitle>Just a repository for the occasional statistical stumble...</subtitle><entry><title type="html">Riddler Submission: ¡Lotería!</title><link href="/blog/Loteria/" rel="alternate" type="text/html" title="Riddler Submission: ¡Loter&amp;iacute;a!" /><published>2019-05-25T00:00:00-06:00</published><updated>2019-05-25T00:00:00-06:00</updated><id>/blog/Loteria</id><content type="html" xml:base="/blog/Loteria/">&lt;head&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-05-27T01:18:14-06:00</updated><id>/</id><title type="html">Taylor Firman</title><subtitle>Just a repository for the occasional statistical stumble...</subtitle><entry><title type="html">Methods to the Madness</title><link href="/blog/MarchMadness/" rel="alternate" type="text/html" title="Methods to the Madness" /><published>2019-05-27T00:00:00-06:00</published><updated>2019-05-27T00:00:00-06:00</updated><id>/blog/MarchMadness</id><content type="html" xml:base="/blog/MarchMadness/">&lt;head&gt;
+&lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; /&gt;
+&lt;meta name=&quot;twitter:creator&quot; content=&quot;@tefirman51&quot; /&gt;
+&lt;meta name=&quot;twitter:site&quot; content=&quot;@tefirman51&quot; /&gt;
+&lt;meta name=&quot;twitter:title&quot; content=&quot;Methods to the Madness&quot; /&gt;
+&lt;meta name=&quot;twitter:description&quot; content=&quot;Because brackets are hard and chalk is for the faint of heart...&quot; /&gt;
+&lt;meta name=&quot;twitter:image:src&quot; content=&quot;https://tefirman.github.io/images/CoinBracket.png&quot; /&gt;
+&lt;meta name=&quot;twitter:image:width&quot; content=&quot;280&quot; /&gt;
+&lt;meta name=&quot;twitter:image:height&quot; content=&quot;150&quot; /&gt;
+&lt;script src=&quot;/assets/js/jquery.min.js&quot;&gt;&lt;/script&gt; 
+&lt;script&gt; 
+$(function(){
+  $(&quot;#includedContent&quot;).load(&quot;/images/MarchMadness_PointDistribution.html&quot;); 
+});
+&lt;/script&gt;
+&lt;script&gt; 
+$(function(){
+  $(&quot;#includedContent2&quot;).load(&quot;/images/MarchMadness_RelativePoints.html&quot;); 
+});
+&lt;/script&gt; 
+&lt;/head&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML&quot; async=&quot;&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;March Madness has come and gone and it was an exciting (albeit fairly chalk-ish) tournament! To get a little skin in the game, many people join &lt;a href=&quot;http://fantasy.espn.com/tournament-challenge-bracket/2019/en/story?pageName=tcmen%5Crules&quot;&gt;bracket leagues&lt;/a&gt; where they pick a winner for each of the sixty-three match-ups in the bracket. A correct pick is worth 10 points in the round of 64, 20 in the round of 32, 40 in the Sweet Sixteen, 80 in the Elite Eight, 160 points in the Final Four, and 320 points in the championship. At the end of the tournament, the bracket with the most points wins. This year would have been my first victory, were it not for the non-existent three-pointer foul by Samir Doughty (thanks for nothing, Wahoos), so I decided to look into the different methodologies of bracket selection to hopefully improve my odds for next year. There are some &lt;a href=&quot;https://bleacherreport.com/articles/1573533-10-fun-ways-to-pick-a-march-madness-bracket#slide0&quot;&gt;pretty strange techniques&lt;/a&gt; out there (my personal favorite is which mascot would win in a fight), but the most logical one I could come up with uses the projections from our friends over at &lt;a href=&quot;https://fivethirtyeight.com&quot;&gt;FiveThirtyEight&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;Let’s say you have no previous experience with college basketball, but you still want to play in order to have something to talk about with coworkers/old high school buddies/random strangers. To get around your lack of experience, you decide to flip a coin to pick who wins each matchup, i.e. heads means the better seed wins, tails means the worse seed wins. However, to make sure you don’t pick a 16-seed going all the way to the Final Four, you decide to use the latest innovation in sports-related coinage: a self-biasing coin whose heads/tails probabilities shift based on the &lt;a href=&quot;https://projects.fivethirtyeight.com/march-madness-api/2019/fivethirtyeight_ncaa_forecasts.csv&quot;&gt;two teams in each matchup&lt;/a&gt; and &lt;a href=&quot;https://fivethirtyeight.com/features/how-our-march-madness-predictions-work-2/&quot;&gt;FiveThirtyEight’s Elo ratings system. For simplicity’s sake, let’s ignore FiveThirtyEight’s travel and injury adjustments (partly because they seem to be shrouded in secrecy) as well as the four initial play-in games (because those games are pointless). Let’s also assume we only know the initial team ratings. So as an example, in the first round Gonzaga-FDU matchup (Go Zags), Gonzaga has a rating of 95.02 and Fairleigh Dickinson has a rating of 70.04. This would suggest that the probability of the coin coming up heads (and Gonzaga winning) would be&lt;/a&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P_{H} = \frac{1}{1 + 10^{30.464*(70.04 - 95.02)/400}} = 98.8\%&lt;/script&gt;
+
+&lt;p&gt;and the probability of the coin coming up tails (and FDU winning) would be&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;P_{T} = \frac{1}{1 + 10^{30.464*(95.02 - 70.04)/400}} = 1.2\%.&lt;/script&gt;
+
+&lt;p&gt;For both the men’s and women’s tournaments, how much better does the specially designed self-biasing coin do compared to a plain old unbiased quarter? What about compared to “chalk” where the better seed always wins? To assess how this method would perform, we can apply it to the past three tournaments using a &lt;a href=&quot;https://en.wikipedia.org/wiki/Monte_Carlo_method&quot;&gt;Monte Carlo simulation&lt;/a&gt;. Using the code located &lt;a href=&quot;https://github.com/tefirman/StatisticalStumbles/blob/master/MarchMadnessSim.py&quot;&gt;here&lt;/a&gt;, we can pick &lt;a href=&quot;https://github.com/tefirman/StatisticalStumbles/tree/master/MarchMadnessSims&quot;&gt;10,000 brackets for each year&lt;/a&gt; and see what the distributions of point values look like for each year compared to chalk or an unbiased coin flip, distributions like the ones below!&lt;/p&gt;
+
+&lt;div align=&quot;center&quot;&gt;&lt;div id=&quot;includedContent&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;style&gt;
+table {
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    line-height: 1
+}
+
+th {
+    cursor: pointer;
+}
+
+th, td {
+    text-align: left;
+    padding: 0px;
+    vertical-align: middle;
+    min-height: 1px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+&lt;/style&gt;
+
+&lt;h3&gt;March Madness Results - Chalk vs. Biased Coin&lt;/h3&gt;
+&lt;table id=&quot;myTable&quot;&gt;
+  &lt;tr height=&quot;50&quot;&gt;
+    &lt;th onclick=&quot;sortTable(0)&quot;&gt;Season&lt;/th&gt;
+    &lt;th onclick=&quot;sortTable(1)&quot;&gt;Gender&lt;/th&gt;
+    &lt;th onclick=&quot;sortTableNumber(2)&quot;&gt;Chalk&lt;/th&gt;
+    &lt;th onclick=&quot;sortTableNumber(3)&quot;&gt;Simulation Avg.&lt;/th&gt;
+    &lt;th onclick=&quot;sortTableNumber(4)&quot;&gt;Simulation St. Dev.&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;Unbiased Coin&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td&gt;314.9&lt;/td&gt;
+    &lt;td&gt;134.7&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;2017&lt;/td&gt;
+    &lt;td&gt;Men&lt;/td&gt;
+    &lt;td&gt;820&lt;/td&gt;
+    &lt;td&gt;680.4&lt;/td&gt;
+    &lt;td&gt;221.7&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;2017&lt;/td&gt;
+    &lt;td&gt;Women&lt;/td&gt;
+    &lt;td&gt;940&lt;/td&gt;
+    &lt;td&gt;930.4&lt;/td&gt;
+    &lt;td&gt;176.5&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;2018&lt;/td&gt;
+    &lt;td&gt;Men&lt;/td&gt;
+    &lt;td&gt;810&lt;/td&gt;
+    &lt;td&gt;662.7&lt;/td&gt;
+    &lt;td&gt;261.4&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;2018&lt;/td&gt;
+    &lt;td&gt;Women&lt;/td&gt;
+    &lt;td&gt;1190&lt;/td&gt;
+    &lt;td&gt;924.7&lt;/td&gt;
+    &lt;td&gt;174.4&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;2019&lt;/td&gt;
+    &lt;td&gt;Men&lt;/td&gt;
+    &lt;td&gt;920&lt;/td&gt;
+    &lt;td&gt;802.8&lt;/td&gt;
+    &lt;td&gt;248.9&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+    &lt;td&gt;2019&lt;/td&gt;
+    &lt;td&gt;Women&lt;/td&gt;
+    &lt;td&gt;1470&lt;/td&gt;
+    &lt;td&gt;1218.3&lt;/td&gt;
+    &lt;td&gt;252.6&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;script&gt;
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById(&quot;myTable&quot;);
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = &quot;desc&quot;; 
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i &lt; (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName(&quot;TD&quot;)[n];
+      y = rows[i + 1].getElementsByTagName(&quot;TD&quot;)[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == &quot;asc&quot;) {
+        if (x.innerHTML.toLowerCase() &gt; y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == &quot;desc&quot;) {
+        if (x.innerHTML.toLowerCase() &lt; y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is &quot;asc&quot;,
+      set the direction to &quot;desc&quot; and run the while loop again.*/
+      if (switchcount == 0 &amp;&amp; dir == &quot;desc&quot;) {
+        dir = &quot;asc&quot;;
+        switching = true;
+      }
+    }
+  }
+}
+
+function sortTableNumber(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById(&quot;myTable&quot;);
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = &quot;desc&quot;; 
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i &lt; (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName(&quot;TD&quot;)[n];
+      y = rows[i + 1].getElementsByTagName(&quot;TD&quot;)[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == &quot;asc&quot;) {
+        if (Number(x.innerHTML) &gt; Number(y.innerHTML)) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == &quot;desc&quot;) {
+        if (Number(x.innerHTML) &lt; Number(y.innerHTML)) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is &quot;asc&quot;,
+      set the direction to &quot;desc&quot; and run the while loop again.*/
+      if (switchcount == 0 &amp;&amp; dir == &quot;desc&quot;) {
+        dir = &quot;asc&quot;;
+        switching = true;
+      }
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;p&gt;As you may have already guessed, the unbiased coin flip (blue traces) does not do well at all, producing far fewer points than our technically advanced currency regardless of the season. Even when we compare the biased coin results (solid lines) to chalk results (dashed lines), we can see that, on average, the sophisticated FiveThirtyEight method comes close but also falls short of a chalk bracket. However, where the benefit of this method can be seen is in the width of these distributions. If we normalize the three biased coin distributions relative to the chalk point values for the respective years and average them together, this produces the graph below. Again, for both the men’s and women’s tournaments, the average ratio is below one, but 24.7% of the men’s brackets and 21.8% of the women’s brackets earn more points than a chalk bracket. Picking chalk may give you more points on average, but if you want to win in a bracket league of ten people, you have to take risks.&lt;/p&gt;
+
+&lt;div align=&quot;center&quot;&gt;&lt;div id=&quot;includedContent2&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The real test would be to compare this method’s results to the actual brackets that fanatical sports enthusiasts submit, but I’ll leave that for next year’s analysis. Hopefully this method helps all of us in next year’s basketball-related spring psychosis!&lt;/p&gt;
+
+&lt;h6&gt;The &lt;a href=&quot;https://github.com/tefirman/StatisticalStumbles/blob/master/MarchMadnessSim.py&quot;&gt;python code&lt;/a&gt; and &lt;a href=&quot;https://github.com/tefirman/StatisticalStumbles/tree/master/MarchMadnessSims&quot;&gt;simulations&lt;/a&gt; used to generate the values and figures above are available on &lt;a href=&quot;https://github.com/tefirman&quot;&gt;my GitHub page&lt;/a&gt;.
+
+&lt;/h6&gt;</content><summary type="html">Because brackets are hard and chalk is for the faint of heart...</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/images/CoinBracket.png" /></entry><entry><title type="html">Riddler Submission: ¡Lotería!</title><link href="/blog/Loteria/" rel="alternate" type="text/html" title="Riddler Submission: ¡Loter&amp;iacute;a!" /><published>2019-05-25T00:00:00-06:00</published><updated>2019-05-25T00:00:00-06:00</updated><id>/blog/Loteria</id><content type="html" xml:base="/blog/Loteria/">&lt;head&gt;
 &lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; /&gt;
 &lt;meta name=&quot;twitter:creator&quot; content=&quot;@tefirman51&quot; /&gt;
 &lt;meta name=&quot;twitter:site&quot; content=&quot;@tefirman51&quot; /&gt;
