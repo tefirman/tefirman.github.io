@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-06-06T21:59:31-06:00</updated><id>/</id><title type="html">Taylor Firman</title><subtitle>Just a repository for the occasional statistical stumble...</subtitle><entry><title type="html">Methods to the Madness</title><link href="/blog/MarchMadness/" rel="alternate" type="text/html" title="Methods to the Madness" /><published>2019-05-27T00:00:00-06:00</published><updated>2019-05-27T00:00:00-06:00</updated><id>/blog/MarchMadness</id><content type="html" xml:base="/blog/MarchMadness/">&lt;head&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-06-06T22:32:08-06:00</updated><id>/</id><title type="html">Taylor Firman</title><subtitle>Just a repository for the occasional statistical stumble...</subtitle><entry><title type="html">Methods to the Madness</title><link href="/blog/MarchMadness/" rel="alternate" type="text/html" title="Methods to the Madness" /><published>2019-05-27T00:00:00-06:00</published><updated>2019-05-27T00:00:00-06:00</updated><id>/blog/MarchMadness</id><content type="html" xml:base="/blog/MarchMadness/">&lt;head&gt;
 &lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; /&gt;
 &lt;meta name=&quot;twitter:creator&quot; content=&quot;@tefirman51&quot; /&gt;
 &lt;meta name=&quot;twitter:site&quot; content=&quot;@tefirman51&quot; /&gt;
@@ -18,6 +18,15 @@ $(function(){
   $(&quot;#includedContent2&quot;).load(&quot;/images/MarchMadness_RelativePoints.html&quot;); 
 });
 &lt;/script&gt; 
+&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
+&lt;script async=&quot;&quot; src=&quot;https://www.googletagmanager.com/gtag/js?id=UA-141691742-3&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141691742-3');
+&lt;/script&gt;
 &lt;/head&gt;
 
 &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML&quot; async=&quot;&quot;&gt;&lt;/script&gt;
@@ -342,6 +351,15 @@ $(function(){
   $(&quot;#includedContent3&quot;).load(&quot;/images/TotalPowerMap_Large.html&quot;); 
 });
 &lt;/script&gt; 
+&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
+&lt;script async=&quot;&quot; src=&quot;https://www.googletagmanager.com/gtag/js?id=UA-141691742-4&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141691742-4');
+&lt;/script&gt;
 &lt;/head&gt;
 
 &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML&quot; async=&quot;&quot;&gt;&lt;/script&gt;
@@ -844,6 +862,15 @@ function sortTableNumber4(n) {
 &lt;meta name=&quot;twitter:image:src&quot; content=&quot;https://tefirman.github.io/images/Mars.jpg&quot; /&gt;
 &lt;meta name=&quot;twitter:image:width&quot; content=&quot;280&quot; /&gt;
 &lt;meta name=&quot;twitter:image:height&quot; content=&quot;150&quot; /&gt;
+&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
+&lt;script async=&quot;&quot; src=&quot;https://www.googletagmanager.com/gtag/js?id=UA-141691742-5&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141691742-5');
+&lt;/script&gt;
 &lt;/head&gt;
 
 &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML&quot; async=&quot;&quot;&gt;&lt;/script&gt;
@@ -922,6 +949,15 @@ print('Probability of Survival = ' + str(round(100*sum(np.array(times) &amp;gt;=
 &lt;meta name=&quot;twitter:image:src&quot; content=&quot;https://tefirman.github.io/images/DougCoPurple.png&quot; /&gt;
 &lt;meta name=&quot;twitter:image:width&quot; content=&quot;280&quot; /&gt;
 &lt;meta name=&quot;twitter:image:height&quot; content=&quot;150&quot; /&gt;
+&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
+&lt;script async=&quot;&quot; src=&quot;https://www.googletagmanager.com/gtag/js?id=UA-141691742-7&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141691742-7');
+&lt;/script&gt;
 &lt;/head&gt;
 
 &lt;p&gt;Canvassing in any scenario is uncomfortable. Canvassing for a Democratic candidate in a historically Republican district is panic-attack-inducing. But in any campaign, it’s a necessary component. So when my partner and I began volunteering for the Douglas County portion of Jason Crow’s congressional campaign in Colorado’s 6th district (CO-6), it seemed like a daunting but worthy challenge. Given the chaotic state of our democracy, a little more is required of average Americans. We are called to endure the occasional door slam to find the few individuals who remain undecided, who aren’t sure where to vote, who need a little extra motivation to even vote at all. We are called to tolerate the surly “leave me alone”’s to ensure that the voice of every citizen is heard in our society.&lt;/p&gt;
@@ -1431,6 +1467,15 @@ function sortTableNumber3(n) {
 &lt;meta name=&quot;twitter:image:src&quot; content=&quot;https://tefirman.github.io/images/BabyGoat.jpg&quot; /&gt;
 &lt;meta name=&quot;twitter:image:width&quot; content=&quot;280&quot; /&gt;
 &lt;meta name=&quot;twitter:image:height&quot; content=&quot;150&quot; /&gt;
+&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
+&lt;script async=&quot;&quot; src=&quot;https://www.googletagmanager.com/gtag/js?id=UA-141691742-8&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141691742-8');
+&lt;/script&gt;
 &lt;/head&gt;
 
 &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML&quot; async=&quot;&quot;&gt;&lt;/script&gt;
@@ -1482,6 +1527,15 @@ print(str(round(100*targetPortion,1))[:-2] + '% grazing at L = ' + str(round(res
 &lt;meta name=&quot;twitter:image:src&quot; content=&quot;https://tefirman.github.io/images/DiazPuzzled.jpg&quot; /&gt;
 &lt;meta name=&quot;twitter:image:width&quot; content=&quot;280&quot; /&gt;
 &lt;meta name=&quot;twitter:image:height&quot; content=&quot;150&quot; /&gt;
+&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
+&lt;script async=&quot;&quot; src=&quot;https://www.googletagmanager.com/gtag/js?id=UA-141691742-9&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141691742-9');
+&lt;/script&gt;
 &lt;/head&gt;
 
 &lt;p&gt;On September 19th, the Seattle Mariners were 84-68, a record that in any other season would send even the ficklest Seattle fan clamoring for their suddenly fashionable Griffey jerseys gathering dust in the back of their closets. But in this logic-defying year of baseball, their season was effectively over despite being a game or less behind four of the ten available playoff spots. With the A’s and Astros streaking into October, what would normally amount to at least a playoff chase was reduced to nothing more than consolation games.&lt;/p&gt;
@@ -1899,6 +1953,15 @@ function sortTableNumber(n) {
 &lt;meta name=&quot;twitter:image:src&quot; content=&quot;https://tefirman.github.io/images/RockPaperScissorsHop.gif&quot; /&gt;
 &lt;meta name=&quot;twitter:image:width&quot; content=&quot;280&quot; /&gt;
 &lt;meta name=&quot;twitter:image:height&quot; content=&quot;150&quot; /&gt;
+&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
+&lt;script async=&quot;&quot; src=&quot;https://www.googletagmanager.com/gtag/js?id=UA-141691742-10&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141691742-10');
+&lt;/script&gt;
 &lt;/head&gt;
 
 &lt;p&gt;As you will come to notice throughout the course of this blog, I am a big fan of the website &lt;a href=&quot;https://fivethirtyeight.com&quot;&gt;FiveThirtyEight&lt;/a&gt; and one weekly segment called &lt;a href=&quot;https://fivethirtyeight.com/tag/the-riddler/&quot;&gt;The Riddler&lt;/a&gt; edited by &lt;a href=&quot;https://twitter.com/ollie&quot;&gt;Oliver Roeder&lt;/a&gt;. Every Friday, it challenges its readers to two math/probability/logic puzzles, one shorter, more accessible problem and one longer, more time-consuming problem for the hardcore puzzle nerds. It’s a fun way to end the week while stretching your brain and maybe picking up a computational tool or two while you’re at it.&lt;/p&gt;

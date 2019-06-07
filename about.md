@@ -8,6 +8,18 @@ sitemap:
     changefreq: weekly
 ---
 
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141691742-11"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141691742-11');
+</script>
+</head>
+
 ## About Taylor
 
 <span class="image left"><img src="{{ "/images/TaylorFirman_Headshot.jpg" | absolute_url }}" alt="" /></span>

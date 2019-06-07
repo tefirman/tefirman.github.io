@@ -15,6 +15,15 @@ image: "/images/BabyGoat.jpg"
 <meta name="twitter:image:src" content="https://tefirman.github.io/images/BabyGoat.jpg">
 <meta name="twitter:image:width" content="280">
 <meta name="twitter:image:height" content="150">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141691742-8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141691742-8');
+</script>
 </head>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>

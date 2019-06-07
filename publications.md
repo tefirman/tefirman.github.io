@@ -8,6 +8,18 @@ sitemap:
     changefreq: weekly
 ---
 
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141691742-12"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141691742-12');
+</script>
+</head>
+
 ## Publications
 
 Maximum Caliber Can Build and Infer Models of Oscillation in a Three-Gene Feedback Network <br />

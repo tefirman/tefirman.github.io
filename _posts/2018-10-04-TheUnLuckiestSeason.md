@@ -15,6 +15,15 @@ image: "/images/DiazPuzzled.jpg"
 <meta name="twitter:image:src" content="https://tefirman.github.io/images/DiazPuzzled.jpg">
 <meta name="twitter:image:width" content="280">
 <meta name="twitter:image:height" content="150">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141691742-9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141691742-9');
+</script>
 </head>
 
 On September 19th, the Seattle Mariners were 84-68, a record that in any other season would send even the ficklest Seattle fan clamoring for their suddenly fashionable Griffey jerseys gathering dust in the back of their closets. But in this logic-defying year of baseball, their season was effectively over despite being a game or less behind four of the ten available playoff spots. With the A's and Astros streaking into October, what would normally amount to at least a playoff chase was reduced to nothing more than consolation games.

@@ -15,6 +15,15 @@ image: "/images/DougCoPurple.png"
 <meta name="twitter:image:src" content="https://tefirman.github.io/images/DougCoPurple.png">
 <meta name="twitter:image:width" content="280">
 <meta name="twitter:image:height" content="150">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141691742-7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141691742-7');
+</script>
 </head>
 
 Canvassing in any scenario is uncomfortable. Canvassing for a Democratic candidate in a historically Republican district is panic-attack-inducing. But in any campaign, it's a necessary component. So when my partner and I began volunteering for the Douglas County portion of Jason Crow's congressional campaign in Colorado's 6th district (CO-6), it seemed like a daunting but worthy challenge. Given the chaotic state of our democracy, a little more is required of average Americans. We are called to endure the occasional door slam to find the few individuals who remain undecided, who aren't sure where to vote, who need a little extra motivation to even vote at all. We are called to tolerate the surly "leave me alone"'s to ensure that the voice of every citizen is heard in our society.
