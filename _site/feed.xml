@@ -1,4 +1,309 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-06-06T22:32:08-06:00</updated><id>/</id><title type="html">Taylor Firman</title><subtitle>Just a repository for the occasional statistical stumble...</subtitle><entry><title type="html">Methods to the Madness</title><link href="/blog/MarchMadness/" rel="alternate" type="text/html" title="Methods to the Madness" /><published>2019-05-27T00:00:00-06:00</published><updated>2019-05-27T00:00:00-06:00</updated><id>/blog/MarchMadness</id><content type="html" xml:base="/blog/MarchMadness/">&lt;head&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-07-18T06:52:49-06:00</updated><id>/</id><title type="html">Taylor Firman</title><subtitle>Just a repository for the occasional statistical stumble...</subtitle><entry><title type="html">Centennial StatePolitical Geography</title><link href="/blog/PoliticalGeographyCO/" rel="alternate" type="text/html" title="Centennial State&lt;br&gt;Political Geography" /><published>2019-07-18T00:00:00-06:00</published><updated>2019-07-18T00:00:00-06:00</updated><id>/blog/PoliticalGeographyCO</id><content type="html" xml:base="/blog/PoliticalGeographyCO/">&lt;head&gt;
+&lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; /&gt;
+&lt;meta name=&quot;twitter:creator&quot; content=&quot;@tefirman51&quot; /&gt;
+&lt;meta name=&quot;twitter:site&quot; content=&quot;@tefirman51&quot; /&gt;
+&lt;meta name=&quot;twitter:title&quot; content=&quot;Centennial State Political Geography&quot; /&gt;
+&lt;meta name=&quot;twitter:description&quot; content=&quot;Let's take a comprehensive look at the divergent political geography of Colorado and its effect on the 2020 Senate race...&quot; /&gt;
+&lt;meta name=&quot;twitter:image:src&quot; content=&quot;https://tefirman.github.io/images/CO_Maps_Wide.png&quot; /&gt;
+&lt;meta name=&quot;twitter:image:width&quot; content=&quot;280&quot; /&gt;
+&lt;meta name=&quot;twitter:image:height&quot; content=&quot;150&quot; /&gt;
+
+&lt;script src=&quot;/assets/js/jquery.min.js&quot;&gt;&lt;/script&gt; 
+&lt;script&gt; 
+$(function(){
+  $(&quot;#includedContent&quot;).load(&quot;/images/PrecinctPartisanLeanCO.html&quot;); 
+});
+&lt;/script&gt;
+&lt;script&gt; 
+$(function(){
+  $(&quot;#includedContent2&quot;).load(&quot;/images/PrecinctTrumpEffectCO.html&quot;); 
+});
+&lt;/script&gt;
+&lt;script&gt; 
+$(function(){
+  $(&quot;#includedContent3&quot;).load(&quot;/images/FlippablePrecinctsCO.html&quot;); 
+});
+&lt;/script&gt; 
+&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
+&lt;!-- &lt;script async src=&quot;https://www.googletagmanager.com/gtag/js?id=UA-141691742-3&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141691742-3');
+&lt;/script&gt; --&gt;
+&lt;/head&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML&quot; async=&quot;&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Colorado has been &lt;a href=&quot;https://en.wikipedia.org/wiki/Politics_of_Colorado&quot;&gt;considered purple since the 90’s&lt;/a&gt;, but has been &lt;a href=&quot;https://www.5280.com/2018/11/colorado-is-still-a-very-purple-state-at-least-for-now/&quot;&gt;steadily turning blue in recent years&lt;/a&gt;. So why is the &lt;a href=&quot;https://fivethirtyeight.com/features/its-early-but-colorados-cory-gardner-has-a-tough-road-to-re-election-in-2020/&quot;&gt;upcoming Senate race&lt;/a&gt; between incumbent Republican Senator Cory Gardner and his hypothetical Democratic opponent still something the citizenry should pay attention to? For starters, the Senate is an unfair playing field, so we should care about every race. The way Senators are apportioned provides &lt;a href=&quot;https://tefirman.github.io/blog/UnequalRepresentation/&quot;&gt;disproportionate power to citizens of certain states&lt;/a&gt;, even more so than the electoral college, so every seat is important. But perhaps a more interesting reason is that the divergent political geography of the Centennial State makes the potential outcome of this race much foggier. In order to illustrate this, I set out to map the behavior of political partisanship throughout the state of Colorado.&lt;/p&gt;
+
+&lt;p&gt;Mapping partisanship by county is actually pretty simple considering that county outlines are readily available from the US Census Bureau. However, different parts of the county take part in different races. For instance, Douglas County votes in both the 4th and 6th congressional districts. Grouping these voters into one statistic would create an apples to oranges comparison in that the 58,000 DougCo voters that voted in the 6th congressional district faced a different choice than the 117,000 that voted in the 4th congressional district. Furthermore, counties can be rather large (Douglas County is 840 mi&lt;sup&gt;2&lt;/sup&gt;) so the partisan characteristics of one end of the county could be very different from the other.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, individual voting precincts are much smaller in area and all voters in each precinct vote in the same races, providing a fair comparison across the board. However, the actual mapping of these results is rather difficult for multiple reasons. Precincts are drawn by each respective county, so you have to go to each of the 64 county clerk offices to find the outlines of the precincts they preside over. In the easiest cases, GIS shapefiles are readily available for download on their website. In the more difficult cases, hand drawn maps need to be manually converted to shapefiles using &lt;a href=&quot;https://automeris.io/WebPlotDigitizer/&quot;&gt;WebPlotDigitizer&lt;/a&gt; and multiple Python modules. In the worst cases, the county clerk doesn’t have an email address and won’t return your phone calls. As a result, I wouldn’t recommend using the following maps in any sort of official capacity to identify which precinct you vote in, but I do think these maps are pretty unique and comprehensive.&lt;/p&gt;
+
+&lt;p&gt;To define the scope of the analysis shown here, let’s consider results from presidential and midterm elections in the state of Colorado between 2012 and 2018. As a disclaimer, the metrics I’ll be using are similar (if not identical) to &lt;a href=&quot;https://fivethirtyeight.com/features/election-update-the-house-districts-that-swing-the-most-and-least-with-the-national-mood/&quot;&gt;those used by analysts at FiveThirtyEight&lt;/a&gt;. There’s no way I’m smart enough to have invented these metrics, just smart enough to know how to apply them. Starting with the basics, &lt;b&gt;partisan lean&lt;/b&gt; is a &lt;a href=&quot;https://fivethirtyeight.com/features/everything-is-partisan-and-correlated-and-boring/&quot;&gt;fairly standard&lt;/a&gt; &lt;a href=&quot;https://en.wikipedia.org/wiki/Cook_Partisan_Voting_Index&quot;&gt;metric&lt;/a&gt; of whether an area is more Republican or Democratic, but we will define it explicitly as&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;L_i = \frac{1}{N_i} \sum_{j=1}^{N_i} (D_{i,j} - R_{i,j}).&lt;/script&gt;
+
+&lt;p&gt;where &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt; is the precinct index, &lt;script type=&quot;math/tex&quot;&gt;N_{i}&lt;/script&gt; is the number of races in the precinct, &lt;script type=&quot;math/tex&quot;&gt;j&lt;/script&gt; is the election index (e.g. 2018 District 3 State House race, 2014 Senate race, etc.), and &lt;script type=&quot;math/tex&quot;&gt;D_{i,j}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;R_{i,j}&lt;/script&gt; are the percentage of Democratic and Republican votes, respectively, for race &lt;script type=&quot;math/tex&quot;&gt;j&lt;/script&gt; in precinct &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt;. The map below illustrates this metric for each precinct throughout the state in the form of a heat map with darker shades of red representing more Republican areas and darker shades of blue representing more Democratic areas. The general trends are not surprising in that more densely populated areas (e.g. Denver, Boulder, Fort Collins) tend to be more Democratic and more sparse rural areas (e.g. the entire eastern third of the state) tend to be more Republican, but seeing where the exact lines are drawn is both interesting and informative.&lt;/p&gt;
+
+&lt;div align=&quot;center&quot;&gt;&lt;div id=&quot;includedContent&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;However, these partisan predilections do not remain static over time. Precinct leans can easily change based on both the impact of current events and the changing makeup of voting populations. For instance, the 2018 midterms in Colorado saw an 8.1% increase in voter turnout compared to 2014. Numerous things changed in those four years, but the most obvious and earth-shattering one in terms of politics was the election of our current president. To illustrate its effect on voters’ behaviors, we’ll use what I’m calling the &lt;b&gt;Trump effect&lt;/b&gt;: it calculates the lean of a precinct using only races from the 2018 midterms and subtracts the lean of the same precinct using only the 2014 midterms. This isolates where voters are trending due to the instability and antics of the current resident of the White House. As you can see in the map below, the sea of cerulean is not good news for Cory Gardner, especially considering &lt;a href=&quot;https://projects.fivethirtyeight.com/congress-trump-score/cory-gardner/&quot;&gt;he votes in line with Trump 90% of the time.&lt;/a&gt;&lt;/p&gt;
+
+&lt;div align=&quot;center&quot;&gt;&lt;div id=&quot;includedContent2&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Another interesting and lesser-known metric is &lt;b&gt;partisan elasticity&lt;/b&gt;, &lt;a href=&quot;https://fivethirtyeight.com/features/election-update-the-house-districts-that-swing-the-most-and-least-with-the-national-mood/&quot;&gt;an index of how stubborn voters are with their partisanship&lt;/a&gt;, i.e. are they voting party lines down the ballot or will they vote for the other party if the right candidate comes along. This will be defined as the standard deviation of the partisan lean, or using the same variables from the first equation,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;E_i = \sqrt{\frac{1}{N_i} \sum_{j=1}^{N_i} (D_{i,j} - R_{i,j})^2 - L_i^2}.&lt;/script&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/PrecinctPartisanElasticityCO.html&quot;&gt;In isolation&lt;/a&gt;, the relevance of a precinct’s elasticity is kind of hard to grasp, but when put in context with its associated lean, elasticity teases out valuable insight for potential candidates. Let’s say a campaign wanted to identify areas where a candidate’s effort would have the most impact. To do this, we can look at “flippable” precincts, precincts that have elasticities larger than the magnitude of their lean. To get the most bang for our buck, let’s also limit the scope to precincts with voter densities higher than 100 per square mile.&lt;/p&gt;
+
+&lt;div align=&quot;center&quot;&gt;&lt;div id=&quot;includedContent3&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Fascinatingly, the map above shows us that the majority of these flippable precincts are in the suburban neighborhoods surrounding the major cities along the Front Range. Keep in mind that winning over precincts is not the goal in a Senate race, winning over voters is, so this metric of flippability should not be the golden standard. In order to get past the primary, a Democrat needs to visit the major cities since that’s where the majority of Democrats reside. Even in the general, a smaller elasticity could still swing more votes overall &lt;a href=&quot;/images/PrecinctVoterDensityCO.html&quot;&gt;if the precinct is dense enough&lt;/a&gt;. However, these suburban conditions provide a great opportunity for a candidate to knock on doors, shake a few hands, and have the fabled “kitchen table discussions” with everyday voters. Gaining Democratic support in these neighborhoods would kill two birds with one stone: they vote for you in the primary and persuade their undecided neighbors during the general.&lt;/p&gt;
+
+&lt;p&gt;So which candidates might we be seeing in these flippable precincts come March? And which of them should we be paying attention to? If online presence has anything to do with it, &lt;a href=&quot;https://www.mikejohnstonforcolorado.com/&quot;&gt;former State Senator Mike Johnston&lt;/a&gt; should be at the top of the list. Of the declared candidates, Johnston has the highest relative search interest via &lt;a href=&quot;https://trends.google.com/trends/?geo=US&quot;&gt;Google Trends&lt;/a&gt; over the past two years, the most &lt;a href=&quot;https://www.facebook.com/MikeJohnstonCO/&quot;&gt;Facebook likes&lt;/a&gt;, and the third most &lt;a href=&quot;https://twitter.com/MikeJohnstonCO&quot;&gt;Twitter followers&lt;/a&gt; as of June 23, 2019 (see table below). And since &lt;a href=&quot;https://www.denverpost.com/2019/04/02/mike-johnston-fundraising-senate-cory-gardner/&quot;&gt;money&lt;/a&gt; definitely has something to do with primaries, it should be mentioned that Johnston has &lt;a href=&quot;https://www.fec.gov/data/elections/senate/CO/2020/&quot;&gt;twice the fundraising&lt;/a&gt; as the rest of the field combined. Honestly, he should be more worried about individuals who have yet to join the race, e.g. if Hickenlooper decides to stop the exercise in narcissism that is his presidential campaign, or if Perlmutter decides it’s time to upgrade from the House of Representatives.&lt;/p&gt;
+
+&lt;style&gt;
+table {
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    line-height: 1
+}
+
+th {
+    cursor: pointer;
+}
+
+th, td {
+    text-align: left;
+    padding: 0px;
+    vertical-align: middle;
+    min-height: 1px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+&lt;/style&gt;
+
+&lt;h3&gt;Online Presence and Fundraising of Declared Democratic Senate Candidates&lt;/h3&gt;
+&lt;table id=&quot;myTable&quot;&gt;
+  &lt;tr height=&quot;50&quot;&gt;
+    &lt;th onclick=&quot;sortTable(0)&quot;&gt;Candidate&lt;/th&gt;
+    &lt;th onclick=&quot;sortTableNumber(1)&quot;&gt;Relative Search Interest&lt;/th&gt;
+    &lt;th onclick=&quot;sortTableNumber(2)&quot;&gt;Twitter Followers&lt;/th&gt;
+    &lt;th onclick=&quot;sortTableNumber(3)&quot;&gt;Facebook Likes&lt;/th&gt;
+    &lt;th onclick=&quot;sortTableNumber(4)&quot;&gt;Fundraising&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+  &lt;td&gt;Mike Johnston&lt;/td&gt;
+    &lt;td&gt;369&lt;/td&gt;
+    &lt;td&gt;14,610&lt;/td&gt;
+    &lt;td&gt;14,789&lt;/td&gt;
+    &lt;td&gt;$1,804,923.52&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+  &lt;td&gt;Andrew Romanoff&lt;/td&gt;
+    &lt;td&gt;76&lt;/td&gt;
+    &lt;td&gt;4,509&lt;/td&gt;
+    &lt;td&gt;7,800&lt;/td&gt;
+    &lt;td&gt;$504,095.35&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+  &lt;td&gt;Diana Bray&lt;/td&gt;
+    &lt;td&gt;0&lt;/td&gt;
+    &lt;td&gt;195&lt;/td&gt;
+    &lt;td&gt;527&lt;/td&gt;
+    &lt;td&gt;$72,514.38&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+  &lt;td&gt;Trish Zornio&lt;/td&gt;
+    &lt;td&gt;19&lt;/td&gt;
+    &lt;td&gt;72,487&lt;/td&gt;
+    &lt;td&gt;2,983&lt;/td&gt;
+    &lt;td&gt;$59,048.41&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+  &lt;td&gt;Lorena Garcia&lt;/td&gt;
+    &lt;td&gt;53&lt;/td&gt;
+    &lt;td&gt;808&lt;/td&gt;
+    &lt;td&gt;1,941&lt;/td&gt;
+    &lt;td&gt;$14,266.15&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+  &lt;td&gt;Dustin Leitzel&lt;/td&gt;
+    &lt;td&gt;0&lt;/td&gt;
+    &lt;td&gt;420&lt;/td&gt;
+    &lt;td&gt;415&lt;/td&gt;
+    &lt;td&gt;$5,603.00&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+  &lt;td&gt;John Walsh&lt;/td&gt;
+    &lt;td&gt;181&lt;/td&gt;
+    &lt;td&gt;7,263&lt;/td&gt;
+    &lt;td&gt;2,301&lt;/td&gt;
+    &lt;td&gt;$0.00&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+  &lt;td&gt;Stephany Rose Spaulding&lt;/td&gt;
+    &lt;td&gt;66&lt;/td&gt;
+    &lt;td&gt;3,225&lt;/td&gt;
+    &lt;td&gt;3,228&lt;/td&gt;
+    &lt;td&gt;$0.00&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+  &lt;td&gt;Dan Baer&lt;/td&gt;
+    &lt;td&gt;29&lt;/td&gt;
+    &lt;td&gt;15,353&lt;/td&gt;
+    &lt;td&gt;5,490&lt;/td&gt;
+    &lt;td&gt;$0.00&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+  &lt;td&gt;Alice Madden&lt;/td&gt;
+    &lt;td&gt;10&lt;/td&gt;
+    &lt;td&gt;1,021&lt;/td&gt;
+    &lt;td&gt;766&lt;/td&gt;
+    &lt;td&gt;$0.00&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr height=&quot;5&quot;&gt;
+  &lt;td&gt;Ellen Burnes&lt;/td&gt;
+    &lt;td&gt;0&lt;/td&gt;
+    &lt;td&gt;62&lt;/td&gt;
+    &lt;td&gt;128&lt;/td&gt;
+    &lt;td&gt;$0.00&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;script&gt;
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById(&quot;myTable&quot;);
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = &quot;desc&quot;; 
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i &lt; (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName(&quot;TD&quot;)[n];
+      y = rows[i + 1].getElementsByTagName(&quot;TD&quot;)[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == &quot;asc&quot;) {
+        if (x.innerHTML.toLowerCase() &gt; y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == &quot;desc&quot;) {
+        if (x.innerHTML.toLowerCase() &lt; y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is &quot;asc&quot;,
+      set the direction to &quot;desc&quot; and run the while loop again.*/
+      if (switchcount == 0 &amp;&amp; dir == &quot;desc&quot;) {
+        dir = &quot;asc&quot;;
+        switching = true;
+      }
+    }
+  }
+}
+
+function sortTableNumber(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById(&quot;myTable&quot;);
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = &quot;desc&quot;; 
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i &lt; (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName(&quot;TD&quot;)[n];
+      y = rows[i + 1].getElementsByTagName(&quot;TD&quot;)[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == &quot;asc&quot;) {
+        if (Number(x.innerHTML.replace(/,/g, '').replace(/\$/g, '')) &gt; Number(y.innerHTML.replace(/,/g, '').replace(/\$/g, ''))) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == &quot;desc&quot;) {
+        if (Number(x.innerHTML.replace(/,/g, '').replace(/\$/g, '')) &lt; Number(y.innerHTML.replace(/,/g, '').replace(/\$/g, ''))) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is &quot;asc&quot;,
+      set the direction to &quot;desc&quot; and run the while loop again.*/
+      if (switchcount == 0 &amp;&amp; dir == &quot;desc&quot;) {
+        dir = &quot;asc&quot;;
+        switching = true;
+      }
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;p&gt;All of these factors aside, I do think Mike Johnston would make an excellent Senator for Colorado. &lt;a href=&quot;https://www.youtube.com/watch?v=xlyBfInS7ec&quot;&gt;To paraphrase the wise (albeit fictional) Sam Seaborn&lt;/a&gt;, education is the silver bullet and &lt;a href=&quot;https://www.chalkbeat.org/posts/co/2010/05/12/effectiveness-bill-advances-in-house/&quot;&gt;Johnston’s record&lt;/a&gt; &lt;a href=&quot;https://www.denverpost.com/2013/04/29/colorado-governor-signs-bill-for-illegal-immigrants-in-state-tuition/&quot;&gt;in that department&lt;/a&gt; is &lt;a href=&quot;https://www.westword.com/news/colorado-gubernatorial-candidate-mike-johnston-is-trying-to-build-bridges-in-bridge-burning-times-10459600&quot;&gt;second to none&lt;/a&gt;. I will note that he may want to tread lightly on that subject considering the &lt;a href=&quot;https://www.cpr.org/2018/11/07/colorado-amendment-73-tax-increase-for-public-education-has-failed/&quot;&gt;recent results of Colorado Amendment 73&lt;/a&gt;, which would have increased public education funding via higher income, corporate, and property taxes. In the flippable precincts mentioned above, &lt;a href=&quot;/images/PrecinctAmendment73YesPctCO.html&quot;&gt;only 44.2% of voters&lt;/a&gt; voted in favor of the amendment. I’m not saying don’t tout your education credentials, just don’t rely entirely on that issue, especially if it’s paired with a tax increase.&lt;/p&gt;
+
+&lt;p&gt;Regardless of who ends up being the Democratic nominee, Cory Gardner &lt;a href=&quot;https://www.denverpost.com/2019/03/14/cory-gardner-endorsement-mistake/&quot;&gt;has not acted with Coloradoans’ best interests in mind&lt;/a&gt;, &lt;a href=&quot;https://www.washingtonpost.com/powerpost/thats-the-model-cory-gardner-stands-up-to-president-trump/2018/01/05/b3b9b2b6-f17b-11e7-b3bf-ab90a706e175_story.html?utm_term=.50900054ae3f&quot;&gt;despite his best efforts as of late&lt;/a&gt;. Senator Gardner has voted &lt;a href=&quot;https://www.denverpost.com/2017/07/29/cory-gardner-health-care-obamacare-repeal-vote/&quot;&gt;to repeal health coverage for over 400,000 Coloradoans&lt;/a&gt;, &lt;a href=&quot;https://www.denverpost.com/2019/03/14/cory-gardner-trump-border-wall-immigration/&quot;&gt;uphold President Trump’s wasteful and xenophobic border wall&lt;/a&gt;, &lt;a href=&quot;http://www.cpr.org/2016/06/21/4-gun-control-measures-fail-how-colorados-senators-voted/&quot;&gt;oppose common-sense gun laws&lt;/a&gt;, and &lt;a href=&quot;https://itep.org/trumpgopplanco/&quot;&gt;provide 60% of the state’s tax cuts to the richest 1% of its citizens&lt;/a&gt;. A change needs to be made, and if the Democratic candidate can deftly navigate the unique political geography of Colorado, this historically purple state may just turn blue.&lt;/p&gt;
+
+&lt;h6&gt;All statistics presented in the maps shown here were calculated using &lt;a href=&quot;https://www.sos.state.co.us/pubs/elections/resultsData.html&quot;&gt;official election results from the Colorado Secretary of State website&lt;/a&gt;. All precinct shapes were collected from each county's Clerk and Recorder. The &lt;a href=&quot;https://github.com/tefirman/StatisticalStumbles/tree/master/ElectionResults_CO&quot;&gt;relevant data&lt;/a&gt; and &lt;a href=&quot;https://github.com/tefirman/StatisticalStumbles/blob/master/ElectionResults_CO.py&quot;&gt;python code&lt;/a&gt; used to calculate them are available on &lt;a href=&quot;https://github.com/tefirman&quot;&gt;my GitHub page&lt;/a&gt; and precinct shapefiles are available on request.
+
+
+&lt;/h6&gt;</content><summary type="html">Let's take a comprehensive look at the divergent political geography of Colorado and its effect on the 2020 Senate race...</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/images/CO_Maps_Wide.png" /></entry><entry><title type="html">Methods to the Madness</title><link href="/blog/MarchMadness/" rel="alternate" type="text/html" title="Methods to the Madness" /><published>2019-05-27T00:00:00-06:00</published><updated>2019-05-27T00:00:00-06:00</updated><id>/blog/MarchMadness</id><content type="html" xml:base="/blog/MarchMadness/">&lt;head&gt;
 &lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; /&gt;
 &lt;meta name=&quot;twitter:creator&quot; content=&quot;@tefirman51&quot; /&gt;
 &lt;meta name=&quot;twitter:site&quot; content=&quot;@tefirman51&quot; /&gt;
