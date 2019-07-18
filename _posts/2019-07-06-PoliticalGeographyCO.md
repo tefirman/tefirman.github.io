@@ -33,14 +33,14 @@ $(function(){
 });
 </script> 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141691742-3"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141691742-13"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-141691742-3');
-</script> -->
+  gtag('config', 'UA-141691742-13');
+</script>
 </head>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
