@@ -94,8 +94,6 @@
 
 <h2 id="solution">Solution</h2>
 
-<p><span class="image right"><img src="/images/RiddlerCounterfeitGraph.png" alt=""></span></p>
-
 <p>Let’s define <script type="math/tex">a</script> as the portion of bills inspected, <script type="math/tex">R</script> as the number of real bills you deposit, <script type="math/tex">F</script> as the number of fake bills you deposit, <script type="math/tex">f</script> as the number of fake bills the bank happens to scrutinize, and <script type="math/tex">p</script> as the probability of a fake’s detection.</p>
 
 <script type="math/tex; mode=display">n = \text{round}(a(R + F))</script>
@@ -109,6 +107,8 @@
 <script type="math/tex; mode=display">E(R,F) = 100(R + F)\sum_{f=0}^{n} P(f)</script>
 
 <p>Using <script type="math/tex">a = 0.05</script>, <script type="math/tex">p = 0.25</script>, and <script type="math/tex">R = 25</script>, we can vary <script type="math/tex">F</script> to produce the graph to the right and the maximum expected return for our little racket occurs at <script type="math/tex">F = 44</script> with a 59.3% probability of winning $6900, suggesting an expected return of $4094.36.</p>
+
+<iframe src="https://riddler-fool-the-bank.herokuapp.com/" height="600" width="100%"></iframe>
 
 <h6>The <a href="https://github.com/tefirman/RiddlerCode/blob/master/Riddler_Aug25_Counterfeits.py">python code</a> used to generate the values and figures above are available on <a href="https://github.com/tefirman">my GitHub page</a>.
 
