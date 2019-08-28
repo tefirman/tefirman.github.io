@@ -62,16 +62,16 @@
     				<header class="major">
       				<span class="date">25 Aug 2019</span>
       				<h1>Riddler Answer:<br>Fool the Bank</h1>
-      				<p>This week's Riddler takes a foray into racketeering...</p>
+      				<p>Put on your Hamburglar costumes, Riddler fans! This week's Riddler takes a foray into racketeering...</p>
       			</header>
-            <div class="image main"><img src="/images/mcdonalds-hamburglar.jpg" alt=""></div>
+            <div class="image main"><img src="/images/FoolTheBankWidgetPic.jpg" alt=""></div>
       			<p></p>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@tefirman51">
 <meta name="twitter:site" content="@tefirman51">
 <meta name="twitter:title" content="Riddler Answer: Fool the Bank">
-<meta name="twitter:description" content="This week's Riddler takes a foray into racketeering...">
-<meta name="twitter:image:src" content="https://tefirman.github.io/images/mcdonalds-hamburglar.jpg">
+<meta name="twitter:description" content="Put on your Hamburglar costumes, Riddler fans! This week's Riddler takes a foray into racketeering...">
+<meta name="twitter:image:src" content="https://tefirman.github.io/images/FoolTheBankWidgetPic.jpg">
 <meta name="twitter:image:width" content="280">
 <meta name="twitter:image:height" content="150">
 <script src="/assets/js/jquery.min.js"></script> 
@@ -90,23 +90,31 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async=""></script>
 
-<p>You are an expert counterfeiter, and you specialize in forging one of the most ubiquitous notes in global circulation, the U.S. $100 bill. You’ve been able to fool the authorities with your carefully crafted C-notes for some time, but you’ve learned that new security features will make it impossible for you to continue to avoid detection. As a result, you decide to deposit as many fake notes as you dare before the security features are implemented and then retire from your life of crime. You know from experience that the bank can only spot your fakes 25 percent of the time, and trying to deposit only counterfeit bills would be a ticket to jail. However, if you combine fake and real notes, there’s a chance the bank will accept your money. You have $2,500 in bona fide hundreds, plus a virtually unlimited supply of counterfeits. The bank scrutinizes cash deposits carefully: They randomly select 5 percent of the notes they receive, rounded up to the nearest whole number, for close examination. If they identify any note in a deposit as fake, they will confiscate the entire sum, leaving you only enough time to flee. How many fake notes should you add to the $2,500 in order to maximize the expected value of your bank account? How much free money are you likely to make from your strategy?</p>
+<p>Put on your Hamburglar costumes, Riddler fans! <a href="https://fivethirtyeight.com/features/can-you-fool-the-bank-with-your-counterfeit-bills/">This week’s puzzle</a> takes a foray into racketeering by putting us in the shoes of an expert counterfeiter specializing in $100 bills. In one last hurrah, we need to optimize the number of fake bills to deposit alongside $2500 worth of real bills, knowing that the bank will randomly inspect 5% of them (rounded up) and have a 25% chance of detecting fake bill after inspecting it. Let’s do this thing…</p>
 
 <h2 id="solution">Solution</h2>
 
-<p>Let’s define <script type="math/tex">a</script> as the portion of bills inspected, <script type="math/tex">R</script> as the number of real bills you deposit, <script type="math/tex">F</script> as the number of fake bills you deposit, <script type="math/tex">f</script> as the number of fake bills the bank happens to scrutinize, and <script type="math/tex">p</script> as the probability of a fake’s detection.</p>
+<p>To start, let’s define <script type="math/tex">a</script> as the portion of bills inspected, <script type="math/tex">R</script> as the number of real bills you deposit, and <script type="math/tex">F</script> as the number of fake bills you deposit. This would put the number of randomly inspected bills at</p>
 
-<script type="math/tex; mode=display">n = \text{round}(a(R + F))</script>
+<script type="math/tex; mode=display">n = \text{ceil}(a(R + F)).</script>
 
-<script type="math/tex; mode=display">\Omega(f) = \frac{F!}{f!(F - f)!} \times \frac{R!}{(n - f)!(R - n + f)!}</script>
+<p>From here, we need to think about the probability (and therefore <a href="https://en.wikipedia.org/wiki/Combinatorics">combinatorics) of how many fake/real bills the bank chose to inspect. If we set <script type="math/tex">f</script> as the number of fake bills the bank happens to scrutinize, the number of ways the bank could choose <script type="math/tex">f</script> fake bills and <script type="math/tex">n</script> bills total can be defined as</a></p>
 
-<script type="math/tex; mode=display">Q = \sum_{f=0}^{n} \Omega(f)</script>
+<script type="math/tex; mode=display">\Omega(f) = \frac{F!}{f!(F - f)!} \times \frac{R!}{(n - f)!(R - n + f)!}.</script>
 
-<script type="math/tex; mode=display">P(f) = \frac{\Omega(f)}{Q} (1 - p)^{f}</script>
+<p>This would put the total number of inspection combinations at</p>
 
-<script type="math/tex; mode=display">E(R,F) = 100(R + F)\sum_{f=0}^{n} P(f)</script>
+<script type="math/tex; mode=display">Q = \sum_{f=0}^{n} \Omega(f).</script>
 
-<p>Using <script type="math/tex">a = 0.05</script>, <script type="math/tex">p = 0.25</script>, and <script type="math/tex">R = 25</script>, we can vary <script type="math/tex">F</script> to produce the graph to the right and the maximum expected return for our little racket occurs at <script type="math/tex">F = 44</script> with a 59.3% probability of winning $6900, suggesting an expected return of $4094.36.</p>
+<p>Let’s also define <script type="math/tex">p</script> as the probability of a fake’s detection. To calculate the probability of success given that <script type="math/tex">f</script> fake bills were analyzed, we can normalize <script type="math/tex">\Omega</script> using <script type="math/tex">Q</script> and add a factor of <script type="math/tex">(1 - p)^{f}</script> to account for the bank teller missing the fakes:</p>
+
+<script type="math/tex; mode=display">P(f) = \frac{\Omega(f)}{Q} (1 - p)^{f}.</script>
+
+<p>Finally, we can sum this function over all possible values of <script type="math/tex">f</script> and multiply by the cash to be gained to get the expected return of our hypothetical caper:</p>
+
+<script type="math/tex; mode=display">E(R,F) = 100(R + F)\sum_{f=0}^{n} P(f).</script>
+
+<p>Using <script type="math/tex">a = 0.05</script>, <script type="math/tex">p = 0.25</script>, and <script type="math/tex">R = 25</script>, we can vary <script type="math/tex">F</script> to produce the graph seen below and the maximum expected return for our efforts occurs at <script type="math/tex">F = 55</script> with a 47.0% probability of winning $8000, suggesting an expected return of $3756.83. But what if the bank decides to modify their protocols and scrutinize a larger portion of the bills? Or what if their techniques improve and increase their detection probablities? Or what if we come into more real bills to use in our endeavor? Play around with the widget below and see how it changes things! Have fun tinkering, Riddler Nation!</p>
 
 <iframe src="https://riddler-fool-the-bank.herokuapp.com/" height="600" width="100%"></iframe>
 
