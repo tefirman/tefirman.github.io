@@ -1,4 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-07-12T12:16:12-07:00</updated><id>/</id><title type="html">Taylor Firman</title><subtitle>Just a repository for the occasional statistical stumble...</subtitle><entry><title type="html">Chasing .400</title><link href="/blog/Chasing400/" rel="alternate" type="text/html" title="Chasing .400" /><published>2020-07-12T00:00:00-07:00</published><updated>2020-07-12T00:00:00-07:00</updated><id>/blog/Chasing400</id><content type="html" xml:base="/blog/Chasing400/">&lt;head&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-11-10T21:53:26-07:00</updated><id>/</id><title type="html">Taylor Firman</title><subtitle>Just a repository for the occasional statistical stumble...</subtitle><entry><title type="html">Fantasy Football: Welcome to the Algorithm</title><link href="/blog/FantasyFootball/" rel="alternate" type="text/html" title="Fantasy Football: Welcome to the Algorithm" /><published>2021-11-10T00:00:00-07:00</published><updated>2021-11-10T00:00:00-07:00</updated><id>/blog/FantasyFootball</id><content type="html" xml:base="/blog/FantasyFootball/">&lt;head&gt;
+&lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; /&gt;
+&lt;meta name=&quot;twitter:creator&quot; content=&quot;@tefirman51&quot; /&gt;
+&lt;meta name=&quot;twitter:site&quot; content=&quot;@tefirman51&quot; /&gt;
+&lt;meta name=&quot;twitter:title&quot; content=&quot;Fantasy Football: Welcome to the Algorithm&quot; /&gt;
+&lt;meta name=&quot;twitter:description&quot; content=&quot;Take a peak into the algorithm with this interactive graph...&quot; /&gt;
+&lt;meta name=&quot;twitter:image:src&quot; content=&quot;https://tefirman.github.io/images/WingHelmet.png&quot; /&gt;
+&lt;meta name=&quot;twitter:image:width&quot; content=&quot;280&quot; /&gt;
+&lt;meta name=&quot;twitter:image:height&quot; content=&quot;150&quot; /&gt;
+&lt;script src=&quot;/assets/js/jquery.min.js&quot;&gt;&lt;/script&gt; 
+
+&lt;iframe src=&quot;https://fantasyfb-graph.herokuapp.com/&quot; height=&quot;1000&quot; width=&quot;100%&quot;&gt;&lt;/iframe&gt;
+
+
+
+
+&lt;/head&gt;</content><summary type="html">Take a peak into the algorithm with this interactive graph...</summary></entry><entry><title type="html">Chasing .400</title><link href="/blog/Chasing400/" rel="alternate" type="text/html" title="Chasing .400" /><published>2020-07-12T00:00:00-06:00</published><updated>2020-07-12T00:00:00-06:00</updated><id>/blog/Chasing400</id><content type="html" xml:base="/blog/Chasing400/">&lt;head&gt;
 &lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; /&gt;
 &lt;meta name=&quot;twitter:creator&quot; content=&quot;@tefirman51&quot; /&gt;
 &lt;meta name=&quot;twitter:site&quot; content=&quot;@tefirman51&quot; /&gt;
@@ -82,7 +98,7 @@ $(function(){
 
 &lt;h6&gt;The &lt;a href=&quot;https://github.com/tefirman/StatisticalStumbles/blob/master/FourHundredSeason.py&quot;&gt;python code&lt;/a&gt; and &lt;a href=&quot;https://github.com/tefirman/StatisticalStumbles/blob/master/FourHundredProbByCareerAvg.xlsx&quot;&gt;data&lt;/a&gt; used to generate the values and figures above are available on &lt;a href=&quot;https://github.com/tefirman&quot;&gt;my GitHub page&lt;/a&gt;.
 
-&lt;/h6&gt;</content><summary type="html">The odds of someone hitting .400 this season may be better than you think...</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/images/BaseballMask.png" /></entry><entry><title type="html">Trivia: Quarantine Edition</title><link href="/blog/TriviaQuarantine/" rel="alternate" type="text/html" title="Trivia: Quarantine Edition" /><published>2020-03-25T00:00:00-07:00</published><updated>2020-03-25T00:00:00-07:00</updated><id>/blog/TriviaQuarantine</id><content type="html" xml:base="/blog/TriviaQuarantine/">&lt;head&gt;
+&lt;/h6&gt;</content><summary type="html">The odds of someone hitting .400 this season may be better than you think...</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/images/BaseballMask.png" /></entry><entry><title type="html">Trivia: Quarantine Edition</title><link href="/blog/TriviaQuarantine/" rel="alternate" type="text/html" title="Trivia: Quarantine Edition" /><published>2020-03-25T00:00:00-06:00</published><updated>2020-03-25T00:00:00-06:00</updated><id>/blog/TriviaQuarantine</id><content type="html" xml:base="/blog/TriviaQuarantine/">&lt;head&gt;
 &lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; /&gt;
 &lt;meta name=&quot;twitter:creator&quot; content=&quot;@tefirman51&quot; /&gt;
 &lt;meta name=&quot;twitter:site&quot; content=&quot;@tefirman51&quot; /&gt;
@@ -98,7 +114,7 @@ $(function(){
 
 
 
-&lt;/head&gt;</content><summary type="html">Most trivia nerds are already self-isolated... Let's do this!!!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/images/TriviaQuarantine.png" /></entry><entry><title type="html">Riddler Answer:Fool the Bank</title><link href="/blog/RiddlerCounterfeit/" rel="alternate" type="text/html" title="Riddler Answer:&lt;br&gt;Fool the Bank" /><published>2019-08-25T00:00:00-07:00</published><updated>2019-08-25T00:00:00-07:00</updated><id>/blog/RiddlerCounterfeit</id><content type="html" xml:base="/blog/RiddlerCounterfeit/">&lt;head&gt;
+&lt;/head&gt;</content><summary type="html">Most trivia nerds are already self-isolated... Let's do this!!!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/images/TriviaQuarantine.png" /></entry><entry><title type="html">Riddler Answer:Fool the Bank</title><link href="/blog/RiddlerCounterfeit/" rel="alternate" type="text/html" title="Riddler Answer:&lt;br&gt;Fool the Bank" /><published>2019-08-25T00:00:00-06:00</published><updated>2019-08-25T00:00:00-06:00</updated><id>/blog/RiddlerCounterfeit</id><content type="html" xml:base="/blog/RiddlerCounterfeit/">&lt;head&gt;
 &lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; /&gt;
 &lt;meta name=&quot;twitter:creator&quot; content=&quot;@tefirman51&quot; /&gt;
 &lt;meta name=&quot;twitter:site&quot; content=&quot;@tefirman51&quot; /&gt;
@@ -154,7 +170,7 @@ $(function(){
 &lt;h6&gt;The &lt;a href=&quot;https://github.com/tefirman/RiddlerCode/blob/master/Riddler_Aug25_Counterfeits.py&quot;&gt;python code&lt;/a&gt; used to generate the values and figures above are available on &lt;a href=&quot;https://github.com/tefirman&quot;&gt;my GitHub page&lt;/a&gt;.
 
 
-&lt;/h6&gt;</content><summary type="html">Put on your Hamburglar costumes, Riddler fans! This week's Riddler takes a foray into racketeering...</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/images/FoolTheBankWidgetPic.jpg" /></entry><entry><title type="html">Presidential Vocabulary</title><link href="/blog/VocabularEntropy/" rel="alternate" type="text/html" title="Presidential Vocabulary" /><published>2019-08-24T00:00:00-07:00</published><updated>2019-08-24T00:00:00-07:00</updated><id>/blog/VocabularEntropy</id><content type="html" xml:base="/blog/VocabularEntropy/">&lt;head&gt;
+&lt;/h6&gt;</content><summary type="html">Put on your Hamburglar costumes, Riddler fans! This week's Riddler takes a foray into racketeering...</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/images/FoolTheBankWidgetPic.jpg" /></entry><entry><title type="html">Presidential Vocabulary</title><link href="/blog/VocabularEntropy/" rel="alternate" type="text/html" title="Presidential Vocabulary" /><published>2019-08-24T00:00:00-06:00</published><updated>2019-08-24T00:00:00-06:00</updated><id>/blog/VocabularEntropy</id><content type="html" xml:base="/blog/VocabularEntropy/">&lt;head&gt;
 &lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; /&gt;
 &lt;meta name=&quot;twitter:creator&quot; content=&quot;@tefirman51&quot; /&gt;
 &lt;meta name=&quot;twitter:site&quot; content=&quot;@tefirman51&quot; /&gt;
@@ -427,7 +443,7 @@ function sortTableNumber(n) {
 
 
 
-&lt;/h6&gt;</content><summary type="html">As we have found out in recent weeks, words absolutely matter, especially coming from a President of the United States...</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/images/PresidentDictionary.jpg" /></entry><entry><title type="html">Centennial StatePolitical Geography</title><link href="/blog/PoliticalGeographyCO/" rel="alternate" type="text/html" title="Centennial State&lt;br&gt;Political Geography" /><published>2019-07-18T00:00:00-07:00</published><updated>2019-07-18T00:00:00-07:00</updated><id>/blog/PoliticalGeographyCO</id><content type="html" xml:base="/blog/PoliticalGeographyCO/">&lt;head&gt;
+&lt;/h6&gt;</content><summary type="html">As we have found out in recent weeks, words absolutely matter, especially coming from a President of the United States...</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/images/PresidentDictionary.jpg" /></entry><entry><title type="html">Centennial StatePolitical Geography</title><link href="/blog/PoliticalGeographyCO/" rel="alternate" type="text/html" title="Centennial State&lt;br&gt;Political Geography" /><published>2019-07-18T00:00:00-06:00</published><updated>2019-07-18T00:00:00-06:00</updated><id>/blog/PoliticalGeographyCO</id><content type="html" xml:base="/blog/PoliticalGeographyCO/">&lt;head&gt;
 &lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; /&gt;
 &lt;meta name=&quot;twitter:creator&quot; content=&quot;@tefirman51&quot; /&gt;
 &lt;meta name=&quot;twitter:site&quot; content=&quot;@tefirman51&quot; /&gt;
@@ -732,7 +748,7 @@ function sortTableNumber(n) {
 &lt;h6&gt;All statistics presented in the maps shown here were calculated using &lt;a href=&quot;https://www.sos.state.co.us/pubs/elections/resultsData.html&quot;&gt;official election results from the Colorado Secretary of State website&lt;/a&gt;. All precinct shapes were collected from each county's Clerk and Recorder. The &lt;a href=&quot;https://github.com/tefirman/StatisticalStumbles/tree/master/ElectionResults_CO&quot;&gt;relevant data&lt;/a&gt; and &lt;a href=&quot;https://github.com/tefirman/StatisticalStumbles/blob/master/ElectionResults_CO.py&quot;&gt;python code&lt;/a&gt; used to calculate them are available on &lt;a href=&quot;https://github.com/tefirman&quot;&gt;my GitHub page&lt;/a&gt; and precinct shapefiles are available on request.
 
 
-&lt;/h6&gt;</content><summary type="html">Let's take a comprehensive look at the divergent political geography of Colorado and its effect on the 2020 Senate race...</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/images/CO_Maps_Wide.png" /></entry><entry><title type="html">Methods to the Madness</title><link href="/blog/MarchMadness/" rel="alternate" type="text/html" title="Methods to the Madness" /><published>2019-05-27T00:00:00-07:00</published><updated>2019-05-27T00:00:00-07:00</updated><id>/blog/MarchMadness</id><content type="html" xml:base="/blog/MarchMadness/">&lt;head&gt;
+&lt;/h6&gt;</content><summary type="html">Let's take a comprehensive look at the divergent political geography of Colorado and its effect on the 2020 Senate race...</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/images/CO_Maps_Wide.png" /></entry><entry><title type="html">Methods to the Madness</title><link href="/blog/MarchMadness/" rel="alternate" type="text/html" title="Methods to the Madness" /><published>2019-05-27T00:00:00-06:00</published><updated>2019-05-27T00:00:00-06:00</updated><id>/blog/MarchMadness</id><content type="html" xml:base="/blog/MarchMadness/">&lt;head&gt;
 &lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; /&gt;
 &lt;meta name=&quot;twitter:creator&quot; content=&quot;@tefirman51&quot; /&gt;
 &lt;meta name=&quot;twitter:site&quot; content=&quot;@tefirman51&quot; /&gt;
@@ -985,7 +1001,7 @@ function sortTableNumber(n) {
 
 &lt;h6&gt;The &lt;a href=&quot;https://github.com/tefirman/StatisticalStumbles/blob/master/MarchMadnessSim.py&quot;&gt;python code&lt;/a&gt; and &lt;a href=&quot;https://github.com/tefirman/StatisticalStumbles/tree/master/MarchMadnessSims&quot;&gt;simulations&lt;/a&gt; used to generate the values and figures above are available on &lt;a href=&quot;https://github.com/tefirman&quot;&gt;my GitHub page&lt;/a&gt;.
 
-&lt;/h6&gt;</content><summary type="html">Because brackets are hard and chalk is for the faint of heart...</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/images/CoinBracket.png" /></entry><entry><title type="html">Riddler Submission: ¡Lotería!</title><link href="/blog/Loteria/" rel="alternate" type="text/html" title="Riddler Submission: ¡Loter&amp;iacute;a!" /><published>2019-05-25T00:00:00-07:00</published><updated>2019-05-25T00:00:00-07:00</updated><id>/blog/Loteria</id><content type="html" xml:base="/blog/Loteria/">&lt;head&gt;
+&lt;/h6&gt;</content><summary type="html">Because brackets are hard and chalk is for the faint of heart...</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/images/CoinBracket.png" /></entry><entry><title type="html">Riddler Submission: ¡Lotería!</title><link href="/blog/Loteria/" rel="alternate" type="text/html" title="Riddler Submission: ¡Loter&amp;iacute;a!" /><published>2019-05-25T00:00:00-06:00</published><updated>2019-05-25T00:00:00-06:00</updated><id>/blog/Loteria</id><content type="html" xml:base="/blog/Loteria/">&lt;head&gt;
 &lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; /&gt;
 &lt;meta name=&quot;twitter:creator&quot; content=&quot;@tefirman51&quot; /&gt;
 &lt;meta name=&quot;twitter:site&quot; content=&quot;@tefirman51&quot; /&gt;
@@ -1060,7 +1076,7 @@ $(function(){
 &lt;h6&gt;The &lt;a href=&quot;https://github.com/tefirman/RiddlerCode/blob/master/Riddler_May25_Loteria.py&quot;&gt;python code&lt;/a&gt; used to generate the values and figures above are available on &lt;a href=&quot;https://github.com/tefirman&quot;&gt;my GitHub page&lt;/a&gt;. &lt;a href=&quot;https://github.com/tefirman/RiddlerCode/blob/master/LoteriaSimulations.csv&quot;&gt;Simulations&lt;/a&gt; that validate the equations above are also available.
 
 
-&lt;/h6&gt;</content><summary type="html">Learn Spanish and gamble all at the same time!!!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/images/Loteria.png" /></entry><entry><title type="html">Uneven Democracy</title><link href="/blog/UnequalRepresentation/" rel="alternate" type="text/html" title="Uneven Democracy" /><published>2019-02-22T00:00:00-08:00</published><updated>2019-02-22T00:00:00-08:00</updated><id>/blog/UnequalRepresentation</id><content type="html" xml:base="/blog/UnequalRepresentation/">&lt;head&gt;
+&lt;/h6&gt;</content><summary type="html">Learn Spanish and gamble all at the same time!!!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/images/Loteria.png" /></entry><entry><title type="html">Uneven Democracy</title><link href="/blog/UnequalRepresentation/" rel="alternate" type="text/html" title="Uneven Democracy" /><published>2019-02-22T00:00:00-07:00</published><updated>2019-02-22T00:00:00-07:00</updated><id>/blog/UnequalRepresentation</id><content type="html" xml:base="/blog/UnequalRepresentation/">&lt;head&gt;
 &lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; /&gt;
 &lt;meta name=&quot;twitter:creator&quot; content=&quot;@tefirman51&quot; /&gt;
 &lt;meta name=&quot;twitter:site&quot; content=&quot;@tefirman51&quot; /&gt;
@@ -1587,7 +1603,7 @@ function sortTableNumber4(n) {
 
 
 
-&lt;/h6&gt;</content><summary type="html">Based on how the American government was designed, not all votes are created equal...</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/images/TippedScales.png" /></entry><entry><title type="html">Riddler Answer: Printers are from Mars, Scanners are from Venus</title><link href="/blog/MartianPrinter/" rel="alternate" type="text/html" title="Riddler Answer: Printers are from Mars, Scanners are from Venus" /><published>2019-01-14T00:00:00-08:00</published><updated>2019-01-14T00:00:00-08:00</updated><id>/blog/MartianPrinter</id><content type="html" xml:base="/blog/MartianPrinter/">&lt;head&gt;
+&lt;/h6&gt;</content><summary type="html">Based on how the American government was designed, not all votes are created equal...</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/images/TippedScales.png" /></entry><entry><title type="html">Riddler Answer: Printers are from Mars, Scanners are from Venus</title><link href="/blog/MartianPrinter/" rel="alternate" type="text/html" title="Riddler Answer: Printers are from Mars, Scanners are from Venus" /><published>2019-01-14T00:00:00-07:00</published><updated>2019-01-14T00:00:00-07:00</updated><id>/blog/MartianPrinter</id><content type="html" xml:base="/blog/MartianPrinter/">&lt;head&gt;
 &lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; /&gt;
 &lt;meta name=&quot;twitter:creator&quot; content=&quot;@tefirman51&quot; /&gt;
 &lt;meta name=&quot;twitter:site&quot; content=&quot;@tefirman51&quot; /&gt;
@@ -1674,522 +1690,4 @@ print('Probability of Survival = ' + str(round(100*sum(np.array(times) &amp;gt;=
 
 &lt;p&gt;&lt;span class=&quot;image right&quot;&gt;&lt;img src=&quot;/images/SurvivalProb.png&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;/images/SurvivalProbability_NumPrinters.png&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;/images/SurvivalProbability_PrinterLag.png&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;This added stochasticity changes the entire game. We intrepid Riddler-nauts now have essentially a zero percent chance of surviving our martian journey with an average survival of &lt;script type=&quot;math/tex&quot;&gt;13.2 \pm 12.6&lt;/script&gt; days. So what needs to change??? What do our highly-skilled RASA engineers need to focus on to get us to the 1825 day finish line? For starters, let’s pretend that the &lt;a href=&quot;https://fivethirtyeight.com/features/how-far-would-you-go-to-rig-a-coin-flip/&quot;&gt;Riddler Nation Senate&lt;/a&gt; decided to approve funding for as many 5% printers as we need to have a 50% chance of survival (man, those senators love their coin flips). If that were the case, we would need seven printers instead of three, as seen in the second figure. But with &lt;a href=&quot;http://www.realclearfuture.com/articles/2017/06/01/elon_musk_is_still_the_king_of_low-cost_space_launch_111957.html&quot;&gt;space travel costing $1250 per pound at best&lt;/a&gt;, each &lt;a href=&quot;https://www.homedepot.com/p/Dremel-Digilab-3D45-Advanced-Idea-Builder-3D-Printer-with-Built-In-WiFi-Guided-Leveling-and-RFID-Filament-Recognition-3D45-01/303720938?cm_mmc=Shopping%7CG%7CVF%7CD25T%7C25-9_PORTABLE+POWER%7CDREMEL%7CNA%7CVersa%7c71700000037187511%7c58700004135694341%7c92700034455553438&amp;amp;gclid=EAIaIQobChMIrqDZuYLv3wIVdx-tBh1yhQN-EAQYBCABEgKaqvD_BwE&amp;amp;gclsrc=aw.ds&quot;&gt;printer&lt;/a&gt; weighing 50 pounds, and each printer costing $1500, the senators are starting to clamor about the extra $256K. Instead, they are encouraging us to optimize the three printers we already have. In the end, lowering the breaking probability of our printers won’t help much – even if the printers never break, it’s reasonably probable for more than three pieces of vital machinery to break in a single day and the lag between printing jobs will do us in. Sure enough, simulating this perfect-printer scenario produces an average survival of &lt;script type=&quot;math/tex&quot;&gt;20.5 \pm 20.0&lt;/script&gt; days so we should definitely focus on reducing the rate-limiting 24 hour recharging period. In order to reach the 50% goal set by the Senate with our original three printers, we would need to lower the lag time to just under 3 hours as seen in the final figure.&lt;/p&gt;
 
-&lt;p&gt;This problem is a perfect example of how deterministic, average-based methods can sometimes be misrepresentative of the real scenario. These simpler methods told us that we had a fighting chance, but let’s be honest, malfunctions aren’t going to happen like clockwork. Only by accounting for the randomness and noise of the stochastic processes of the real world do we realize that something needs to change or we’re going to end up as martian toast. If anyone in Riddler Nation wants to mess around with the simulation or see if a different strategy would be more effective, the underlying code is available &lt;a href=&quot;https://github.com/tefirman/RiddlerCode/blob/master/MartianPrinters.py&quot;&gt;here&lt;/a&gt;. Safe travels, Riddler-nauts!!!&lt;/p&gt;</content><summary type="html">Captain Blondebeard would be so proud...</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/images/Mars.jpg" /></entry><entry><title type="html">When Red Becomes Purple</title><link href="/blog/DougCoRecap/" rel="alternate" type="text/html" title="When Red Becomes Purple" /><published>2018-11-23T00:00:00-08:00</published><updated>2018-11-23T00:00:00-08:00</updated><id>/blog/DougCoRecap</id><content type="html" xml:base="/blog/DougCoRecap/">&lt;head&gt;
-&lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; /&gt;
-&lt;meta name=&quot;twitter:creator&quot; content=&quot;@tefirman51&quot; /&gt;
-&lt;meta name=&quot;twitter:site&quot; content=&quot;@tefirman51&quot; /&gt;
-&lt;meta name=&quot;twitter:title&quot; content=&quot;When Red Becomes Purple&quot; /&gt;
-&lt;meta name=&quot;twitter:description&quot; content=&quot;Colorado's 6th Congressional District is a perfect example of why every turf matters...&quot; /&gt;
-&lt;meta name=&quot;twitter:image:src&quot; content=&quot;https://tefirman.github.io/images/DougCoPurple.png&quot; /&gt;
-&lt;meta name=&quot;twitter:image:width&quot; content=&quot;280&quot; /&gt;
-&lt;meta name=&quot;twitter:image:height&quot; content=&quot;150&quot; /&gt;
-&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
-&lt;script async=&quot;&quot; src=&quot;https://www.googletagmanager.com/gtag/js?id=UA-141691742-7&quot;&gt;&lt;/script&gt;
-&lt;script&gt;
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-141691742-7');
-&lt;/script&gt;
-&lt;/head&gt;
-
-&lt;p&gt;Canvassing in any scenario is uncomfortable. Canvassing for a Democratic candidate in a historically Republican district is panic-attack-inducing. But in any campaign, it’s a necessary component. So when my partner and I began volunteering for the Douglas County portion of Jason Crow’s congressional campaign in Colorado’s 6th district (CO-6), it seemed like a daunting but worthy challenge. Given the chaotic state of our democracy, a little more is required of average Americans. We are called to endure the occasional door slam to find the few individuals who remain undecided, who aren’t sure where to vote, who need a little extra motivation to even vote at all. We are called to tolerate the surly “leave me alone”’s to ensure that the voice of every citizen is heard in our society.&lt;/p&gt;
-
-&lt;p&gt;These efforts were particularly necessary in the region that we were assigned by the Crow campaign. In the &lt;a href=&quot;https://www.douglas.co.us/elections/historical-election-data/&quot;&gt;three previous House races in Douglas County&lt;/a&gt;, Democrats have won exactly zero precincts and lost by an average of more than 26 percentage points. With this level of incumbency advantage, we had our work cut out for us, but other indicators left a whiff of possibility in the air. Unprecedented &lt;a href=&quot;https://www.opensecrets.org/overview/&quot;&gt;individual contribution levels&lt;/a&gt; of Democrats across the country (including &lt;a href=&quot;https://www.opensecrets.org/races/candidates?cycle=2018&amp;amp;id=CO06&amp;amp;spec=N&quot;&gt;this one&lt;/a&gt;) provided a significant advantage and could have suggested a grass roots mobilization of previously silent Democrats across the country. Midterm elections are &lt;a href=&quot;https://fivethirtyeight.com/features/trumps-approval-rating-is-up-republican-house-chances-are-down-does-that-make-any-sense/&quot;&gt;always difficult for the party controlling the White House&lt;/a&gt;, and with the &lt;a href=&quot;https://projects.fivethirtyeight.com/trump-approval-ratings/?ex_cid=rrpromo&quot;&gt;considerable unpopularity of President Trump&lt;/a&gt;, the fact that the Republican incumbent Mike Coffman &lt;a href=&quot;https://projects.fivethirtyeight.com/congress-trump-score/mike-coffman/&quot;&gt;voted with Trump 96% of the time&lt;/a&gt; was a major selling point to independent voters. And having a moderate candidate with a military background as an Army Ranger and a progressive stance on gun violence in a region deeply effected by several tragic shootings in recent years would definitely make a difference. So in the days leading up to the election, when Jason Crow’s aides would jokingly ask “you gonna win us DougCo?”, I understood the sarcasm but confidently replied, “we’ll win a few precincts for sure.”&lt;/p&gt;
-
-&lt;p&gt;&lt;span class=&quot;image right&quot;&gt;&lt;img src=&quot;/images/DougCoHistory.png&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;As results came pouring in, this prediction turned out to be an understatement. Jason Crow went on to take thirteen precincts in Douglas County and only lost the county by six percentage points. Losing in any fashion may not sound like an uplifting fact, but the 22.0% jump from losing by 27.9% in 2016 to only 5.9% in 2018 is the largest gain out of all the counties in the district (Adams: 16.4%, Arapahoe: 19.8%).&lt;/p&gt;
-
-&lt;style&gt;
-table {
-    border-spacing: 0;
-    width: 100%;
-    border: 1px solid #ddd;
-    line-height: 1
-}
-
-th {
-    cursor: pointer;
-}
-
-th, td {
-    text-align: left;
-    padding: 0px;
-    vertical-align: middle;
-    min-height: 1px;
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2
-}
-&lt;/style&gt;
-
-&lt;h3&gt;Recent House Races in the DougCo Portion of CO-6&lt;/h3&gt;
-&lt;table id=&quot;myTable&quot;&gt;
-  &lt;tr height=&quot;50&quot;&gt;
-   &lt;!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:--&gt;  
-    &lt;th onclick=&quot;sortTableNumber(0)&quot;&gt;Year&lt;/th&gt;
-    &lt;th onclick=&quot;sortTable(1)&quot;&gt;Dem. Candidate&lt;/th&gt;
-    &lt;th onclick=&quot;sortTableNumber(2)&quot;&gt;Vote %&lt;/th&gt;
-    &lt;th onclick=&quot;sortTableNumber(3)&quot;&gt;Margin of Defeat (%)&lt;/th&gt;
-    &lt;th onclick=&quot;sortTableNumber(4)&quot;&gt;Precincts Won&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr height=&quot;5&quot;&gt;
-    &lt;td&gt;2012&lt;/td&gt;
-    &lt;td&gt;Joe Miklosi&lt;/td&gt;
-    &lt;td&gt;35.4&lt;/td&gt;
-    &lt;td&gt;24.7&lt;/td&gt;
-    &lt;td&gt;0&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr height=&quot;5&quot;&gt;
-    &lt;td&gt;2014&lt;/td&gt;
-    &lt;td&gt;Andrew Romanoff&lt;/td&gt;
-    &lt;td&gt;34.5&lt;/td&gt;
-    &lt;td&gt;27.5&lt;/td&gt;
-    &lt;td&gt;0&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr height=&quot;5&quot;&gt;
-    &lt;td&gt;2016&lt;/td&gt;
-    &lt;td&gt;Morgan Carroll&lt;/td&gt;
-    &lt;td&gt;33.3&lt;/td&gt;
-    &lt;td&gt;27.9&lt;/td&gt;
-    &lt;td&gt;0&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr height=&quot;5&quot;&gt;
-    &lt;td&gt;2018&lt;/td&gt;
-    &lt;td&gt;Jason Crow&lt;/td&gt;
-    &lt;td&gt;45.8&lt;/td&gt;
-    &lt;td&gt;5.9&lt;/td&gt;
-    &lt;td&gt;13&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-
-&lt;script&gt;
-function sortTable(n) {
-  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-  table = document.getElementById(&quot;myTable&quot;);
-  switching = true;
-  //Set the sorting direction to ascending:
-  dir = &quot;desc&quot;; 
-  /*Make a loop that will continue until
-  no switching has been done:*/
-  while (switching) {
-    //start by saying: no switching is done:
-    switching = false;
-    rows = table.rows;
-    /*Loop through all table rows (except the
-    first, which contains table headers):*/
-    for (i = 1; i &lt; (rows.length - 1); i++) {
-      //start by saying there should be no switching:
-      shouldSwitch = false;
-      /*Get the two elements you want to compare,
-      one from current row and one from the next:*/
-      x = rows[i].getElementsByTagName(&quot;TD&quot;)[n];
-      y = rows[i + 1].getElementsByTagName(&quot;TD&quot;)[n];
-      /*check if the two rows should switch place,
-      based on the direction, asc or desc:*/
-      if (dir == &quot;asc&quot;) {
-        if (x.innerHTML.toLowerCase() &gt; y.innerHTML.toLowerCase()) {
-          //if so, mark as a switch and break the loop:
-          shouldSwitch= true;
-          break;
-        }
-      } else if (dir == &quot;desc&quot;) {
-        if (x.innerHTML.toLowerCase() &lt; y.innerHTML.toLowerCase()) {
-          //if so, mark as a switch and break the loop:
-          shouldSwitch = true;
-          break;
-        }
-      }
-    }
-    if (shouldSwitch) {
-      /*If a switch has been marked, make the switch
-      and mark that a switch has been done:*/
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-      //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
-    } else {
-      /*If no switching has been done AND the direction is &quot;asc&quot;,
-      set the direction to &quot;desc&quot; and run the while loop again.*/
-      if (switchcount == 0 &amp;&amp; dir == &quot;desc&quot;) {
-        dir = &quot;asc&quot;;
-        switching = true;
-      }
-    }
-  }
-}
-
-function sortTableNumber(n) {
-  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-  table = document.getElementById(&quot;myTable&quot;);
-  switching = true;
-  //Set the sorting direction to ascending:
-  dir = &quot;desc&quot;; 
-  /*Make a loop that will continue until
-  no switching has been done:*/
-  while (switching) {
-    //start by saying: no switching is done:
-    switching = false;
-    rows = table.rows;
-    /*Loop through all table rows (except the
-    first, which contains table headers):*/
-    for (i = 1; i &lt; (rows.length - 1); i++) {
-      //start by saying there should be no switching:
-      shouldSwitch = false;
-      /*Get the two elements you want to compare,
-      one from current row and one from the next:*/
-      x = rows[i].getElementsByTagName(&quot;TD&quot;)[n];
-      y = rows[i + 1].getElementsByTagName(&quot;TD&quot;)[n];
-      /*check if the two rows should switch place,
-      based on the direction, asc or desc:*/
-      if (dir == &quot;asc&quot;) {
-        if (Number(x.innerHTML) &gt; Number(y.innerHTML)) {
-          //if so, mark as a switch and break the loop:
-          shouldSwitch= true;
-          break;
-        }
-      } else if (dir == &quot;desc&quot;) {
-        if (Number(x.innerHTML) &lt; Number(y.innerHTML)) {
-          //if so, mark as a switch and break the loop:
-          shouldSwitch = true;
-          break;
-        }
-      }
-    }
-    if (shouldSwitch) {
-      /*If a switch has been marked, make the switch
-      and mark that a switch has been done:*/
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-      //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
-    } else {
-      /*If no switching has been done AND the direction is &quot;asc&quot;,
-      set the direction to &quot;desc&quot; and run the while loop again.*/
-      if (switchcount == 0 &amp;&amp; dir == &quot;desc&quot;) {
-        dir = &quot;asc&quot;;
-        switching = true;
-      }
-    }
-  }
-}
-&lt;/script&gt;
-
-&lt;p&gt;&lt;span class=&quot;image left&quot;&gt;&lt;img src=&quot;/images/DougCoDownTheBallot.png&quot; alt=&quot;&quot; /&gt;&lt;/span&gt;So what happened to Douglas County voters? Why the sudden purple hue? Races further down the ballot give us some insight into why the citizens of Douglas County voted the way they did, and we see that these results don’t quite fit the “blue wave” narrative that everyone is so fond of using. Across the board, Democrats did get a bump compared to previous years because of all the factors listed above, but some of that advantage disappears down the ballot. The higher profile races with national implications, i.e. the House and Governor’s races, only had a Republican edge of 5.9% while the race for Attorney General ballooned up to 13.5%. This could suggest that voters wanted to rebuke the White House while keeping local government conservative.&lt;/p&gt;
-
-&lt;h3&gt;Races Down the Ballot in the DougCo Portion of CO-6&lt;/h3&gt;
-&lt;table id=&quot;myTable2&quot;&gt;
-  &lt;tr height=&quot;50&quot;&gt;
-   &lt;!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:--&gt;  
-    &lt;th onclick=&quot;sortTable2(0)&quot;&gt;Position&lt;/th&gt;
-    &lt;th onclick=&quot;sortTableNumber2(1)&quot;&gt;Republican Vote %&lt;/th&gt;
-    &lt;th onclick=&quot;sortTableNumber2(2)&quot;&gt;Democrat Vote %&lt;/th&gt;
-    &lt;th onclick=&quot;sortTableNumber2(3)&quot;&gt;Margin (%)&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr height=&quot;5&quot;&gt;
-    &lt;td&gt;House&lt;/td&gt;
-    &lt;td&gt;51.7&lt;/td&gt;
-    &lt;td&gt;45.8&lt;/td&gt;
-    &lt;td&gt;5.9&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr height=&quot;5&quot;&gt;
-    &lt;td&gt;Governor&lt;/td&gt;
-    &lt;td&gt;51.6&lt;/td&gt;
-    &lt;td&gt;45.7&lt;/td&gt;
-    &lt;td&gt;5.9&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr height=&quot;5&quot;&gt;
-    &lt;td&gt;Secretary of State&lt;/td&gt;
-    &lt;td&gt;53.6&lt;/td&gt;
-    &lt;td&gt;44.6&lt;/td&gt;
-    &lt;td&gt;9.0&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr height=&quot;5&quot;&gt;
-    &lt;td&gt;State Treasurer&lt;/td&gt;
-    &lt;td&gt;54.3&lt;/td&gt;
-    &lt;td&gt;43.8&lt;/td&gt;
-    &lt;td&gt;10.5&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr height=&quot;5&quot;&gt;
-    &lt;td&gt;Attorney General&lt;/td&gt;
-    &lt;td&gt;55.5&lt;/td&gt;
-    &lt;td&gt;42.0&lt;/td&gt;
-    &lt;td&gt;13.5&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-
-&lt;script&gt;
-function sortTable2(n) {
-  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-  table = document.getElementById(&quot;myTable2&quot;);
-  switching = true;
-  //Set the sorting direction to ascending:
-  dir = &quot;desc&quot;; 
-  /*Make a loop that will continue until
-  no switching has been done:*/
-  while (switching) {
-    //start by saying: no switching is done:
-    switching = false;
-    rows = table.rows;
-    /*Loop through all table rows (except the
-    first, which contains table headers):*/
-    for (i = 1; i &lt; (rows.length - 1); i++) {
-      //start by saying there should be no switching:
-      shouldSwitch = false;
-      /*Get the two elements you want to compare,
-      one from current row and one from the next:*/
-      x = rows[i].getElementsByTagName(&quot;TD&quot;)[n];
-      y = rows[i + 1].getElementsByTagName(&quot;TD&quot;)[n];
-      /*check if the two rows should switch place,
-      based on the direction, asc or desc:*/
-      if (dir == &quot;asc&quot;) {
-        if (x.innerHTML.toLowerCase() &gt; y.innerHTML.toLowerCase()) {
-          //if so, mark as a switch and break the loop:
-          shouldSwitch= true;
-          break;
-        }
-      } else if (dir == &quot;desc&quot;) {
-        if (x.innerHTML.toLowerCase() &lt; y.innerHTML.toLowerCase()) {
-          //if so, mark as a switch and break the loop:
-          shouldSwitch = true;
-          break;
-        }
-      }
-    }
-    if (shouldSwitch) {
-      /*If a switch has been marked, make the switch
-      and mark that a switch has been done:*/
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-      //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
-    } else {
-      /*If no switching has been done AND the direction is &quot;asc&quot;,
-      set the direction to &quot;desc&quot; and run the while loop again.*/
-      if (switchcount == 0 &amp;&amp; dir == &quot;desc&quot;) {
-        dir = &quot;asc&quot;;
-        switching = true;
-      }
-    }
-  }
-}
-
-function sortTableNumber2(n) {
-  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-  table = document.getElementById(&quot;myTable2&quot;);
-  switching = true;
-  //Set the sorting direction to ascending:
-  dir = &quot;desc&quot;; 
-  /*Make a loop that will continue until
-  no switching has been done:*/
-  while (switching) {
-    //start by saying: no switching is done:
-    switching = false;
-    rows = table.rows;
-    /*Loop through all table rows (except the
-    first, which contains table headers):*/
-    for (i = 1; i &lt; (rows.length - 1); i++) {
-      //start by saying there should be no switching:
-      shouldSwitch = false;
-      /*Get the two elements you want to compare,
-      one from current row and one from the next:*/
-      x = rows[i].getElementsByTagName(&quot;TD&quot;)[n];
-      y = rows[i + 1].getElementsByTagName(&quot;TD&quot;)[n];
-      /*check if the two rows should switch place,
-      based on the direction, asc or desc:*/
-      if (dir == &quot;asc&quot;) {
-        if (Number(x.innerHTML) &gt; Number(y.innerHTML)) {
-          //if so, mark as a switch and break the loop:
-          shouldSwitch= true;
-          break;
-        }
-      } else if (dir == &quot;desc&quot;) {
-        if (Number(x.innerHTML) &lt; Number(y.innerHTML)) {
-          //if so, mark as a switch and break the loop:
-          shouldSwitch = true;
-          break;
-        }
-      }
-    }
-    if (shouldSwitch) {
-      /*If a switch has been marked, make the switch
-      and mark that a switch has been done:*/
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-      //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
-    } else {
-      /*If no switching has been done AND the direction is &quot;asc&quot;,
-      set the direction to &quot;desc&quot; and run the while loop again.*/
-      if (switchcount == 0 &amp;&amp; dir == &quot;desc&quot;) {
-        dir = &quot;asc&quot;;
-        switching = true;
-      }
-    }
-  }
-}
-&lt;/script&gt;
-
-&lt;p&gt;So if the &lt;a href=&quot;https://fivethirtyeight.com/features/the-suburbs-all-kinds-of-suburbs-delivered-the-house-to-democrats/&quot;&gt;suburbs were what handed Democrats the House in 2018&lt;/a&gt;, the Douglas County portion of CO-6 should be exhibit A. Obviously, part of Jason Crow’s success in this area was regression to the mean – it was already so red that there was really nowhere to go but up – but it even stands out when comparing apples to apples. Out of the the top ten districts most similar to CO-6 according to &lt;a href=&quot;https://fivethirtyeight.com/methodology/how-fivethirtyeights-house-and-senate-models-work/&quot;&gt;FiveThirtyEight’s similarity metrics&lt;/a&gt;, three were held by a Republican before the midterms. All three seats flipped to Democrats, but in terms of gain in vote margin, CO-6 just barely finishes second to Kansas’s 3rd district (KS-3) by only 0.3%. In fact, the comparison between Jason Crow’s victory and &lt;a href=&quot;https://projects.fivethirtyeight.com/2018-midterm-election-forecast/house/kansas/3/&quot;&gt;Sharice Davids’ victory in KS-3&lt;/a&gt; is actually rather fitting. In the primaries, Davids’ defeated a Bernie-Sanders-endorsed candidate to move on to the general election, possibly suggesting a desire for moderate candidates in KS-3 similar to CO-6. And while the storyline of a gay Native American MMA-fighter candidate will generate more national attention than yet another white male running for congress, the energy levels behind both campaigns in historically red districts seem reminiscent of each other. Both benefitted from early grass roots organizing by neighborhood volunteers refusing to accept the status quo.&lt;/p&gt;
-
-&lt;h3&gt; Demographically, Geographically, and Politically Similar Districts to CO-6&lt;/h3&gt;
-&lt;table id=&quot;myTable3&quot;&gt;
-  &lt;tr height=&quot;50&quot;&gt;
-   &lt;!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:--&gt;  
-    &lt;th onclick=&quot;sortTable3(0)&quot;&gt;District&lt;/th&gt;
-    &lt;th onclick=&quot;sortTableNumber3(1)&quot;&gt;2016 Margin of Defeat (%)&lt;/th&gt;
-    &lt;th onclick=&quot;sortTableNumber3(2)&quot;&gt;2018 Margin of Victory (%)&lt;/th&gt;
-    &lt;th onclick=&quot;sortTableNumber3(3)&quot;&gt;Democratic Gain (%)&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr height=&quot;5&quot;&gt;
-    &lt;td&gt;CO-6&lt;/td&gt;
-    &lt;td&gt;8.3&lt;/td&gt;
-    &lt;td&gt;11.2&lt;/td&gt;
-    &lt;td&gt;19.5&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr height=&quot;5&quot;&gt;
-    &lt;td&gt;CA-49&lt;/td&gt;
-    &lt;td&gt;0.5&lt;/td&gt;
-    &lt;td&gt;7.4&lt;/td&gt;
-    &lt;td&gt;7.9&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr height=&quot;5&quot;&gt;
-    &lt;td&gt;CA-25&lt;/td&gt;
-    &lt;td&gt;6.3&lt;/td&gt;
-    &lt;td&gt;6.4&lt;/td&gt;
-    &lt;td&gt;12.7&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr height=&quot;5&quot;&gt;
-    &lt;td&gt;KS-3&lt;/td&gt;
-    &lt;td&gt;10.7&lt;/td&gt;
-    &lt;td&gt;9.1&lt;/td&gt;
-    &lt;td&gt;19.8&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-
-&lt;script&gt;
-function sortTable3(n) {
-  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-  table = document.getElementById(&quot;myTable3&quot;);
-  switching = true;
-  //Set the sorting direction to ascending:
-  dir = &quot;desc&quot;; 
-  /*Make a loop that will continue until
-  no switching has been done:*/
-  while (switching) {
-    //start by saying: no switching is done:
-    switching = false;
-    rows = table.rows;
-    /*Loop through all table rows (except the
-    first, which contains table headers):*/
-    for (i = 1; i &lt; (rows.length - 1); i++) {
-      //start by saying there should be no switching:
-      shouldSwitch = false;
-      /*Get the two elements you want to compare,
-      one from current row and one from the next:*/
-      x = rows[i].getElementsByTagName(&quot;TD&quot;)[n];
-      y = rows[i + 1].getElementsByTagName(&quot;TD&quot;)[n];
-      /*check if the two rows should switch place,
-      based on the direction, asc or desc:*/
-      if (dir == &quot;asc&quot;) {
-        if (x.innerHTML.toLowerCase() &gt; y.innerHTML.toLowerCase()) {
-          //if so, mark as a switch and break the loop:
-          shouldSwitch= true;
-          break;
-        }
-      } else if (dir == &quot;desc&quot;) {
-        if (x.innerHTML.toLowerCase() &lt; y.innerHTML.toLowerCase()) {
-          //if so, mark as a switch and break the loop:
-          shouldSwitch = true;
-          break;
-        }
-      }
-    }
-    if (shouldSwitch) {
-      /*If a switch has been marked, make the switch
-      and mark that a switch has been done:*/
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-      //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
-    } else {
-      /*If no switching has been done AND the direction is &quot;asc&quot;,
-      set the direction to &quot;desc&quot; and run the while loop again.*/
-      if (switchcount == 0 &amp;&amp; dir == &quot;desc&quot;) {
-        dir = &quot;asc&quot;;
-        switching = true;
-      }
-    }
-  }
-}
-
-function sortTableNumber3(n) {
-  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-  table = document.getElementById(&quot;myTable3&quot;);
-  switching = true;
-  //Set the sorting direction to ascending:
-  dir = &quot;desc&quot;; 
-  /*Make a loop that will continue until
-  no switching has been done:*/
-  while (switching) {
-    //start by saying: no switching is done:
-    switching = false;
-    rows = table.rows;
-    /*Loop through all table rows (except the
-    first, which contains table headers):*/
-    for (i = 1; i &lt; (rows.length - 1); i++) {
-      //start by saying there should be no switching:
-      shouldSwitch = false;
-      /*Get the two elements you want to compare,
-      one from current row and one from the next:*/
-      x = rows[i].getElementsByTagName(&quot;TD&quot;)[n];
-      y = rows[i + 1].getElementsByTagName(&quot;TD&quot;)[n];
-      /*check if the two rows should switch place,
-      based on the direction, asc or desc:*/
-      if (dir == &quot;asc&quot;) {
-        if (Number(x.innerHTML) &gt; Number(y.innerHTML)) {
-          //if so, mark as a switch and break the loop:
-          shouldSwitch= true;
-          break;
-        }
-      } else if (dir == &quot;desc&quot;) {
-        if (Number(x.innerHTML) &lt; Number(y.innerHTML)) {
-          //if so, mark as a switch and break the loop:
-          shouldSwitch = true;
-          break;
-        }
-      }
-    }
-    if (shouldSwitch) {
-      /*If a switch has been marked, make the switch
-      and mark that a switch has been done:*/
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-      //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
-    } else {
-      /*If no switching has been done AND the direction is &quot;asc&quot;,
-      set the direction to &quot;desc&quot; and run the while loop again.*/
-      if (switchcount == 0 &amp;&amp; dir == &quot;desc&quot;) {
-        dir = &quot;asc&quot;;
-        switching = true;
-      }
-    }
-  }
-}
-&lt;/script&gt;
-
-&lt;p&gt;Two and a half weeks of door-knocking, organizing, and getting out the vote felt far more like two and a half months. It would normally be difficult to imagine how people would have survived the entire campaign, but the energy and passion for change of the volunteers that came to make a difference had to have something to do with it. There’s no way you make it through an entire campaign without neighborhood leaders like Darien and Kathy, without expert phone-bankers like Connie, without unstoppable doorknockers like Brian and Sam, and without energy boosts from seasoned campaign veterans like my partner, Ashley (of course I was going to shamelessly brag about my wife at some point during this article). Jason Crow and his team ran a hell of a campaign, but if there’s anyone to credit with this win, it’s the citizens of Colorado’s 6th district that gave their time, sweat, and effort to the idea that change can materialize anywhere. More than anything, that is what it takes to turn red into purple.&lt;/p&gt;
-
-&lt;h6&gt;All election results presented here are unofficial as of November 23rd, 2018 and a spreadsheet containing all relevant data is available &lt;a href=&quot;https://github.com/tefirman/StatisticalStumbles/blob/master/DouglasCounty_AllResults.xlsx&quot;&gt;here&lt;/a&gt; on &lt;a href=&quot;https://github.com/tefirman&quot;&gt;my GitHub page&lt;/a&gt;.
-
-
-
-
-
-
-
-&lt;/h6&gt;</content><summary type="html">Colorado's 6th Congressional District is a perfect example of why every turf matters...</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/images/DougCoPurple.png" /></entry></feed>
+&lt;p&gt;This problem is a perfect example of how deterministic, average-based methods can sometimes be misrepresentative of the real scenario. These simpler methods told us that we had a fighting chance, but let’s be honest, malfunctions aren’t going to happen like clockwork. Only by accounting for the randomness and noise of the stochastic processes of the real world do we realize that something needs to change or we’re going to end up as martian toast. If anyone in Riddler Nation wants to mess around with the simulation or see if a different strategy would be more effective, the underlying code is available &lt;a href=&quot;https://github.com/tefirman/RiddlerCode/blob/master/MartianPrinters.py&quot;&gt;here&lt;/a&gt;. Safe travels, Riddler-nauts!!!&lt;/p&gt;</content><summary type="html">Captain Blondebeard would be so proud...</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/images/Mars.jpg" /></entry></feed>

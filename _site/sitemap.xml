@@ -2,9 +2,18 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
     <url>
+      <loc>/blog/FantasyFootball/</loc>
+      
+        <lastmod>2021-11-10T00:00:00-07:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
       <loc>/blog/Chasing400/</loc>
       
-        <lastmod>2020-07-12T00:00:00-07:00</lastmod>
+        <lastmod>2020-07-12T00:00:00-06:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
@@ -13,7 +22,7 @@
     <url>
       <loc>/blog/TriviaQuarantine/</loc>
       
-        <lastmod>2020-03-25T00:00:00-07:00</lastmod>
+        <lastmod>2020-03-25T00:00:00-06:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
@@ -22,7 +31,7 @@
     <url>
       <loc>/blog/RiddlerCounterfeit/</loc>
       
-        <lastmod>2019-08-25T00:00:00-07:00</lastmod>
+        <lastmod>2019-08-25T00:00:00-06:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
@@ -31,7 +40,7 @@
     <url>
       <loc>/blog/VocabularEntropy/</loc>
       
-        <lastmod>2019-08-24T00:00:00-07:00</lastmod>
+        <lastmod>2019-08-24T00:00:00-06:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
@@ -40,7 +49,7 @@
     <url>
       <loc>/blog/PoliticalGeographyCO/</loc>
       
-        <lastmod>2019-07-18T00:00:00-07:00</lastmod>
+        <lastmod>2019-07-18T00:00:00-06:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
@@ -49,7 +58,7 @@
     <url>
       <loc>/blog/MarchMadness/</loc>
       
-        <lastmod>2019-05-27T00:00:00-07:00</lastmod>
+        <lastmod>2019-05-27T00:00:00-06:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
@@ -58,7 +67,7 @@
     <url>
       <loc>/blog/Loteria/</loc>
       
-        <lastmod>2019-05-25T00:00:00-07:00</lastmod>
+        <lastmod>2019-05-25T00:00:00-06:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
@@ -67,7 +76,7 @@
     <url>
       <loc>/blog/UnequalRepresentation/</loc>
       
-        <lastmod>2019-02-22T00:00:00-08:00</lastmod>
+        <lastmod>2019-02-22T00:00:00-07:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
@@ -76,7 +85,7 @@
     <url>
       <loc>/blog/MartianPrinter/</loc>
       
-        <lastmod>2019-01-14T00:00:00-08:00</lastmod>
+        <lastmod>2019-01-14T00:00:00-07:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
@@ -85,7 +94,7 @@
     <url>
       <loc>/blog/DougCoRecap/</loc>
       
-        <lastmod>2018-11-23T00:00:00-08:00</lastmod>
+        <lastmod>2018-11-23T00:00:00-07:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
@@ -94,7 +103,7 @@
     <url>
       <loc>/blog/GrazedAndConfused/</loc>
       
-        <lastmod>2018-10-13T00:00:00-07:00</lastmod>
+        <lastmod>2018-10-13T00:00:00-06:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
@@ -103,7 +112,7 @@
     <url>
       <loc>/blog/TheUnLuckiestSeason/</loc>
       
-        <lastmod>2018-10-04T00:00:00-07:00</lastmod>
+        <lastmod>2018-10-04T00:00:00-06:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
@@ -112,7 +121,7 @@
     <url>
       <loc>/blog/RockPaperScissorsHop/</loc>
       
-        <lastmod>2018-09-15T00:00:00-07:00</lastmod>
+        <lastmod>2018-09-15T00:00:00-06:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
@@ -121,7 +130,7 @@
   
     <url>
       <loc>/about/</loc>
-       <lastmod>2018-09-14T00:00:00-07:00</lastmod>
+       <lastmod>2018-09-14T00:00:00-06:00</lastmod>
       
        <changefreq>weekly</changefreq>
       
@@ -131,7 +140,7 @@
   
     <url>
       <loc>/blog/</loc>
-       <lastmod>2018-09-14T00:00:00-07:00</lastmod>
+       <lastmod>2018-09-14T00:00:00-06:00</lastmod>
       
        <changefreq>weekly</changefreq>
       
@@ -141,7 +150,7 @@
   
     <url>
       <loc>/elements/</loc>
-       <lastmod>2017-11-02T00:00:00-07:00</lastmod>
+       <lastmod>2017-11-02T00:00:00-06:00</lastmod>
       
        <changefreq>weekly</changefreq>
       
@@ -151,7 +160,7 @@
   
     <url>
       <loc>/</loc>
-       <lastmod>2018-09-14T00:00:00-07:00</lastmod>
+       <lastmod>2018-09-14T00:00:00-06:00</lastmod>
       
        <changefreq>weekly</changefreq>
       
@@ -161,7 +170,7 @@
   
     <url>
       <loc>/publications/</loc>
-       <lastmod>2019-01-15T00:00:00-08:00</lastmod>
+       <lastmod>2019-01-15T00:00:00-07:00</lastmod>
       
        <changefreq>weekly</changefreq>
       
@@ -201,7 +210,7 @@
   
     <url>
       <loc>/blog/page2/</loc>
-       <lastmod>2018-09-14T00:00:00-07:00</lastmod>
+       <lastmod>2018-09-14T00:00:00-06:00</lastmod>
       
        <changefreq>weekly</changefreq>
       
@@ -211,7 +220,7 @@
   
     <url>
       <loc>/blog/page3/</loc>
-       <lastmod>2018-09-14T00:00:00-07:00</lastmod>
+       <lastmod>2018-09-14T00:00:00-06:00</lastmod>
       
        <changefreq>weekly</changefreq>
       
