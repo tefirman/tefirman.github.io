@@ -3,6 +3,7 @@ layout: post
 title:  "Fantasy Football: Welcome to the Algorithm"
 date:   2021-11-10
 excerpt: "Take a peak into the algorithm with this interactive graph..."
+image: "/images/WingHelmet.png"
 ---
 
 <head>
