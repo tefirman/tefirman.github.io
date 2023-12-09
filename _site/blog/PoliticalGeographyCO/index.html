@@ -4,27 +4,27 @@
 	html5up.net | @ajlkn
   Jekyll integration by somiibo.com
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
---><html>
+-->
+<html>
 	<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
 <title>Centennial State<br>Political Geography</title>
 <meta name="description" content="">
 
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/icon/favicon-16x16.png">
-<link rel="manifest" href="/assets/icon/manifest.json">
-<link rel="mask-icon" href="/assets/icon/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="/assets/icon/favicon.ico">
-<meta name="msapplication-config" content="/assets/icon/browserconfig.xml">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/assets/icon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:4000/assets/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:4000/assets/icon/favicon-16x16.png">
+<link rel="manifest" href="http://localhost:4000/assets/icon/manifest.json">
+<link rel="mask-icon" href="http://localhost:4000/assets/icon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="http://localhost:4000/assets/icon/favicon.ico">
+<meta name="msapplication-config" content="http://localhost:4000/assets/icon/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
 <!-- CSS -->
-<link rel="stylesheet" href="/assets/css/main.css">
-<noscript><link rel="stylesheet" href="/assets/css/noscript.css"></noscript>
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css" />
+<noscript><link rel="stylesheet" href="http://localhost:4000/assets/css/noscript.css" /></noscript>
 
 	</head>
 	<body class="is-loading">
@@ -34,17 +34,17 @@
 
 				<!-- Header -->
         <header id="header">
-          <a href="/" class="logo">Taylor Firman</a>
+          <a href="http://localhost:4000/" class="logo">Taylor Firman</a>
         </header>
 
 				<!-- Nav -->
 					<nav id="nav">
 
             <ul class="links">
-  <li class=""><a href="/">Home</a></li>
-  <li class=""><a href="/about/">About</a></li>
-  <li class=" active "><a href="/blog/">Blog</a></li>
-  <li class=""><a href="/publications/">Publications</a></li>
+  <li class=""><a href="http://localhost:4000/">Home</a></li>
+  <li class=""><a href="http://localhost:4000/about/">About</a></li>
+  <li class=" active "><a href="http://localhost:4000/blog/">Blog</a></li>
+  <li class=""><a href="http://localhost:4000/publications/">Publications</a></li>
 </ul>
 
 
@@ -65,15 +65,15 @@
       				<p>Let's take a comprehensive look at the divergent political geography of Colorado and its effect on the 2020 Senate race...</p>
       			</header>
             <div class="image main"><img src="/images/CO_Maps_Wide.png" alt=""></div>
-      			<p></p>
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:creator" content="@tefirman51">
-<meta name="twitter:site" content="@tefirman51">
-<meta name="twitter:title" content="Centennial State Political Geography">
-<meta name="twitter:description" content="Let's take a comprehensive look at the divergent political geography of Colorado and its effect on the 2020 Senate race...">
-<meta name="twitter:image:src" content="https://tefirman.github.io/images/CO_Maps_Wide.png">
-<meta name="twitter:image:width" content="280">
-<meta name="twitter:image:height" content="150">
+      			<p><head>
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@tefirman51" />
+<meta name="twitter:site" content="@tefirman51" />
+<meta name="twitter:title" content="Centennial State Political Geography" />
+<meta name="twitter:description" content="Let's take a comprehensive look at the divergent political geography of Colorado and its effect on the 2020 Senate race..." />
+<meta name="twitter:image:src" content="https://tefirman.github.io/images/CO_Maps_Wide.png" />
+<meta name="twitter:image:width" content="280" />
+<meta name="twitter:image:height" content="150" />
 
 <script src="/assets/js/jquery.min.js"></script> 
 <script> 
@@ -100,7 +100,7 @@ $(function(){
 
   gtag('config', 'UA-141691742-13');
 </script>
-
+</head>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async=""></script>
 
@@ -112,26 +112,26 @@ $(function(){
 
 <p>To define the scope of the analysis shown here, let’s consider results from presidential and midterm elections in the state of Colorado between 2012 and 2018. As a disclaimer, the metrics I’ll be using are similar (if not identical) to <a href="https://fivethirtyeight.com/features/election-update-the-house-districts-that-swing-the-most-and-least-with-the-national-mood/">those used by analysts at FiveThirtyEight</a>. There’s no way I’m smart enough to have invented these metrics, just smart enough to know how to apply them. Starting with the basics, <b>partisan lean</b> is a <a href="https://fivethirtyeight.com/features/everything-is-partisan-and-correlated-and-boring/">fairly standard</a> <a href="https://en.wikipedia.org/wiki/Cook_Partisan_Voting_Index">metric</a> of whether an area is more Republican or Democratic, but we will define it explicitly as</p>
 
-<script type="math/tex; mode=display">L_i = \frac{1}{N_i} \sum_{j=1}^{N_i} (D_{i,j} - R_{i,j}).</script>
+\[L_i = \frac{1}{N_i} \sum_{j=1}^{N_i} (D_{i,j} - R_{i,j}).\]
 
-<p>where <script type="math/tex">i</script> is the precinct index, <script type="math/tex">N_{i}</script> is the number of races in the precinct, <script type="math/tex">j</script> is the election index (e.g. 2018 District 3 State House race, 2014 Senate race, etc.), and <script type="math/tex">D_{i,j}</script> and <script type="math/tex">R_{i,j}</script> are the percentage of Democratic and Republican votes, respectively, for race <script type="math/tex">j</script> in precinct <script type="math/tex">i</script>. The map below illustrates this metric for each precinct throughout the state in the form of a heat map with darker shades of red representing more Republican areas and darker shades of blue representing more Democratic areas. The general trends are not surprising in that more densely populated areas (e.g. Denver, Boulder, Fort Collins) tend to be more Democratic and more sparse rural areas (e.g. the entire eastern third of the state) tend to be more Republican, but seeing where the exact lines are drawn is both interesting and informative.</p>
+<p>where \(i\) is the precinct index, \(N_{i}\) is the number of races in the precinct, \(j\) is the election index (e.g. 2018 District 3 State House race, 2014 Senate race, etc.), and \(D_{i,j}\) and \(R_{i,j}\) are the percentage of Democratic and Republican votes, respectively, for race \(j\) in precinct \(i\). The map below illustrates this metric for each precinct throughout the state in the form of a heat map with darker shades of red representing more Republican areas and darker shades of blue representing more Democratic areas. The general trends are not surprising in that more densely populated areas (e.g. Denver, Boulder, Fort Collins) tend to be more Democratic and more sparse rural areas (e.g. the entire eastern third of the state) tend to be more Republican, but seeing where the exact lines are drawn is both interesting and informative.</p>
 
 <div align="center"><div id="includedContent"></div></div>
-<p><br></p>
+<p><br /></p>
 
 <p>However, these partisan predilections do not remain static over time. Precinct leans can easily change based on both the impact of current events and the changing makeup of voting populations. For instance, the 2018 midterms in Colorado saw an 8.1% increase in voter turnout compared to 2014. Numerous things changed in those four years, but the most obvious and earth-shattering one in terms of politics was the election of our current president. To illustrate its effect on voters’ behaviors, we’ll use what I’m calling the <b>Trump effect</b>: it calculates the lean of a precinct using only races from the 2018 midterms and subtracts the lean of the same precinct using only the 2014 midterms. This isolates where voters are trending due to the instability and antics of the current resident of the White House. As you can see in the map below, the sea of cerulean is not good news for Cory Gardner, especially considering <a href="https://projects.fivethirtyeight.com/congress-trump-score/cory-gardner/">he votes in line with Trump 90% of the time.</a></p>
 
 <div align="center"><div id="includedContent2"></div></div>
-<p><br></p>
+<p><br /></p>
 
 <p>Another interesting and lesser-known metric is <b>partisan elasticity</b>, <a href="https://fivethirtyeight.com/features/election-update-the-house-districts-that-swing-the-most-and-least-with-the-national-mood/">an index of how stubborn voters are with their partisanship</a>, i.e. are they voting party lines down the ballot or will they vote for the other party if the right candidate comes along. This will be defined as the standard deviation of the partisan lean, or using the same variables from the first equation,</p>
 
-<script type="math/tex; mode=display">E_i = \sqrt{\frac{1}{N_i} \sum_{j=1}^{N_i} (D_{i,j} - R_{i,j})^2 - L_i^2}.</script>
+\[E_i = \sqrt{\frac{1}{N_i} \sum_{j=1}^{N_i} (D_{i,j} - R_{i,j})^2 - L_i^2}.\]
 
 <p><a href="/images/PrecinctPartisanElasticityCO.html">In isolation</a>, the relevance of a precinct’s elasticity is kind of hard to grasp, but when put in context with its associated lean, elasticity teases out valuable insight for potential candidates. Let’s say a campaign wanted to identify areas where a candidate’s effort would have the most impact. To do this, we can look at “flippable” precincts, precincts that have elasticities larger than the magnitude of their lean. To get the most bang for our buck, let’s also limit the scope to precincts with voter densities higher than 100 per square mile.</p>
 
 <div align="center"><div id="includedContent3"></div></div>
-<p><br></p>
+<p><br /></p>
 
 <p>Fascinatingly, the map above shows us that the majority of these flippable precincts are in the suburban neighborhoods surrounding the major cities along the Front Range. Keep in mind that winning over precincts is not the goal in a Senate race, winning over voters is, so this metric of flippability should not be the golden standard. In order to get past the primary, a Democrat needs to visit the major cities since that’s where the majority of Democrats reside. Even in the general, a smaller elasticity could still swing more votes overall <a href="/images/PrecinctVoterDensityCO.html">if the precinct is dense enough</a>. However, these suburban conditions provide a great opportunity for a candidate to knock on doors, shake a few hands, and have the fabled “kitchen table discussions” with everyday voters. Gaining Democratic support in these neighborhoods would kill two birds with one stone: they vote for you in the primary and persuade their undecided neighbors during the general.</p>
 
@@ -371,7 +371,7 @@ function sortTableNumber(n) {
 
 
 </h6>
-
+</p>
       		</section>
 
           <!-- <div class="comments-wrapper">
@@ -403,7 +403,7 @@ function sortTableNumber(n) {
 					<!-- Footer -->
 						<footer>
               <ul class="actions">
-                <li><a href="/blog/" class="button">Blog</a></li>
+                <li><a href="http://localhost:4000/blog/" class="button">Blog</a></li>
               </ul>
 						</footer>
 					</div>
@@ -414,18 +414,18 @@ function sortTableNumber(n) {
     <form method="POST" action="https://formspree.io/tefirman@gmail.com">
       <div class="field">
         <label for="name">Name</label>
-        <input type="text" name="name" id="name">
+        <input type="text" name="name" id="name" />
       </div>
       <div class="field">
         <label for="email">Email</label>
-        <input type="text" name="email" id="email">
+        <input type="text" name="email" id="email" />
       </div>
       <div class="field">
         <label for="message">Message</label>
         <textarea name="message" id="message" rows="3"></textarea>
       </div>
       <ul class="actions">
-        <li><input type="submit" value="Send Message"></li>
+        <li><input type="submit" value="Send Message" /></li>
       </ul>
     </form>
   </section>
@@ -455,13 +455,7 @@ function sortTableNumber(n) {
 </footer>
 <!-- Copyright -->
 <div id="copyright">
-  <ul>
-<li>© HTML5 UP</li>
-<li>Design by <a href="https://html5up.net" rel="nofollow">HTML5 UP</a>
-</li>
-<li>Jekyll Integration by <a href="https://soundgrail.com">SoundGrail</a>
-</li>
-</ul>
+  <ul><li>&copy; HTML5 UP</li><li>Design by <a href="https://html5up.net" rel="nofollow">HTML5 UP</a></li><li>Jekyll Integration by <a href="https://soundgrail.com">SoundGrail</a></li></ul>
 </div>
 
 
@@ -469,12 +463,12 @@ function sortTableNumber(n) {
 
       <!-- Scripts -->
   		<!-- DYN -->
-<script src="/assets/js/jquery.min.js"></script>
-<script src="/assets/js/jquery.scrollex.min.js"></script>
-<script src="/assets/js/jquery.scrolly.min.js"></script>
-<script src="/assets/js/skel.min.js"></script>
-<script src="/assets/js/util.js"></script>
-<script src="/assets/js/main.js"></script>
+<script src="http://localhost:4000/assets/js/jquery.min.js"></script>
+<script src="http://localhost:4000/assets/js/jquery.scrollex.min.js"></script>
+<script src="http://localhost:4000/assets/js/jquery.scrolly.min.js"></script>
+<script src="http://localhost:4000/assets/js/skel.min.js"></script>
+<script src="http://localhost:4000/assets/js/util.js"></script>
+<script src="http://localhost:4000/assets/js/main.js"></script>
 
 			<script async src="https://www.googletagmanager.com/gtag/js?id=tefirman"></script>
 <script>

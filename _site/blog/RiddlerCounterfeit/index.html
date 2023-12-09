@@ -4,27 +4,27 @@
 	html5up.net | @ajlkn
   Jekyll integration by somiibo.com
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
---><html>
+-->
+<html>
 	<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
 <title>Riddler Answer:<br>Fool the Bank</title>
 <meta name="description" content="">
 
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/icon/favicon-16x16.png">
-<link rel="manifest" href="/assets/icon/manifest.json">
-<link rel="mask-icon" href="/assets/icon/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="/assets/icon/favicon.ico">
-<meta name="msapplication-config" content="/assets/icon/browserconfig.xml">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/assets/icon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:4000/assets/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:4000/assets/icon/favicon-16x16.png">
+<link rel="manifest" href="http://localhost:4000/assets/icon/manifest.json">
+<link rel="mask-icon" href="http://localhost:4000/assets/icon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="http://localhost:4000/assets/icon/favicon.ico">
+<meta name="msapplication-config" content="http://localhost:4000/assets/icon/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
 <!-- CSS -->
-<link rel="stylesheet" href="/assets/css/main.css">
-<noscript><link rel="stylesheet" href="/assets/css/noscript.css"></noscript>
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css" />
+<noscript><link rel="stylesheet" href="http://localhost:4000/assets/css/noscript.css" /></noscript>
 
 	</head>
 	<body class="is-loading">
@@ -34,17 +34,17 @@
 
 				<!-- Header -->
         <header id="header">
-          <a href="/" class="logo">Taylor Firman</a>
+          <a href="http://localhost:4000/" class="logo">Taylor Firman</a>
         </header>
 
 				<!-- Nav -->
 					<nav id="nav">
 
             <ul class="links">
-  <li class=""><a href="/">Home</a></li>
-  <li class=""><a href="/about/">About</a></li>
-  <li class=" active "><a href="/blog/">Blog</a></li>
-  <li class=""><a href="/publications/">Publications</a></li>
+  <li class=""><a href="http://localhost:4000/">Home</a></li>
+  <li class=""><a href="http://localhost:4000/about/">About</a></li>
+  <li class=" active "><a href="http://localhost:4000/blog/">Blog</a></li>
+  <li class=""><a href="http://localhost:4000/publications/">Publications</a></li>
 </ul>
 
 
@@ -65,15 +65,15 @@
       				<p>Put on your Hamburglar costumes, Riddler fans! This week's Riddler takes a foray into racketeering...</p>
       			</header>
             <div class="image main"><img src="/images/FoolTheBankWidgetPic.jpg" alt=""></div>
-      			<p></p>
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:creator" content="@tefirman51">
-<meta name="twitter:site" content="@tefirman51">
-<meta name="twitter:title" content="Riddler Answer: Fool the Bank">
-<meta name="twitter:description" content="Put on your Hamburglar costumes, Riddler fans! This week's Riddler takes a foray into racketeering...">
-<meta name="twitter:image:src" content="https://tefirman.github.io/images/FoolTheBankWidgetPic.jpg">
-<meta name="twitter:image:width" content="280">
-<meta name="twitter:image:height" content="150">
+      			<p><head>
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@tefirman51" />
+<meta name="twitter:site" content="@tefirman51" />
+<meta name="twitter:title" content="Riddler Answer: Fool the Bank" />
+<meta name="twitter:description" content="Put on your Hamburglar costumes, Riddler fans! This week's Riddler takes a foray into racketeering..." />
+<meta name="twitter:image:src" content="https://tefirman.github.io/images/FoolTheBankWidgetPic.jpg" />
+<meta name="twitter:image:width" content="280" />
+<meta name="twitter:image:height" content="150" />
 <script src="/assets/js/jquery.min.js"></script> 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -86,7 +86,7 @@
   gtag('config', 'UA-141691742-15');
 </script>
 
-
+</head>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async=""></script>
 
@@ -94,27 +94,27 @@
 
 <h2 id="solution">Solution</h2>
 
-<p>To start, let’s define <script type="math/tex">a</script> as the portion of bills inspected, <script type="math/tex">R</script> as the number of real bills you deposit, and <script type="math/tex">F</script> as the number of fake bills you deposit. This would put the number of randomly inspected bills at</p>
+<p>To start, let’s define \(a\) as the portion of bills inspected, \(R\) as the number of real bills you deposit, and \(F\) as the number of fake bills you deposit. This would put the number of randomly inspected bills at</p>
 
-<script type="math/tex; mode=display">n = \text{ceil}(a(R + F)).</script>
+\[n = \text{ceil}(a(R + F)).\]
 
-<p>From here, we need to think about the probability (and therefore <a href="https://en.wikipedia.org/wiki/Combinatorics">combinatorics) of how many fake/real bills the bank chose to inspect. If we set <script type="math/tex">f</script> as the number of fake bills the bank happens to scrutinize, the number of ways the bank could choose <script type="math/tex">f</script> fake bills and <script type="math/tex">n</script> bills total can be defined as</a></p>
+<p>From here, we need to think about the probability (and therefore <a href="https://en.wikipedia.org/wiki/Combinatorics">combinatorics) of how many fake/real bills the bank chose to inspect. If we set \(f\) as the number of fake bills the bank happens to scrutinize, the number of ways the bank could choose \(f\) fake bills and \(n\) bills total can be defined as</a></p>
 
-<script type="math/tex; mode=display">\Omega(f) = \frac{F!}{f!(F - f)!} \times \frac{R!}{(n - f)!(R - n + f)!}.</script>
+\[\Omega(f) = \frac{F!}{f!(F - f)!} \times \frac{R!}{(n - f)!(R - n + f)!}.\]
 
 <p>This would put the total number of inspection combinations at</p>
 
-<script type="math/tex; mode=display">Q = \sum_{f=0}^{n} \Omega(f).</script>
+\[Q = \sum_{f=0}^{n} \Omega(f).\]
 
-<p>Let’s also define <script type="math/tex">p</script> as the probability of a fake’s detection. To calculate the probability of success given that <script type="math/tex">f</script> fake bills were analyzed, we can normalize <script type="math/tex">\Omega</script> using <script type="math/tex">Q</script> and add a factor of <script type="math/tex">(1 - p)^{f}</script> to account for the bank teller missing the fakes:</p>
+<p>Let’s also define \(p\) as the probability of a fake’s detection. To calculate the probability of success given that \(f\) fake bills were analyzed, we can normalize \(\Omega\) using \(Q\) and add a factor of \((1 - p)^{f}\) to account for the bank teller missing the fakes:</p>
 
-<script type="math/tex; mode=display">P(f) = \frac{\Omega(f)}{Q} (1 - p)^{f}.</script>
+\[P(f) = \frac{\Omega(f)}{Q} (1 - p)^{f}.\]
 
-<p>Finally, we can sum this function over all possible values of <script type="math/tex">f</script> and multiply by the cash to be gained to get the expected return of our hypothetical caper:</p>
+<p>Finally, we can sum this function over all possible values of \(f\) and multiply by the cash to be gained to get the expected return of our hypothetical caper:</p>
 
-<script type="math/tex; mode=display">E(R,F) = 100(R + F)\sum_{f=0}^{n} P(f).</script>
+\[E(R,F) = 100(R + F)\sum_{f=0}^{n} P(f).\]
 
-<p>Using <script type="math/tex">a = 0.05</script>, <script type="math/tex">p = 0.25</script>, and <script type="math/tex">R = 25</script>, we can vary <script type="math/tex">F</script> to produce the graph seen below and the maximum expected return for our efforts occurs at <script type="math/tex">F = 55</script> with a 47.0% probability of winning $8000, suggesting an expected return of $3756.83. But what if the bank decides to modify their protocols and scrutinize a larger portion of the bills? Or what if their techniques improve and increase their detection probablities? Or what if we come into more real bills to use in our endeavor? Play around with the widget below and see how it changes things! Have fun tinkering, Riddler Nation!</p>
+<p>Using \(a = 0.05\), \(p = 0.25\), and \(R = 25\), we can vary \(F\) to produce the graph seen below and the maximum expected return for our efforts occurs at \(F = 55\) with a 47.0% probability of winning $8000, suggesting an expected return of $3756.83. But what if the bank decides to modify their protocols and scrutinize a larger portion of the bills? Or what if their techniques improve and increase their detection probablities? Or what if we come into more real bills to use in our endeavor? Play around with the widget below and see how it changes things! Have fun tinkering, Riddler Nation!</p>
 
 <iframe src="https://riddler-fool-the-bank.herokuapp.com/" height="600" width="100%"></iframe>
 
@@ -122,7 +122,7 @@
 
 
 </h6>
-
+</p>
       		</section>
 
           <!-- <div class="comments-wrapper">
@@ -154,7 +154,7 @@
 					<!-- Footer -->
 						<footer>
               <ul class="actions">
-                <li><a href="/blog/" class="button">Blog</a></li>
+                <li><a href="http://localhost:4000/blog/" class="button">Blog</a></li>
               </ul>
 						</footer>
 					</div>
@@ -165,18 +165,18 @@
     <form method="POST" action="https://formspree.io/tefirman@gmail.com">
       <div class="field">
         <label for="name">Name</label>
-        <input type="text" name="name" id="name">
+        <input type="text" name="name" id="name" />
       </div>
       <div class="field">
         <label for="email">Email</label>
-        <input type="text" name="email" id="email">
+        <input type="text" name="email" id="email" />
       </div>
       <div class="field">
         <label for="message">Message</label>
         <textarea name="message" id="message" rows="3"></textarea>
       </div>
       <ul class="actions">
-        <li><input type="submit" value="Send Message"></li>
+        <li><input type="submit" value="Send Message" /></li>
       </ul>
     </form>
   </section>
@@ -206,13 +206,7 @@
 </footer>
 <!-- Copyright -->
 <div id="copyright">
-  <ul>
-<li>© HTML5 UP</li>
-<li>Design by <a href="https://html5up.net" rel="nofollow">HTML5 UP</a>
-</li>
-<li>Jekyll Integration by <a href="https://soundgrail.com">SoundGrail</a>
-</li>
-</ul>
+  <ul><li>&copy; HTML5 UP</li><li>Design by <a href="https://html5up.net" rel="nofollow">HTML5 UP</a></li><li>Jekyll Integration by <a href="https://soundgrail.com">SoundGrail</a></li></ul>
 </div>
 
 
@@ -220,12 +214,12 @@
 
       <!-- Scripts -->
   		<!-- DYN -->
-<script src="/assets/js/jquery.min.js"></script>
-<script src="/assets/js/jquery.scrollex.min.js"></script>
-<script src="/assets/js/jquery.scrolly.min.js"></script>
-<script src="/assets/js/skel.min.js"></script>
-<script src="/assets/js/util.js"></script>
-<script src="/assets/js/main.js"></script>
+<script src="http://localhost:4000/assets/js/jquery.min.js"></script>
+<script src="http://localhost:4000/assets/js/jquery.scrollex.min.js"></script>
+<script src="http://localhost:4000/assets/js/jquery.scrolly.min.js"></script>
+<script src="http://localhost:4000/assets/js/skel.min.js"></script>
+<script src="http://localhost:4000/assets/js/util.js"></script>
+<script src="http://localhost:4000/assets/js/main.js"></script>
 
 			<script async src="https://www.googletagmanager.com/gtag/js?id=tefirman"></script>
 <script>

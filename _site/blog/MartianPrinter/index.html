@@ -4,27 +4,27 @@
 	html5up.net | @ajlkn
   Jekyll integration by somiibo.com
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
---><html>
+-->
+<html>
 	<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
 <title>Riddler Answer: Printers are from Mars, Scanners are from Venus</title>
 <meta name="description" content="">
 
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/icon/favicon-16x16.png">
-<link rel="manifest" href="/assets/icon/manifest.json">
-<link rel="mask-icon" href="/assets/icon/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="/assets/icon/favicon.ico">
-<meta name="msapplication-config" content="/assets/icon/browserconfig.xml">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/assets/icon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:4000/assets/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:4000/assets/icon/favicon-16x16.png">
+<link rel="manifest" href="http://localhost:4000/assets/icon/manifest.json">
+<link rel="mask-icon" href="http://localhost:4000/assets/icon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="http://localhost:4000/assets/icon/favicon.ico">
+<meta name="msapplication-config" content="http://localhost:4000/assets/icon/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
 <!-- CSS -->
-<link rel="stylesheet" href="/assets/css/main.css">
-<noscript><link rel="stylesheet" href="/assets/css/noscript.css"></noscript>
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css" />
+<noscript><link rel="stylesheet" href="http://localhost:4000/assets/css/noscript.css" /></noscript>
 
 	</head>
 	<body class="is-loading">
@@ -34,17 +34,17 @@
 
 				<!-- Header -->
         <header id="header">
-          <a href="/" class="logo">Taylor Firman</a>
+          <a href="http://localhost:4000/" class="logo">Taylor Firman</a>
         </header>
 
 				<!-- Nav -->
 					<nav id="nav">
 
             <ul class="links">
-  <li class=""><a href="/">Home</a></li>
-  <li class=""><a href="/about/">About</a></li>
-  <li class=" active "><a href="/blog/">Blog</a></li>
-  <li class=""><a href="/publications/">Publications</a></li>
+  <li class=""><a href="http://localhost:4000/">Home</a></li>
+  <li class=""><a href="http://localhost:4000/about/">About</a></li>
+  <li class=" active "><a href="http://localhost:4000/blog/">Blog</a></li>
+  <li class=""><a href="http://localhost:4000/publications/">Publications</a></li>
 </ul>
 
 
@@ -65,15 +65,15 @@
       				<p>Captain Blondebeard would be so proud...</p>
       			</header>
             <div class="image main"><img src="/images/Mars.jpg" alt=""></div>
-      			<p></p>
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:creator" content="@tefirman51">
-<meta name="twitter:site" content="@tefirman51">
-<meta name="twitter:title" content="Riddler Answer: Printers are from Mars, Scanners are from Venus">
-<meta name="twitter:description" content="Captain Blondebeard would be so proud...">
-<meta name="twitter:image:src" content="https://tefirman.github.io/images/Mars.jpg">
-<meta name="twitter:image:width" content="280">
-<meta name="twitter:image:height" content="150">
+      			<p><head>
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@tefirman51" />
+<meta name="twitter:site" content="@tefirman51" />
+<meta name="twitter:title" content="Riddler Answer: Printers are from Mars, Scanners are from Venus" />
+<meta name="twitter:description" content="Captain Blondebeard would be so proud..." />
+<meta name="twitter:image:src" content="https://tefirman.github.io/images/Mars.jpg" />
+<meta name="twitter:image:width" content="280" />
+<meta name="twitter:image:height" content="150" />
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-141691742-5"></script>
 <script>
@@ -83,7 +83,7 @@
 
   gtag('config', 'UA-141691742-5');
 </script>
-
+</head>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async=""></script>
 
@@ -93,7 +93,7 @@
 
 <p>If I understand the description of the scenario correctly, the only way you would die is if all three printers break in the same day because all other scenarios are fixable. For instance, if printers A and B both fail, printer C can print a part to fix printer B, printer B can then print a piece to fix printer A, and finally, printer A can then print a new part for the vital equipment. By this logic, the probability of surviving the entire journey would be</p>
 
-<script type="math/tex; mode=display">P = (100\% - 10\% * 7.5\% * 5\%)^{1825} = 50.4\%.</script>
+\[P = (100\% - 10\% * 7.5\% * 5\%)^{1825} = 50.4\%.\]
 
 <p>However, the problem gets much more interesting if we make it a bit more realistic. Specifically, we can make the vital equipment/printer failures a random process using a <a href="https://en.wikipedia.org/wiki/Gillespie_algorithm">Gillespie algorithm</a> like the one shown below. On average, one piece of vital equipment will still break each day and each printer will have the same odds of breaking each day, but there is now a significant chance of having multiple breakages in a single day. When anything breaks, the next available printer will print a replacement but then remain unavailable for the next 24 hours to recharge.</p>
 
@@ -150,11 +150,11 @@ print('Average Survival Time = ' + str(round(np.average(times),1)) + \
 print('Probability of Survival = ' + str(round(100*sum(np.array(times) &gt;= numDays)/len(times),1)) + '%')
 </code></pre>
 
-<p><span class="image right"><img src="/images/SurvivalProb.png" alt=""><img src="/images/SurvivalProbability_NumPrinters.png" alt=""><img src="/images/SurvivalProbability_PrinterLag.png" alt=""></span>This added stochasticity changes the entire game. We intrepid Riddler-nauts now have essentially a zero percent chance of surviving our martian journey with an average survival of <script type="math/tex">13.2 \pm 12.6</script> days. So what needs to change??? What do our highly-skilled RASA engineers need to focus on to get us to the 1825 day finish line? For starters, let’s pretend that the <a href="https://fivethirtyeight.com/features/how-far-would-you-go-to-rig-a-coin-flip/">Riddler Nation Senate</a> decided to approve funding for as many 5% printers as we need to have a 50% chance of survival (man, those senators love their coin flips). If that were the case, we would need seven printers instead of three, as seen in the second figure. But with <a href="http://www.realclearfuture.com/articles/2017/06/01/elon_musk_is_still_the_king_of_low-cost_space_launch_111957.html">space travel costing $1250 per pound at best</a>, each <a href="https://www.homedepot.com/p/Dremel-Digilab-3D45-Advanced-Idea-Builder-3D-Printer-with-Built-In-WiFi-Guided-Leveling-and-RFID-Filament-Recognition-3D45-01/303720938?cm_mmc=Shopping%7CG%7CVF%7CD25T%7C25-9_PORTABLE+POWER%7CDREMEL%7CNA%7CVersa%7c71700000037187511%7c58700004135694341%7c92700034455553438&amp;gclid=EAIaIQobChMIrqDZuYLv3wIVdx-tBh1yhQN-EAQYBCABEgKaqvD_BwE&amp;gclsrc=aw.ds">printer</a> weighing 50 pounds, and each printer costing $1500, the senators are starting to clamor about the extra $256K. Instead, they are encouraging us to optimize the three printers we already have. In the end, lowering the breaking probability of our printers won’t help much – even if the printers never break, it’s reasonably probable for more than three pieces of vital machinery to break in a single day and the lag between printing jobs will do us in. Sure enough, simulating this perfect-printer scenario produces an average survival of <script type="math/tex">20.5 \pm 20.0</script> days so we should definitely focus on reducing the rate-limiting 24 hour recharging period. In order to reach the 50% goal set by the Senate with our original three printers, we would need to lower the lag time to just under 3 hours as seen in the final figure.</p>
+<p><span class="image right"><img src="http://localhost:4000/images/SurvivalProb.png" alt="" /><img src="http://localhost:4000/images/SurvivalProbability_NumPrinters.png" alt="" /><img src="http://localhost:4000/images/SurvivalProbability_PrinterLag.png" alt="" /></span>This added stochasticity changes the entire game. We intrepid Riddler-nauts now have essentially a zero percent chance of surviving our martian journey with an average survival of \(13.2 \pm 12.6\) days. So what needs to change??? What do our highly-skilled RASA engineers need to focus on to get us to the 1825 day finish line? For starters, let’s pretend that the <a href="https://fivethirtyeight.com/features/how-far-would-you-go-to-rig-a-coin-flip/">Riddler Nation Senate</a> decided to approve funding for as many 5% printers as we need to have a 50% chance of survival (man, those senators love their coin flips). If that were the case, we would need seven printers instead of three, as seen in the second figure. But with <a href="http://www.realclearfuture.com/articles/2017/06/01/elon_musk_is_still_the_king_of_low-cost_space_launch_111957.html">space travel costing $1250 per pound at best</a>, each <a href="https://www.homedepot.com/p/Dremel-Digilab-3D45-Advanced-Idea-Builder-3D-Printer-with-Built-In-WiFi-Guided-Leveling-and-RFID-Filament-Recognition-3D45-01/303720938?cm_mmc=Shopping%7CG%7CVF%7CD25T%7C25-9_PORTABLE+POWER%7CDREMEL%7CNA%7CVersa%7c71700000037187511%7c58700004135694341%7c92700034455553438&amp;gclid=EAIaIQobChMIrqDZuYLv3wIVdx-tBh1yhQN-EAQYBCABEgKaqvD_BwE&amp;gclsrc=aw.ds">printer</a> weighing 50 pounds, and each printer costing $1500, the senators are starting to clamor about the extra $256K. Instead, they are encouraging us to optimize the three printers we already have. In the end, lowering the breaking probability of our printers won’t help much – even if the printers never break, it’s reasonably probable for more than three pieces of vital machinery to break in a single day and the lag between printing jobs will do us in. Sure enough, simulating this perfect-printer scenario produces an average survival of \(20.5 \pm 20.0\) days so we should definitely focus on reducing the rate-limiting 24 hour recharging period. In order to reach the 50% goal set by the Senate with our original three printers, we would need to lower the lag time to just under 3 hours as seen in the final figure.</p>
 
 <p>This problem is a perfect example of how deterministic, average-based methods can sometimes be misrepresentative of the real scenario. These simpler methods told us that we had a fighting chance, but let’s be honest, malfunctions aren’t going to happen like clockwork. Only by accounting for the randomness and noise of the stochastic processes of the real world do we realize that something needs to change or we’re going to end up as martian toast. If anyone in Riddler Nation wants to mess around with the simulation or see if a different strategy would be more effective, the underlying code is available <a href="https://github.com/tefirman/RiddlerCode/blob/master/MartianPrinters.py">here</a>. Safe travels, Riddler-nauts!!!</p>
 
-
+</p>
       		</section>
 
           <!-- <div class="comments-wrapper">
@@ -186,7 +186,7 @@ print('Probability of Survival = ' + str(round(100*sum(np.array(times) &gt;= num
 					<!-- Footer -->
 						<footer>
               <ul class="actions">
-                <li><a href="/blog/" class="button">Blog</a></li>
+                <li><a href="http://localhost:4000/blog/" class="button">Blog</a></li>
               </ul>
 						</footer>
 					</div>
@@ -197,18 +197,18 @@ print('Probability of Survival = ' + str(round(100*sum(np.array(times) &gt;= num
     <form method="POST" action="https://formspree.io/tefirman@gmail.com">
       <div class="field">
         <label for="name">Name</label>
-        <input type="text" name="name" id="name">
+        <input type="text" name="name" id="name" />
       </div>
       <div class="field">
         <label for="email">Email</label>
-        <input type="text" name="email" id="email">
+        <input type="text" name="email" id="email" />
       </div>
       <div class="field">
         <label for="message">Message</label>
         <textarea name="message" id="message" rows="3"></textarea>
       </div>
       <ul class="actions">
-        <li><input type="submit" value="Send Message"></li>
+        <li><input type="submit" value="Send Message" /></li>
       </ul>
     </form>
   </section>
@@ -238,13 +238,7 @@ print('Probability of Survival = ' + str(round(100*sum(np.array(times) &gt;= num
 </footer>
 <!-- Copyright -->
 <div id="copyright">
-  <ul>
-<li>© HTML5 UP</li>
-<li>Design by <a href="https://html5up.net" rel="nofollow">HTML5 UP</a>
-</li>
-<li>Jekyll Integration by <a href="https://soundgrail.com">SoundGrail</a>
-</li>
-</ul>
+  <ul><li>&copy; HTML5 UP</li><li>Design by <a href="https://html5up.net" rel="nofollow">HTML5 UP</a></li><li>Jekyll Integration by <a href="https://soundgrail.com">SoundGrail</a></li></ul>
 </div>
 
 
@@ -252,12 +246,12 @@ print('Probability of Survival = ' + str(round(100*sum(np.array(times) &gt;= num
 
       <!-- Scripts -->
   		<!-- DYN -->
-<script src="/assets/js/jquery.min.js"></script>
-<script src="/assets/js/jquery.scrollex.min.js"></script>
-<script src="/assets/js/jquery.scrolly.min.js"></script>
-<script src="/assets/js/skel.min.js"></script>
-<script src="/assets/js/util.js"></script>
-<script src="/assets/js/main.js"></script>
+<script src="http://localhost:4000/assets/js/jquery.min.js"></script>
+<script src="http://localhost:4000/assets/js/jquery.scrollex.min.js"></script>
+<script src="http://localhost:4000/assets/js/jquery.scrolly.min.js"></script>
+<script src="http://localhost:4000/assets/js/skel.min.js"></script>
+<script src="http://localhost:4000/assets/js/util.js"></script>
+<script src="http://localhost:4000/assets/js/main.js"></script>
 
 			<script async src="https://www.googletagmanager.com/gtag/js?id=tefirman"></script>
 <script>

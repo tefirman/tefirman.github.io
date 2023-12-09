@@ -4,27 +4,27 @@
 	html5up.net | @ajlkn
   Jekyll integration by somiibo.com
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
---><html>
+-->
+<html>
 	<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-<title>Riddler Submission: ¡Lotería!</title>
+<title>Riddler Submission: ¡Loter&iacute;a!</title>
 <meta name="description" content="">
 
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/icon/favicon-16x16.png">
-<link rel="manifest" href="/assets/icon/manifest.json">
-<link rel="mask-icon" href="/assets/icon/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="/assets/icon/favicon.ico">
-<meta name="msapplication-config" content="/assets/icon/browserconfig.xml">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/assets/icon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:4000/assets/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:4000/assets/icon/favicon-16x16.png">
+<link rel="manifest" href="http://localhost:4000/assets/icon/manifest.json">
+<link rel="mask-icon" href="http://localhost:4000/assets/icon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="http://localhost:4000/assets/icon/favicon.ico">
+<meta name="msapplication-config" content="http://localhost:4000/assets/icon/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
 <!-- CSS -->
-<link rel="stylesheet" href="/assets/css/main.css">
-<noscript><link rel="stylesheet" href="/assets/css/noscript.css"></noscript>
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css" />
+<noscript><link rel="stylesheet" href="http://localhost:4000/assets/css/noscript.css" /></noscript>
 
 	</head>
 	<body class="is-loading">
@@ -34,17 +34,17 @@
 
 				<!-- Header -->
         <header id="header">
-          <a href="/" class="logo">Taylor Firman</a>
+          <a href="http://localhost:4000/" class="logo">Taylor Firman</a>
         </header>
 
 				<!-- Nav -->
 					<nav id="nav">
 
             <ul class="links">
-  <li class=""><a href="/">Home</a></li>
-  <li class=""><a href="/about/">About</a></li>
-  <li class=" active "><a href="/blog/">Blog</a></li>
-  <li class=""><a href="/publications/">Publications</a></li>
+  <li class=""><a href="http://localhost:4000/">Home</a></li>
+  <li class=""><a href="http://localhost:4000/about/">About</a></li>
+  <li class=" active "><a href="http://localhost:4000/blog/">Blog</a></li>
+  <li class=""><a href="http://localhost:4000/publications/">Publications</a></li>
 </ul>
 
 
@@ -61,19 +61,19 @@
           <section class="post">
     				<header class="major">
       				<span class="date">25 May 2019</span>
-      				<h1>Riddler Submission: ¡Lotería!</h1>
+      				<h1>Riddler Submission: ¡Loter&iacute;a!</h1>
       				<p>Learn Spanish and gamble all at the same time!!!</p>
       			</header>
             <div class="image main"><img src="/images/Loteria.png" alt=""></div>
-      			<p></p>
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:creator" content="@tefirman51">
-<meta name="twitter:site" content="@tefirman51">
-<meta name="twitter:title" content="Riddler Submission: ¡Lotería!">
-<meta name="twitter:description" content="Learn Spanish and gamble all at the same time!!!">
-<meta name="twitter:image:src" content="https://tefirman.github.io/images/Loteria.png">
-<meta name="twitter:image:width" content="280">
-<meta name="twitter:image:height" content="150">
+      			<p><head>
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@tefirman51" />
+<meta name="twitter:site" content="@tefirman51" />
+<meta name="twitter:title" content="Riddler Submission: ¡Loter&iacute;a!" />
+<meta name="twitter:description" content="Learn Spanish and gamble all at the same time!!!" />
+<meta name="twitter:image:src" content="https://tefirman.github.io/images/Loteria.png" />
+<meta name="twitter:image:width" content="280" />
+<meta name="twitter:image:height" content="150" />
 <script src="/assets/js/jquery.min.js"></script> 
 <script> 
 $(function(){
@@ -94,7 +94,7 @@ $(function(){
 
   gtag('config', 'UA-141691742-1');
 </script>
-
+</head>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async=""></script>
 
@@ -104,44 +104,44 @@ $(function(){
 
 <h2 id="solution">Solution</h2>
 
-<p>The inspiration for this problem actually comes from reality: while on vacation, a friend of mine ended a game with zero matching images and I seemed to be the only one flabbergasted by the odds. To illustrate that I wasn’t crazy (or perhaps confirm that I was), I set out to calculate the exact odds of such a thing happening. First, the two grids cannot have any overlap. If any of the images on the first card are also on the second, the first card cannot possibly cover all its images without covering one on the second. With <script type="math/tex">G = 16</script> images on each grid and <script type="math/tex">D = 54</script> possible images, there are <script type="math/tex">\frac{D!}{G!(D - G)!} = \frac{54!}{16!38!}</script> possible grids that either player could have. Regardless of which images are on the first player’s grid, the second grid now only has <script type="math/tex">D - G = 38</script> images to choose from, hence leaving <script type="math/tex">\frac{(D - G)!}{G!(D - 2G)!} = \frac{38!}{16!22!}</script> non-overlap grids. Thus, the probability of the two grids having no overlap is</p>
+<p>The inspiration for this problem actually comes from reality: while on vacation, a friend of mine ended a game with zero matching images and I seemed to be the only one flabbergasted by the odds. To illustrate that I wasn’t crazy (or perhaps confirm that I was), I set out to calculate the exact odds of such a thing happening. First, the two grids cannot have any overlap. If any of the images on the first card are also on the second, the first card cannot possibly cover all its images without covering one on the second. With \(G = 16\) images on each grid and \(D = 54\) possible images, there are \(\frac{D!}{G!(D - G)!} = \frac{54!}{16!38!}\) possible grids that either player could have. Regardless of which images are on the first player’s grid, the second grid now only has \(D - G = 38\) images to choose from, hence leaving \(\frac{(D - G)!}{G!(D - 2G)!} = \frac{38!}{16!22!}\) non-overlap grids. Thus, the probability of the two grids having no overlap is</p>
 
-<script type="math/tex; mode=display">P_{d} = \frac{(D - G)!}{G!(D - 2G)!} \times \frac{G!(D - G)!}{D!} = \frac{(D - G)!(D - G)!}{(D - 2G)!D!} = \frac{38!38!}{22!54!} = 0.00105428</script>
+\[P_{d} = \frac{(D - G)!}{G!(D - 2G)!} \times \frac{G!(D - G)!}{D!} = \frac{(D - G)!(D - G)!}{(D - 2G)!D!} = \frac{38!38!}{22!54!} = 0.00105428\]
 
-<p>Second, we need the order of the deck to be such that all of one player’s images will come up before any of the other player’s images. After <script type="math/tex">N</script> cards are revealed from the deck, there are <script type="math/tex">\frac{D!}{N!(D - N)!} = \frac{54!}{N!(54 - N)!}</script> possible card combinations that could be revealed and <script type="math/tex">N!</script> possible orderings of those cards, giving us a total of</p>
+<p>Second, we need the order of the deck to be such that all of one player’s images will come up before any of the other player’s images. After \(N\) cards are revealed from the deck, there are \(\frac{D!}{N!(D - N)!} = \frac{54!}{N!(54 - N)!}\) possible card combinations that could be revealed and \(N!\) possible orderings of those cards, giving us a total of</p>
 
-<script type="math/tex; mode=display">Q = \frac{D!}{N!(D - N)!} \times N! = \frac{D!}{(D - N)!} = \frac{54!}{(54 - N)!}\text{ possible outcomes.}</script>
+\[Q = \frac{D!}{N!(D - N)!} \times N! = \frac{D!}{(D - N)!} = \frac{54!}{(54 - N)!}\text{ possible outcomes.}\]
 
-<p>How many of the possible outcomes result in the first player getting their sixteenth and final match on the <script type="math/tex">N^{\text{th}}</script> card and the second player getting no matches at all? Out of the <script type="math/tex">N</script> cards revealed, <script type="math/tex">G = 16</script> of them have to match, but the remaining <script type="math/tex">N - G</script> cards can’t match any image on either grid. This suggests <script type="math/tex">\frac{(D - 2G)!}{(N - G)!(D - G - N)!} = \frac{22!}{(N - 16)!(38 - N)!}</script> possible combinations of non-matching cards to come up. Furthermore, the first <script type="math/tex">N - 1</script> cards can be in any order they want, giving us <script type="math/tex">(N - 1)!</script> possible orderings, but the <script type="math/tex">N^{\text{th}}</script> card has to be one of the G = 16 matching cards, resulting in G possible endings. This produces</p>
+<p>How many of the possible outcomes result in the first player getting their sixteenth and final match on the \(N^{\text{th}}\) card and the second player getting no matches at all? Out of the \(N\) cards revealed, \(G = 16\) of them have to match, but the remaining \(N - G\) cards can’t match any image on either grid. This suggests \(\frac{(D - 2G)!}{(N - G)!(D - G - N)!} = \frac{22!}{(N - 16)!(38 - N)!}\) possible combinations of non-matching cards to come up. Furthermore, the first \(N - 1\) cards can be in any order they want, giving us \((N - 1)!\) possible orderings, but the \(N^{\text{th}}\) card has to be one of the G = 16 matching cards, resulting in G possible endings. This produces</p>
 
-<script type="math/tex; mode=display">W = \frac{(D - 2G)!}{(N - G)!(D - G - N)!} \times (N - 1)! \times G = \frac{22!(N - 1)!16}{(N - 16)!(38 - N)!}\text{ possible winning outcomes.}</script>
+\[W = \frac{(D - 2G)!}{(N - G)!(D - G - N)!} \times (N - 1)! \times G = \frac{22!(N - 1)!16}{(N - 16)!(38 - N)!}\text{ possible winning outcomes.}\]
 
-<p>With all possible outcomes being equally probable, we can calculate the probability of one player winning and the other remaining at zero after revealing <script type="math/tex">N</script> cards as</p>
+<p>With all possible outcomes being equally probable, we can calculate the probability of one player winning and the other remaining at zero after revealing \(N\) cards as</p>
 
-<script type="math/tex; mode=display">P_{w}(N) = \frac{W}{Q} = \frac{(D - 2G)!(N - 1)!G}{(N - G)!(D - G - N)!} \times \frac{(D - N)!}{D!} = \frac{22!(N - 1)!16}{(N - 16)!(38 - N)!} \times \frac{(54 - N)!}{54!}.</script>
+\[P_{w}(N) = \frac{W}{Q} = \frac{(D - 2G)!(N - 1)!G}{(N - G)!(D - G - N)!} \times \frac{(D - N)!}{D!} = \frac{22!(N - 1)!16}{(N - 16)!(38 - N)!} \times \frac{(54 - N)!}{54!}.\]
 
-<p>Next, let’s put these two probability functions together. Since either player can be the winner or loser, the probability of a game ending with either player having an empty grid after <script type="math/tex">N</script> turns is</p>
+<p>Next, let’s put these two probability functions together. Since either player can be the winner or loser, the probability of a game ending with either player having an empty grid after \(N\) turns is</p>
 
-<script type="math/tex; mode=display">P_{z}(N) = 2 \times P_{d} \times P_{w}(N) = 2 \times \frac{(D - G)!(D - G)!}{(D - 2G)!D!} \times \frac{(D - 2G)!(N - 1)!G}{(N - G)!(D - G - N)!} \times \frac{(D - N)!}{D!}</script>
+\[P_{z}(N) = 2 \times P_{d} \times P_{w}(N) = 2 \times \frac{(D - G)!(D - G)!}{(D - 2G)!D!} \times \frac{(D - 2G)!(N - 1)!G}{(N - G)!(D - G - N)!} \times \frac{(D - N)!}{D!}\]
 
-<script type="math/tex; mode=display">P_{z}(N) = \frac{2(D - G)!(D - G)!(N - 1)!G(D - N)!}{D!(N - G)!(D - G - N)!D!} = \frac{38!38!(N - 1)!(54 - N)!32}{54!(N - 16)!(38 - N)!54!}.</script>
+\[P_{z}(N) = \frac{2(D - G)!(D - G)!(N - 1)!G(D - N)!}{D!(N - G)!(D - G - N)!D!} = \frac{38!38!(N - 1)!(54 - N)!32}{54!(N - 16)!(38 - N)!54!}.\]
 
-<p>Finally, we can plot this function as shown below and sum up over all possible values of <script type="math/tex">N</script> to calculate a total probability of</p>
+<p>Finally, we can plot this function as shown below and sum up over all possible values of \(N\) to calculate a total probability of</p>
 
-<script type="math/tex; mode=display">P_{tot} = \sum_{N = G}^{D - G} P_{z}(N) = 3.508 \times 10^{-12}.</script>
+\[P_{tot} = \sum_{N = G}^{D - G} P_{z}(N) = 3.508 \times 10^{-12}.\]
 
 <div align="center"><div id="includedContent"></div></div>
 
-<p>Think about that for a second. That means that even if we played three billion times, we would still only have about a 1% chance of a zero match game occurring. And yet it happened to us in real life. I would say that we should have bought a lottery ticket, but sadly that’s not how random variables work. As for the second part of the question, we can easily calculate the zero match probability for larger/smaller grid sizes or more/fewer unique images simply by varying <script type="math/tex">G</script> and <script type="math/tex">D</script> respectively in the same equations above. As your intuition might have guessed, more unique images and smaller grids produce higher zero match probabilities, but play around with the interactive graph below to see exactly how it varies. Hope everyone has as much “divertido” with this as I did!</p>
+<p>Think about that for a second. That means that even if we played three billion times, we would still only have about a 1% chance of a zero match game occurring. And yet it happened to us in real life. I would say that we should have bought a lottery ticket, but sadly that’s not how random variables work. As for the second part of the question, we can easily calculate the zero match probability for larger/smaller grid sizes or more/fewer unique images simply by varying \(G\) and \(D\) respectively in the same equations above. As your intuition might have guessed, more unique images and smaller grids produce higher zero match probabilities, but play around with the interactive graph below to see exactly how it varies. Hope everyone has as much “divertido” with this as I did!</p>
 
 <div align="center"><div id="includedContent2"></div></div>
 
-<p><br></p>
+<p><br /></p>
 <h6>The <a href="https://github.com/tefirman/RiddlerCode/blob/master/Riddler_May25_Loteria.py">python code</a> used to generate the values and figures above are available on <a href="https://github.com/tefirman">my GitHub page</a>. <a href="https://github.com/tefirman/RiddlerCode/blob/master/LoteriaSimulations.csv">Simulations</a> that validate the equations above are also available.
 
 
 </h6>
-
+</p>
       		</section>
 
           <!-- <div class="comments-wrapper">
@@ -173,7 +173,7 @@ $(function(){
 					<!-- Footer -->
 						<footer>
               <ul class="actions">
-                <li><a href="/blog/" class="button">Blog</a></li>
+                <li><a href="http://localhost:4000/blog/" class="button">Blog</a></li>
               </ul>
 						</footer>
 					</div>
@@ -184,18 +184,18 @@ $(function(){
     <form method="POST" action="https://formspree.io/tefirman@gmail.com">
       <div class="field">
         <label for="name">Name</label>
-        <input type="text" name="name" id="name">
+        <input type="text" name="name" id="name" />
       </div>
       <div class="field">
         <label for="email">Email</label>
-        <input type="text" name="email" id="email">
+        <input type="text" name="email" id="email" />
       </div>
       <div class="field">
         <label for="message">Message</label>
         <textarea name="message" id="message" rows="3"></textarea>
       </div>
       <ul class="actions">
-        <li><input type="submit" value="Send Message"></li>
+        <li><input type="submit" value="Send Message" /></li>
       </ul>
     </form>
   </section>
@@ -225,13 +225,7 @@ $(function(){
 </footer>
 <!-- Copyright -->
 <div id="copyright">
-  <ul>
-<li>© HTML5 UP</li>
-<li>Design by <a href="https://html5up.net" rel="nofollow">HTML5 UP</a>
-</li>
-<li>Jekyll Integration by <a href="https://soundgrail.com">SoundGrail</a>
-</li>
-</ul>
+  <ul><li>&copy; HTML5 UP</li><li>Design by <a href="https://html5up.net" rel="nofollow">HTML5 UP</a></li><li>Jekyll Integration by <a href="https://soundgrail.com">SoundGrail</a></li></ul>
 </div>
 
 
@@ -239,12 +233,12 @@ $(function(){
 
       <!-- Scripts -->
   		<!-- DYN -->
-<script src="/assets/js/jquery.min.js"></script>
-<script src="/assets/js/jquery.scrollex.min.js"></script>
-<script src="/assets/js/jquery.scrolly.min.js"></script>
-<script src="/assets/js/skel.min.js"></script>
-<script src="/assets/js/util.js"></script>
-<script src="/assets/js/main.js"></script>
+<script src="http://localhost:4000/assets/js/jquery.min.js"></script>
+<script src="http://localhost:4000/assets/js/jquery.scrollex.min.js"></script>
+<script src="http://localhost:4000/assets/js/jquery.scrolly.min.js"></script>
+<script src="http://localhost:4000/assets/js/skel.min.js"></script>
+<script src="http://localhost:4000/assets/js/util.js"></script>
+<script src="http://localhost:4000/assets/js/main.js"></script>
 
 			<script async src="https://www.googletagmanager.com/gtag/js?id=tefirman"></script>
 <script>
