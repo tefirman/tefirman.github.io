@@ -2,45 +2,24 @@
 layout: post
 title:  "Presidential Vocabulary"
 date:   2019-08-24
-excerpt: "As we have found out in recent weeks, words absolutely matter, especially coming from a President of the United States..."
-image: "/images/PresidentDictionary.jpg"
+description: "As we have found out in recent weeks, words absolutely matter, especially coming from a President of the United States..."
+image: /assets/img/posts/PresidentDictionary.jpg
+categories: [Data Science]
+tags: [nlp, presidents, entropy]
+math: true
 ---
-
-<head>
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:creator" content="@tefirman51">
-<meta name="twitter:site" content="@tefirman51">
-<meta name="twitter:title" content="Presidential Vocabulary">
-<meta name="twitter:description" content="As we have found out in recent weeks, words absolutely matter, especially coming from a President of the United States...">
-<meta name="twitter:image:src" content="https://tefirman.github.io/images/PresidentDictionary.jpg">
-<meta name="twitter:image:width" content="280">
-<meta name="twitter:image:height" content="150">
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141691742-14"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-141691742-14');
-</script>
-
-</head>
-
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 It seems immensely difficult to form a presidential voice that's strong, reassuring, informative, and fifty other adjectives all at once. Too sophisticated: you're an out-of-touch elitist. Too simple: you're unqualified for the most complex job on the planet. Too soft: you're spineless. Too strong: you're heartless. In an attempt to better characterize presidential vocabularies, I went through every presidential transcript in <a href="https://www.presidency.ucsb.edu/">UC Santa Barbara's American Presidency Project</a> and analyzed the relative frequencies of different words. I recognize that a president's lexical fingerprint extends far beyond just the words they choose, but this will hopefully be a good start.
 
-Because less material available as you go further back in time, we'll focus on presidents with more than 1,000 documents in the database, i.e. Herbert Hoover and onward. Furthermore, we'll exclude functional words like "the", "is", "where", etc. and only consider descriptive lexical words. Let's start with a fun, interactive way of looking at things! Below is an interactive widget comparing the frequencies of different words (y-axis) across different presidents (x-axis). You can type in as many words as you want in the search bar for a side-by-side comparison of those words. You can also break things down by president, by party, or not break them down at all, i.e. frequencies over all presidents combined. Play around with it and see if you can find any interesting comparisons!
+Because less material available as you go further back in time, we'll focus on presidents with more than 1,000 documents in the database, i.e. Herbert Hoover and onward. Furthermore, we'll exclude functional words like "the", "is", "where", etc. and only consider descriptive lexical words.
 
-<iframe src="https://presidentialvocabs.herokuapp.com" height="600" width="100%"></iframe>
+> **Note:** This post originally included an interactive widget that let you compare word frequencies across presidents, broken down by party or individual. The widget has been retired, but the analysis and findings below remain.
 
-Here are a few interesting examples to check out:
+Here are a few interesting examples from the data:
 
 * **"Democrats" vs. "Republicans" broken down by party**: Apparently, politicians are obsessed with whatever party they're not in because Republican presidents are much more likely to mention "democrats" over "republicans" and vice versa for Democratic presidents.
 * **Presidential last names broken down by president**: This provides an interesting perspective on which presidents greatly influenced their successors (Roosevelt/Kennedy) and which presidents are the biggest narcissists (Hoover/Trump).
-* **"America" vs. "American" vs. "Americans" over all presidents**: I might be reading a bit too far into this one, but it's interesting that presidents tend to emphasize "America" and something being "American" a bit more than actual "Americans". 
+* **"America" vs. "American" vs. "Americans" over all presidents**: I might be reading a bit too far into this one, but it's interesting that presidents tend to emphasize "America" and something being "American" a bit more than actual "Americans".
 
 I will be the first to point out that the comparisons above don't paint the whole picture. They depend heavily on the exact word you choose to look at and the interpretations largely depend on the observer. To eliminate this subjectivity and get a broader lexical characterization, we can look at statistics that apply across a president's entire vocabulary. One such metric could be the average number of syllables per word for each president, loosely gauging verbal complexity. Along the same lines, we can get a little more sophisticated and measure the <a href="https://en.wikipedia.org/wiki/Entropy_(information_theory)">informational entropy</a> of each president's vocabulary. Explicitly, we will define it as
 
@@ -164,7 +143,7 @@ function sortTable(n) {
   table = document.getElementById("myTable");
   switching = true;
   //Set the sorting direction to ascending:
-  dir = "desc"; 
+  dir = "desc";
   /*Make a loop that will continue until
   no switching has been done:*/
   while (switching) {
@@ -202,7 +181,7 @@ function sortTable(n) {
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
       //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
+      switchcount ++;
     } else {
       /*If no switching has been done AND the direction is "asc",
       set the direction to "desc" and run the while loop again.*/
@@ -219,7 +198,7 @@ function sortTableNumber(n) {
   table = document.getElementById("myTable");
   switching = true;
   //Set the sorting direction to ascending:
-  dir = "desc"; 
+  dir = "desc";
   /*Make a loop that will continue until
   no switching has been done:*/
   while (switching) {
@@ -257,7 +236,7 @@ function sortTableNumber(n) {
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
       //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
+      switchcount ++;
     } else {
       /*If no switching has been done AND the direction is "asc",
       set the direction to "desc" and run the while loop again.*/
@@ -273,7 +252,5 @@ function sortTableNumber(n) {
 A few questions naturally follow: How much does the <a href="https://books.google.com/ngrams">language of each president's era</a> increase/decrease their informational entropy? What about the relative frequencies of two-word combinations? Can we categorize the major themes of each president using <a href="https://www.analyticsvidhya.com/blog/2018/04/a-comprehensive-guide-to-understand-and-implement-text-classification-in-python/">text classification?</a> These are all ideas that are in the works and will come soon in a sequel to this post. As we have seen in recent weeks, words absolutely matter, especially those coming from a President of the United States. They can <a href="https://www.youtube.com/watch?v=ueMNqdB1QIE">lift the hopes</a> or <a href="https://www.washingtonpost.com/">stoke the fears</a> of the citizens who hear them. We should all keep track of them in any way we can.
 
 <h6>All statistics presented here are based on documents curated by the <a href="https://www.presidency.ucsb.edu/">American Presidency Project of UC Santa Barbara</a>. <a href="https://github.com/tefirman/PresidentialVocab_App">Detailed datasets and the python code</a> used to generate them are available on <a href="https://github.com/tefirman">my GitHub page</a>.
-
-
 
 

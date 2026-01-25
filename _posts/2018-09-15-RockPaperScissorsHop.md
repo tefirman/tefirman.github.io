@@ -2,29 +2,11 @@
 layout: post
 title:  "Riddler Submission"
 date:   2018-09-15
-excerpt: "Got a riddle published in the Riddler: Life goal complete! Try your hand at a game I call 'Rock-Paper-Scissors-Hop'..."
-image: "/images/RockPaperScissorsHop.gif"
+description: "Got a riddle published in the Riddler: Life goal complete! Try your hand at a game I call 'Rock-Paper-Scissors-Hop'..."
+image: /assets/img/posts/RockPaperScissorsHop.gif
+categories: [Puzzles]
+tags: [riddler, game-theory, python]
 ---
-
-<head>
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:creator" content="@tefirman51">
-<meta name="twitter:site" content="@tefirman51">
-<meta name="twitter:title" content="Riddler Submission">
-<meta name="twitter:description" content="Got a riddle published in the Riddler: Life goal complete! Try your hand at a game I call 'Rock-Paper-Scissors-Hop'...">
-<meta name="twitter:image:src" content="https://tefirman.github.io/images/RockPaperScissorsHop.gif">
-<meta name="twitter:image:width" content="280">
-<meta name="twitter:image:height" content="150">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141691742-10"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-141691742-10');
-</script>
-</head>
 
 As you will come to notice throughout the course of this blog, I am a big fan of the website <a href="https://fivethirtyeight.com">FiveThirtyEight</a> and one weekly segment called <a href="https://fivethirtyeight.com/tag/the-riddler/">The Riddler</a> edited by <a href="https://twitter.com/ollie">Oliver Roeder</a>. Every Friday, it challenges its readers to two math/probability/logic puzzles, one shorter, more accessible problem and one longer, more time-consuming problem for the hardcore puzzle nerds. It's a fun way to end the week while stretching your brain and maybe picking up a computational tool or two while you're at it.
 
@@ -49,7 +31,7 @@ Now, imagine you are a gym teacher having a bad day and you want to make sure th
 
 Obviously, I had to have a solution in order to submit the problem, but I was flabbergasted at the kinds of the <a href="https://fivethirtyeight.com/features/the-new-national-pastime-competitive-coin-flipping/">solutions</a> that were submitted. Multiple solvers had code that was <a href="https://github.com/zsegel/538riddler/blob/master/riddler_RPS_hop.py">far</a> <a href="https://gist.github.com/mrichards42/7c63d2ea209081f75dedfaaa08f87e86">more</a> <a href="https://github.com/Saehry/Riddler/blob/master/2018-08-24.py">elegant</a> than mine and the analytical solutions from <a href="https://laurentlessard.com/bookproofs/hoop-hop-showdown/">Laurent Lessard</a> and <a href="http://math.uchicago.edu/~timblack/blog/hoops.html">Tim Black</a> (which cleverly involved a hyper-intelligent firefly) were mind-blowing. So please be warned ahead of time that my solution is not as pretty as those ones, but it still works... #AforEffort #YesIKnowHashtagsDontWorkInBlogs <a href="https://twitter.com/search?q=%23OrDoThey&src=typd">#OrDoThey</a>
 
-The easiest solution would probably be a <a href="https://en.wikipedia.org/wiki/Monte_Carlo_method">Monte Carlo</a> simulation. Mimicking the rules of the game, the code below advances players from either end until they meet in the middle. It then picks a random number to decide which player wins the rock-paper-scissors matchup and this repeats until either side reaches the other side. The time length of the game is recorded and then the entire game is repeated 10<sup>6</sup> times to create a distribution of game lengths. My coding language of choice is Python, but this can easily been done using pretty much any language: 
+The easiest solution would probably be a <a href="https://en.wikipedia.org/wiki/Monte_Carlo_method">Monte Carlo</a> simulation. Mimicking the rules of the game, the code below advances players from either end until they meet in the middle. It then picks a random number to decide which player wins the rock-paper-scissors matchup and this repeats until either side reaches the other side. The time length of the game is recorded and then the entire game is repeated 10<sup>6</sup> times to create a distribution of game lengths. My coding language of choice is Python, but this can easily been done using pretty much any language:
 
 <pre><code>import numpy as np
 
@@ -90,6 +72,6 @@ for numTry in range(1000000):
 del numTry
 </code></pre>
 
-<span class="image right"><img src="{{ "/images/RockPaperScissorsHop_MethodComparison.png" | absolute_url }}" alt="" /></span>I also made an <a href="https://github.com/tefirman/RiddlerCode/blob/master/RockPaperScissorsHop.py">analytical solution</a> that calculates the time and probability of every possible path of a game up to 99.9% of probability. It's a bit of a "brute force" method and is definitely impractical for larger hoop numbers, but it gets the job done. Overlaying the distributions for an eight hoop game from simulations (orange trace) and the analytical method (blue trace) produces the figure to the right, and as you can see, things line up perfectly. These distributions suggest that an average eight hoop game would last 59.46 seconds, answering the first part of the original question. If we adjust the "numHoops" variable in the code, you can also find that it takes 57 hoops for a game to take more than thirty minutes on average, answering the second part of the original question. Just for kicks, you can also generate a sample gif of a single game (like the one at the top of this article) to demonstrate how the dynamics work! My answer may not be quite as elegant as the rest of Riddler Nation, but it was fun coming up with the question in the first place and I'm inspired by the originality of everyone's answers. Thanks for tuning in! Hope everyone had fun!
+<span class="image right"><img src="/assets/img/posts/RockPaperScissorsHop_MethodComparison.png" alt="" /></span>I also made an <a href="https://github.com/tefirman/RiddlerCode/blob/master/RockPaperScissorsHop.py">analytical solution</a> that calculates the time and probability of every possible path of a game up to 99.9% of probability. It's a bit of a "brute force" method and is definitely impractical for larger hoop numbers, but it gets the job done. Overlaying the distributions for an eight hoop game from simulations (orange trace) and the analytical method (blue trace) produces the figure to the right, and as you can see, things line up perfectly. These distributions suggest that an average eight hoop game would last 59.46 seconds, answering the first part of the original question. If we adjust the "numHoops" variable in the code, you can also find that it takes 57 hoops for a game to take more than thirty minutes on average, answering the second part of the original question. Just for kicks, you can also generate a sample gif of a single game (like the one at the top of this article) to demonstrate how the dynamics work! My answer may not be quite as elegant as the rest of Riddler Nation, but it was fun coming up with the question in the first place and I'm inspired by the originality of everyone's answers. Thanks for tuning in! Hope everyone had fun!
 
 
