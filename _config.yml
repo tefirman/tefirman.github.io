@@ -1,63 +1,134 @@
-# Site
-title:              Taylor Firman
-bio:                'Data Scientist, Biophysics PhD'
-description:        "Just a repository for the occasional statistical stumble..."
-locale:             en_US
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+# The Site Configuration
+
+# Import the theme
+theme: jekyll-theme-chirpy
+
+# The language of the webpage
+lang: en
+
+# Change to your timezone
+timezone: America/Denver
+
+# jekyll-seo-tag settings
+
+title: Taylor Firman
+
+tagline: Data Scientist, Biophysics PhD
+
+description: >-
+  Personal website and blog of Taylor Firman - data science, statistics, baseball analytics, and more.
+
+# Fill in the protocol & hostname for your site.
+url: "https://taylorfirman.com"
+
+github:
+  username: tefirman
+
+twitter:
+  username: tefirman51
+
+social:
+  name: Taylor Firman
+  email: tefirman@gmail.com
+  links:
+    - https://twitter.com/tefirman51
+    - https://github.com/tefirman
+
+# Web Analytics Settings
+analytics:
+  google:
+    id: # Add your GA4 ID here if you want analytics
+
+# Prefer color scheme setting (light, dark, or empty for system default)
+theme_mode:
+
+# the avatar on sidebar, support local or CORS resources
+avatar: /assets/img/avatar.jpg
+
+# boolean type, the global switch for TOC in posts.
+toc: true
+
+# Comments - disabled as requested
+comments:
+  provider:
+
+pwa:
+  enabled: true
+  cache:
+    enabled: true
+
+paginate: 10
+
+# The base URL of your site
+baseurl: ""
+
+# ------------ The following options are not recommended to be modified ------------------
+
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+  math_engine: mathjax
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
 
 defaults:
-- scope:
-    path: ''
-    type: posts
-  values:
-    permalink: "/blog/:title/"
-    layout: post
-    author:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: false
+      toc: true
+      permalink: /posts/:title/
+  - scope:
+      path: _drafts
+    values:
+      comments: false
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: page
+      permalink: /:title/
 
-# Jekyll
-permalink:          /blog/:title/
-markdown:           kramdown
-highlighter:        rouge
-kramdown:
-  auto_ids:         true
-  footnote_nr:      1
-  entity_output:    as_char
-  toc_levels:       1..6
-  enable_coderay:   false
-mathjax:            true
 sass:
-  sass_dir:         _sass
-  style:            compressed
+  style: compressed
 
-# Comments
-disqus_shortname:   tefirman
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
 
-# Social
-analytics-id:       "tefirman"
-twitter:            "tefirman51"
-facebook:           "tfirman"
-instagram:          "tefirman51"
-github:             "tefirman"
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
+  - LICENSE
+  - purgecss.js
+  - "*.config.js"
+  - "package*.json"
 
-# personal
-location:           Denver, CO
-phone:              253-740-3456
-email:              tefirman@gmail.com
-
-# Gems
-gems:
-  - jekyll-mentions
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
-
-paginate: 6
-paginate_path: "/blog/page:num/"
-
-jekyll-mentions:
-    base_url: https://github.com
-
-# Exclude list
-exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile, old]
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/

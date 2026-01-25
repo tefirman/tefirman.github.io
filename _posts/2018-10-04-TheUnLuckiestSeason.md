@@ -2,37 +2,19 @@
 layout: post
 title:  "The (Un)Luckiest Season of All"
 date:   2018-10-04
-excerpt: "Depending on which statistics you look at, the Seattle Mariners had either the luckiest or unluckiest season in recent memory... #SchrodingersBaseballTeam"
-image: "/images/DiazPuzzled.jpg"
+description: "Depending on which statistics you look at, the Seattle Mariners had either the luckiest or unluckiest season in recent memory... #SchrodingersBaseballTeam"
+image: /assets/img/posts/DiazPuzzled.jpg
+categories: [Baseball, Statistics]
+tags: [baseball, luck, probability]
 ---
-
-<head>
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:creator" content="@tefirman51">
-<meta name="twitter:site" content="@tefirman51">
-<meta name="twitter:title" content="The (Un)Luckiest Season of All">
-<meta name="twitter:description" content="Depending on which statistics you look at, the Seattle Mariners had either the luckiest or unluckiest season in recent memory... #SchrodingersBaseballTeam">
-<meta name="twitter:image:src" content="https://tefirman.github.io/images/DiazPuzzled.jpg">
-<meta name="twitter:image:width" content="280">
-<meta name="twitter:image:height" content="150">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141691742-9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-141691742-9');
-</script>
-</head>
 
 On September 19th, the Seattle Mariners were 84-68, a record that in any other season would send even the ficklest Seattle fan clamoring for their suddenly fashionable Griffey jerseys gathering dust in the back of their closets. But in this logic-defying year of baseball, their season was effectively over despite being a game or less behind four of the ten available playoff spots. With the A's and Astros streaking into October, what would normally amount to at least a playoff chase was reduced to nothing more than consolation games.
 
-<span class="image right"><img src="{{ "/images/RealVsPythagHeatMap.png" | absolute_url }}" alt="" /></span>But before we dive too far into self-pity, Mariners fans should probably be thankful that they even got this far considering the team's performance in terms of runs. The easiest stat to point to is run differential where, despite having won more games than lost, the M's allowed 34 more runs than they scored. But the far more interesting stat is the <a href="https://en.wikipedia.org/wiki/Pythagorean_expectation">Pythagorean Win Expectancy (PWE)</a>. According to this metric, they should be sitting at a .478 win percentage, a season-long difference of 12 games compared to the Mariners' final .549 pace. Obviously, credit has to be given to the Herculean effort of Edwin Diaz and his 57 saves, but a little bit of luck had to have been involved, considering that only nine other teams since the deadball era have ever outperformed their PWE by more. (One notable example of these outperformers is the <a href="https://en.wikipedia.org/wiki/1981_Cincinnati_Reds_season">1981 Reds</a>, who actually got shafted much harder than this year's M's due to a strike-shortened season. Despite having the best overall record in the NL, a midseason strike reset the standings, leaving Ken Griffey Sr. out in the cold.)
+<span class="image right"><img src="/assets/img/posts/RealVsPythagHeatMap.png" alt="" /></span>But before we dive too far into self-pity, Mariners fans should probably be thankful that they even got this far considering the team's performance in terms of runs. The easiest stat to point to is run differential where, despite having won more games than lost, the M's allowed 34 more runs than they scored. But the far more interesting stat is the <a href="https://en.wikipedia.org/wiki/Pythagorean_expectation">Pythagorean Win Expectancy (PWE)</a>. According to this metric, they should be sitting at a .478 win percentage, a season-long difference of 12 games compared to the Mariners' final .549 pace. Obviously, credit has to be given to the Herculean effort of Edwin Diaz and his 57 saves, but a little bit of luck had to have been involved, considering that only nine other teams since the deadball era have ever outperformed their PWE by more. (One notable example of these outperformers is the <a href="https://en.wikipedia.org/wiki/1981_Cincinnati_Reds_season">1981 Reds</a>, who actually got shafted much harder than this year's M's due to a strike-shortened season. Despite having the best overall record in the NL, a midseason strike reset the standings, leaving Ken Griffey Sr. out in the cold.)
 
-<span class="image left"><img src="{{ "/images/PlayoffProbHist.png" | absolute_url }}" alt="" /></span> Just to give you an idea of how unlucky/lucky this season has been, a team with 89 wins (as the Mariners ended up with) makes the playoffs about 70% of the time according to a logistic regression run by <a href="https://fivethirtyeight.com/features/the-seattle-mariners-cant-catch-a-postseason-break/">FiveThirtyEight</a>. But a team with just 77 wins (as the M’s PWE projects them to have) makes the playoffs less than 1% of the time. The bottom line is that while we should have a better view of the mythical land of playoff baseball, the fact that we’re within a nautical mile is a miracle in itself.
+<span class="image left"><img src="/assets/img/posts/PlayoffProbHist.png" alt="" /></span> Just to give you an idea of how unlucky/lucky this season has been, a team with 89 wins (as the Mariners ended up with) makes the playoffs about 70% of the time according to a logistic regression run by <a href="https://fivethirtyeight.com/features/the-seattle-mariners-cant-catch-a-postseason-break/">FiveThirtyEight</a>. But a team with just 77 wins (as the M's PWE projects them to have) makes the playoffs less than 1% of the time. The bottom line is that while we should have a better view of the mythical land of playoff baseball, the fact that we're within a nautical mile is a miracle in itself.
 
-But that doesn’t take away any of the sting, does it? Why is a franchise that has had notoriously terrible playoff luck in recent years getting clubbed over the head by the baseball gods once again? In 2016, <a href="https://twitter.com/No_Little_Plans">Rob Arthur</a> <a href="https://fivethirtyeight.com/features/the-seattle-mariners-cant-catch-a-postseason-break/">unsurprisingly crowned</a> the Seattle Mariners the “Unluckiest MLB Franchise Since 1998” by comparing the number of actual and expected playoff appearances based on regular season records. If we update this to include the last two seasons, it gets even worse. Based on their records, the Mariners should have been to the playoffs an additional three times in the last two decades, almost twice as many as the nearest franchise. Even if we utilize the PWE instead of the actual win percentage to calculate expected playoff appearances, the M’s remain the unluckiest team by almost an entire playoff berth.
+But that doesn't take away any of the sting, does it? Why is a franchise that has had notoriously terrible playoff luck in recent years getting clubbed over the head by the baseball gods once again? In 2016, <a href="https://twitter.com/No_Little_Plans">Rob Arthur</a> <a href="https://fivethirtyeight.com/features/the-seattle-mariners-cant-catch-a-postseason-break/">unsurprisingly crowned</a> the Seattle Mariners the "Unluckiest MLB Franchise Since 1998" by comparing the number of actual and expected playoff appearances based on regular season records. If we update this to include the last two seasons, it gets even worse. Based on their records, the Mariners should have been to the playoffs an additional three times in the last two decades, almost twice as many as the nearest franchise. Even if we utilize the PWE instead of the actual win percentage to calculate expected playoff appearances, the M's remain the unluckiest team by almost an entire playoff berth.
 
 <style>
 table {
@@ -63,7 +45,7 @@ tr:nth-child(even) {
 <h3>Playoff Karma By MLB Franchise</h3>
 <table id="myTable">
   <tr height="50">
-   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
     <th onclick="sortTable(0)">Franchise</th>
     <th onclick="sortTableNumber(1)">Actual</th>
     <th onclick="sortTableNumber(2)">Expected</th>
@@ -319,7 +301,7 @@ function sortTable(n) {
   table = document.getElementById("myTable");
   switching = true;
   //Set the sorting direction to ascending:
-  dir = "desc"; 
+  dir = "desc";
   /*Make a loop that will continue until
   no switching has been done:*/
   while (switching) {
@@ -357,7 +339,7 @@ function sortTable(n) {
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
       //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
+      switchcount ++;
     } else {
       /*If no switching has been done AND the direction is "asc",
       set the direction to "desc" and run the while loop again.*/
@@ -374,7 +356,7 @@ function sortTableNumber(n) {
   table = document.getElementById("myTable");
   switching = true;
   //Set the sorting direction to ascending:
-  dir = "desc"; 
+  dir = "desc";
   /*Make a loop that will continue until
   no switching has been done:*/
   while (switching) {
@@ -412,7 +394,7 @@ function sortTableNumber(n) {
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
       //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
+      switchcount ++;
     } else {
       /*If no switching has been done AND the direction is "asc",
       set the direction to "desc" and run the while loop again.*/
@@ -425,9 +407,9 @@ function sortTableNumber(n) {
 }
 </script>
 
-So why can’t the M’s catch a break after seventeen long years of frustration? Well, for a couple reasons: (1) <a href="https://en.wikipedia.org/wiki/Gambler%27s_fallacy">That’s not how probability works.</a> Past outcomes do not affect future probabilities. If I flip a coin and get ten heads in a row, the odds of getting heads an eleventh time are still 50-50. A baseball doesn’t remember previous seasons and then adjust its path accordingly. (2) As many of you may have seen by now, the AL has a <a href="https://fivethirtyeight.com/features/the-orioles-and-royals-could-at-least-still-beat-a-triple-a-team-right/">parity (read: tanking) problem</a>, where bad teams appear worse and good teams appear better. The standard deviation of win percentages in the AL is the largest in either league since 1962 and the range is the largest since 1954 (thanks Baltimore). This wide spread means that just being good won’t cut it. Only absurd 97-win seasons will keep you in the running, a feat that was achieved by the second wild card Oakland Athletics.
+So why can't the M's catch a break after seventeen long years of frustration? Well, for a couple reasons: (1) <a href="https://en.wikipedia.org/wiki/Gambler%27s_fallacy">That's not how probability works.</a> Past outcomes do not affect future probabilities. If I flip a coin and get ten heads in a row, the odds of getting heads an eleventh time are still 50-50. A baseball doesn't remember previous seasons and then adjust its path accordingly. (2) As many of you may have seen by now, the AL has a <a href="https://fivethirtyeight.com/features/the-orioles-and-royals-could-at-least-still-beat-a-triple-a-team-right/">parity (read: tanking) problem</a>, where bad teams appear worse and good teams appear better. The standard deviation of win percentages in the AL is the largest in either league since 1962 and the range is the largest since 1954 (thanks Baltimore). This wide spread means that just being good won't cut it. Only absurd 97-win seasons will keep you in the running, a feat that was achieved by the second wild card Oakland Athletics.
 
-So to mentally put this season to bed, the 2018 Mariners are either extremely lucky or unlucky based on what statistics you look at. I choose to see it in a positive light as a lucky one, but all of this analysis boils down to the age-old philosophical question of whether your beer is half empty or half full. Regardless, order another one because professional sports’ longest playoff drought is lasting at least another year and the A’s and Astros are playing in October.
+So to mentally put this season to bed, the 2018 Mariners are either extremely lucky or unlucky based on what statistics you look at. I choose to see it in a positive light as a lucky one, but all of this analysis boils down to the age-old philosophical question of whether your beer is half empty or half full. Regardless, order another one because professional sports' longest playoff drought is lasting at least another year and the A's and Astros are playing in October.
 
 <h6>MLB season-by-season data was provided by <a href="https://www.retrosheet.org/gamelogs/index.html">Retrosheets</a> and <a href="https://www.baseball-reference.com/leagues/MLB/2018-standings.shtml">Baseball-Reference</a>, and the Python code used to process this data is available <a href="https://github.com/tefirman/StatisticalStumbles/blob/master/RecordAnalysis.py">here</a> on <a href="https://github.com/tefirman">my Github page</a>.
 

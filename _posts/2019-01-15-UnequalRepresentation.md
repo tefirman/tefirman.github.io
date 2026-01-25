@@ -2,55 +2,37 @@
 layout: post
 title:  "Uneven Democracy"
 date:   2019-02-22
-excerpt: "Based on how the American government was designed, not all votes are created equal..."
-image: "/images/TippedScales.png"
+description: "Based on how the American government was designed, not all votes are created equal..."
+image: /assets/img/posts/TippedScales.png
+categories: [Politics]
+tags: [elections, democracy]
+math: true
 ---
 
-<head>
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:creator" content="@tefirman51">
-<meta name="twitter:site" content="@tefirman51">
-<meta name="twitter:title" content="Uneven Democracy">
-<meta name="twitter:description" content="Not all votes are created equal...">
-<meta name="twitter:image:src" content="https://tefirman.github.io/images/TippedScales.png">
-<meta name="twitter:image:width" content="280">
-<meta name="twitter:image:height" content="150">
-<script src="/assets/js/jquery.min.js"></script> 
-<script> 
-$(function(){
-  $("#includedContent").load("/images/HouseSenateResultsByYear.html"); 
-});
-</script> 
-<script> 
-$(function(){
-  $("#includedContent2").load("/images/HouseSenateResultsByYear_Alternates.html"); 
-});
-</script> 
-<script> 
-$(function(){
-  $("#includedContent3").load("/images/TotalPowerMap_Large.html"); 
-});
-</script> 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141691742-4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-141691742-4');
-</script>
-</head>
-
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-
-Americans pride themselves on their democracy, on the idea that everyone has an equal voice in our government, and to be honest, I'm pretty proud of it too (less so in recent years). But if anyone tells you that every citizen truly has an <i>equal</i> voice in our system, they possess one of two things: 1. a misunderstanding of how our government is designed and operated, or 2. a loose definition of the term "equal". In an ideal scenario, each person's voice would be equally valued and political representation on a macroscopic level would be proportional to the views of the American public. As a simple example, a group of 1800 Democrats and 1200 Republicans could be represented by 9 Democrats and 6 Republicans, giving each voter a representative power of 1/200 or 0.005. But let's say that a neighboring group of 900 Republicans and 600 Democrats was represented by 9 Republicans and 6 Democrats. Locally, this is proportional and fair, but macroscopically, we now have equal representation (15-15) for unequal populations (2400-2100) because the second group has twice the representative power (1/100 or 0.01). 
+Americans pride themselves on their democracy, on the idea that everyone has an equal voice in our government, and to be honest, I'm pretty proud of it too (less so in recent years). But if anyone tells you that every citizen truly has an <i>equal</i> voice in our system, they possess one of two things: 1. a misunderstanding of how our government is designed and operated, or 2. a loose definition of the term "equal". In an ideal scenario, each person's voice would be equally valued and political representation on a macroscopic level would be proportional to the views of the American public. As a simple example, a group of 1800 Democrats and 1200 Republicans could be represented by 9 Democrats and 6 Republicans, giving each voter a representative power of 1/200 or 0.005. But let's say that a neighboring group of 900 Republicans and 600 Democrats was represented by 9 Republicans and 6 Democrats. Locally, this is proportional and fair, but macroscopically, we now have equal representation (15-15) for unequal populations (2400-2100) because the second group has twice the representative power (1/100 or 0.01).
 
 This may seem like an unrealistic example, but this is basically how the United States Senate has operated since 1789 thanks to the <a href="https://en.wikipedia.org/wiki/Connecticut_Compromise">Connecticut Compromise</a>. Gerrymandering has led to similar (but less extreme) situations in the House of Representatives. To illustrate this, we can calculate the representative power of each state or congressional district by dividing the number of representatives/senators they have by the number of voters who participated. Just to clarify units, we will define a 1 representative to 1 voter ratio as a "rep" which would make 1 representative to 1,000,000 voters a "microrep" or &mu;rep. Furthermore, since there are 435 representatives in the House and 100 in the Senate, we will define "Total Power" as 4.35*(Senate Power) + (House Power). The map below illustrates darker colors as higher representative powers and shows the exact values for a congressional district when you hover over it.
 
 <div align="center"><div id="includedContent3"></div></div><br>
-<!-- <span class="image fit"><img src="{{ "/images/PowerMapsFigure.png" | absolute_url }}" alt="" /></span> -->
+<!-- <span class="image fit"><img src="/assets/img/posts/PowerMapsFigure.png" alt="" /></span> -->
 <!-- <a onclick="alert('Hello world!')" class="button special">Special</a> -->
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+$(function(){
+  $("#includedContent").load("/assets/img/posts/HouseSenateResultsByYear.html");
+});
+</script>
+<script>
+$(function(){
+  $("#includedContent2").load("/assets/img/posts/HouseSenateResultsByYear_Alternates.html");
+});
+</script>
+<script>
+$(function(){
+  $("#includedContent3").load("/assets/img/posts/TotalPowerMap_Large.html");
+});
+</script>
 
 Taking a look at the two extremes, we can see a pretty shocking disparity in representation. A voter in Wyoming has more representative power than a Floridian, a Pennsylvanian, a New Yorker, a Californian, an Ohioan, a North Carolinian, a Michigander, an Illinoisan, and a Texan <i>combined</i>. This is purely due to the fact that while each of these five states are represented by two senators, only 200,000 voters pick those two people in Wyoming while multiple millions of voters pick them in each of the other four states. Using state-by-state voter demographics, we can expand the scope of our power metric to compare the average representative power of different demographics to see if any group in particular benefits from this arrangement. Comparisons based on sex and age show fairly similar representation between different groups, but race, political affiliation, and urban/rural delineation produce very unbalanced playing fields. As seen in the tables below, white voters have about 10% more representative power than non-white voters, Republican voters have 29% more than Democratic voters, and rural voters (based on <a href="https://github.com/theatlantic/citylab-data/blob/master/citylab-congress/citylab_cdi.csv">CityLab's classification</a>) have 39% more than urban voters. This is again due to the disparate proportioning of representatives in the Senate and highlights the inherent representative inequity in our country's democracy.
 
@@ -83,7 +65,7 @@ tr:nth-child(even) {
 <h3>Representative Power By Race in 2016 (microreps)</h3>
 <table id="myTable2">
   <tr height="50">
-   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
     <th onclick="sortTable2(0)">Race</th>
     <th onclick="sortTableNumber2(1)">House Power</th>
     <th onclick="sortTableNumber2(2)">Senate Power</th>
@@ -121,7 +103,7 @@ function sortTable2(n) {
   table = document.getElementById("myTable2");
   switching = true;
   //Set the sorting direction to ascending:
-  dir = "desc"; 
+  dir = "desc";
   /*Make a loop that will continue until
   no switching has been done:*/
   while (switching) {
@@ -159,7 +141,7 @@ function sortTable2(n) {
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
       //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
+      switchcount ++;
     } else {
       /*If no switching has been done AND the direction is "asc",
       set the direction to "desc" and run the while loop again.*/
@@ -176,7 +158,7 @@ function sortTableNumber2(n) {
   table = document.getElementById("myTable2");
   switching = true;
   //Set the sorting direction to ascending:
-  dir = "desc"; 
+  dir = "desc";
   /*Make a loop that will continue until
   no switching has been done:*/
   while (switching) {
@@ -214,7 +196,7 @@ function sortTableNumber2(n) {
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
       //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
+      switchcount ++;
     } else {
       /*If no switching has been done AND the direction is "asc",
       set the direction to "desc" and run the while loop again.*/
@@ -230,7 +212,7 @@ function sortTableNumber2(n) {
 <h3> Representative Power By Political Party in 2016 (microreps)</h3>
 <table id="myTable3">
   <tr height="50">
-   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
     <th onclick="sortTable3(0)">Party</th>
     <th onclick="sortTableNumber3(1)">House Power</th>
     <th onclick="sortTableNumber3(2)">Senate Power</th>
@@ -262,7 +244,7 @@ function sortTable3(n) {
   table = document.getElementById("myTable3");
   switching = true;
   //Set the sorting direction to ascending:
-  dir = "desc"; 
+  dir = "desc";
   /*Make a loop that will continue until
   no switching has been done:*/
   while (switching) {
@@ -300,7 +282,7 @@ function sortTable3(n) {
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
       //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
+      switchcount ++;
     } else {
       /*If no switching has been done AND the direction is "asc",
       set the direction to "desc" and run the while loop again.*/
@@ -317,7 +299,7 @@ function sortTableNumber3(n) {
   table = document.getElementById("myTable3");
   switching = true;
   //Set the sorting direction to ascending:
-  dir = "desc"; 
+  dir = "desc";
   /*Make a loop that will continue until
   no switching has been done:*/
   while (switching) {
@@ -355,7 +337,7 @@ function sortTableNumber3(n) {
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
       //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
+      switchcount ++;
     } else {
       /*If no switching has been done AND the direction is "asc",
       set the direction to "desc" and run the while loop again.*/
@@ -371,7 +353,7 @@ function sortTableNumber3(n) {
 <h3> Representative Power By Urban, Suburban, and Rural Classification in 2016 (microreps)</h3>
 <table id="myTable4">
   <tr height="50">
-   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
     <th onclick="sortTable4(0)">Party</th>
     <th onclick="sortTableNumber4(1)">House Power</th>
     <th onclick="sortTableNumber4(2)">Senate Power</th>
@@ -403,7 +385,7 @@ function sortTable4(n) {
   table = document.getElementById("myTable4");
   switching = true;
   //Set the sorting direction to ascending:
-  dir = "desc"; 
+  dir = "desc";
   /*Make a loop that will continue until
   no switching has been done:*/
   while (switching) {
@@ -441,7 +423,7 @@ function sortTable4(n) {
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
       //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
+      switchcount ++;
     } else {
       /*If no switching has been done AND the direction is "asc",
       set the direction to "desc" and run the while loop again.*/
@@ -458,7 +440,7 @@ function sortTableNumber4(n) {
   table = document.getElementById("myTable4");
   switching = true;
   //Set the sorting direction to ascending:
-  dir = "desc"; 
+  dir = "desc";
   /*Make a loop that will continue until
   no switching has been done:*/
   while (switching) {
@@ -496,7 +478,7 @@ function sortTableNumber4(n) {
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
       //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
+      switchcount ++;
     } else {
       /*If no switching has been done AND the direction is "asc",
       set the direction to "desc" and run the while loop again.*/
@@ -524,11 +506,5 @@ Let's imagine a scenario where no districts are drawn. In this scenario, everyon
 I realize that the founding fathers established our government this way for a reason, that the Connecticut Compromise was necessary to get smaller states to ratify the Constitution, and that, like the Electoral College, it helps to guard against the <a href="https://en.wikipedia.org/wiki/Tyranny_of_the_majority">tyranny of the majority</a>. But right now, it feels a hell of a lot like we're at risk of the opposite. A congressional majority elected by a minority of Americans is enabling an unpopular president (also elected by a minority of Americans) to enact legislation opposed by a majority of Americans. The framers were very intentional in their preambular word choice of forming a <i>more perfect</i> union, implying a good start but plenty of room to improve. Maybe it's time to start thinking about making Congress a bit more perfect in terms of representation.
 
 <h6>All statistics presented here were calculated using <a href="https://transition.fec.gov/pubrec/electionresults.shtml">official election results from the FEC</a>. The <a href="https://github.com/tefirman/StatisticalStumbles/tree/master/ElectionResults">relevant data</a> and <a href="https://github.com/tefirman/StatisticalStumbles/blob/master/ElectionResults.ipynb">python code</a> used to calculate them are available on <a href="https://github.com/tefirman">my GitHub page</a>.
-
-
-
-
-
-
 
 

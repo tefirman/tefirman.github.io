@@ -2,46 +2,27 @@
 layout: post
 title:  "Methods to the Madness"
 date:   2019-05-27
-excerpt: "Because brackets are hard and chalk is for the faint of heart..."
-image: "/images/CoinBracket.png"
+description: "Because brackets are hard and chalk is for the faint of heart..."
+image: /assets/img/posts/CoinBracket.png
+categories: [Data Science, Sports]
+tags: [march-madness, probability]
 ---
 
-<head>
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:creator" content="@tefirman51">
-<meta name="twitter:site" content="@tefirman51">
-<meta name="twitter:title" content="Methods to the Madness">
-<meta name="twitter:description" content="Because brackets are hard and chalk is for the faint of heart...">
-<meta name="twitter:image:src" content="https://tefirman.github.io/images/CoinBracket.png">
-<meta name="twitter:image:width" content="280">
-<meta name="twitter:image:height" content="150">
-<script src="/assets/js/jquery.min.js"></script> 
-<script> 
-$(function(){
-  $("#includedContent").load("/images/MarchMadness_PointDistribution.html"); 
-});
-</script>
-<script> 
-$(function(){
-  $("#includedContent2").load("/images/MarchMadness_RelativePoints.html"); 
-});
-</script> 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141691742-3"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-141691742-3');
+$(function(){
+  $("#includedContent").load("/assets/img/posts/MarchMadness_PointDistribution.html");
+});
 </script>
-</head>
-
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+<script>
+$(function(){
+  $("#includedContent2").load("/assets/img/posts/MarchMadness_RelativePoints.html");
+});
+</script>
 
 March Madness has come and gone and it was an exciting (albeit fairly chalk-ish) tournament! To get a little skin in the game, many people join <a href="http://fantasy.espn.com/tournament-challenge-bracket/2019/en/story?pageName=tcmen%5Crules">bracket leagues</a> where they pick a winner for each of the sixty-three match-ups in the bracket. A correct pick is worth 10 points in the round of 64, 20 in the round of 32, 40 in the Sweet Sixteen, 80 in the Elite Eight, 160 points in the Final Four, and 320 points in the championship. At the end of the tournament, the bracket with the most points wins. This year would have been my first victory, were it not for the non-existent three-pointer foul by Samir Doughty (thanks for nothing, Wahoos), so I decided to look into the different methodologies of bracket selection to hopefully improve my odds for next year. There are some <a href="https://bleacherreport.com/articles/1573533-10-fun-ways-to-pick-a-march-madness-bracket#slide0">pretty strange techniques</a> out there (my personal favorite is which mascot would win in a fight), but the most logical one I could come up with uses the projections from our friends over at <a href="https://fivethirtyeight.com">FiveThirtyEight</a>:
 
-Let’s say you have no previous experience with college basketball, but you still want to play in order to have something to talk about with coworkers/old high school buddies/random strangers. To get around your lack of experience, you decide to flip a coin to pick who wins each matchup, i.e. heads means the better seed wins, tails means the worse seed wins. However, to make sure you don't pick a 16-seed going all the way to the Final Four, you decide to use the latest innovation in sports-related coinage: a self-biasing coin whose heads/tails probabilities shift based on the <a href="https://projects.fivethirtyeight.com/march-madness-api/2019/fivethirtyeight_ncaa_forecasts.csv">two teams in each matchup</a> and <a href="https://fivethirtyeight.com/features/how-our-march-madness-predictions-work-2/">FiveThirtyEight’s Elo ratings system. For simplicity’s sake, let’s ignore FiveThirtyEight's travel and injury adjustments (partly because they seem to be shrouded in secrecy) as well as the four initial play-in games (because those games are pointless). Let’s also assume we only know the initial team ratings. So as an example, in the first round Gonzaga-FDU matchup (Go Zags), Gonzaga has a rating of 95.02 and Fairleigh Dickinson has a rating of 70.04. This would suggest that the probability of the coin coming up heads (and Gonzaga winning) would be
+Let's say you have no previous experience with college basketball, but you still want to play in order to have something to talk about with coworkers/old high school buddies/random strangers. To get around your lack of experience, you decide to flip a coin to pick who wins each matchup, i.e. heads means the better seed wins, tails means the worse seed wins. However, to make sure you don't pick a 16-seed going all the way to the Final Four, you decide to use the latest innovation in sports-related coinage: a self-biasing coin whose heads/tails probabilities shift based on the <a href="https://projects.fivethirtyeight.com/march-madness-api/2019/fivethirtyeight_ncaa_forecasts.csv">two teams in each matchup</a> and <a href="https://fivethirtyeight.com/features/how-our-march-madness-predictions-work-2/">FiveThirtyEight's Elo ratings system. For simplicity's sake, let's ignore FiveThirtyEight's travel and injury adjustments (partly because they seem to be shrouded in secrecy) as well as the four initial play-in games (because those games are pointless). Let's also assume we only know the initial team ratings. So as an example, in the first round Gonzaga-FDU matchup (Go Zags), Gonzaga has a rating of 95.02 and Fairleigh Dickinson has a rating of 70.04. This would suggest that the probability of the coin coming up heads (and Gonzaga winning) would be
 
 $$P_{H} = \frac{1}{1 + 10^{30.464*(70.04 - 95.02)/400}} = 98.8\%$$
 
@@ -49,7 +30,7 @@ and the probability of the coin coming up tails (and FDU winning) would be
 
 $$P_{T} = \frac{1}{1 + 10^{30.464*(95.02 - 70.04)/400}} = 1.2\%.$$
 
-For both the men’s and women’s tournaments, how much better does the specially designed self-biasing coin do compared to a plain old unbiased quarter? What about compared to “chalk” where the better seed always wins? To assess how this method would perform, we can apply it to the past three tournaments using a <a href="https://en.wikipedia.org/wiki/Monte_Carlo_method">Monte Carlo simulation</a>. Using the code located <a href="https://github.com/tefirman/StatisticalStumbles/blob/master/MarchMadnessSim.py">here</a>, we can pick <a href="https://github.com/tefirman/StatisticalStumbles/tree/master/MarchMadnessSims">10,000 brackets for each year</a> and see what the distributions of point values look like for each year compared to chalk or an unbiased coin flip, distributions like the ones below!
+For both the men's and women's tournaments, how much better does the specially designed self-biasing coin do compared to a plain old unbiased quarter? What about compared to "chalk" where the better seed always wins? To assess how this method would perform, we can apply it to the past three tournaments using a <a href="https://en.wikipedia.org/wiki/Monte_Carlo_method">Monte Carlo simulation</a>. Using the code located <a href="https://github.com/tefirman/StatisticalStumbles/blob/master/MarchMadnessSim.py">here</a>, we can pick <a href="https://github.com/tefirman/StatisticalStumbles/tree/master/MarchMadnessSims">10,000 brackets for each year</a> and see what the distributions of point values look like for each year compared to chalk or an unbiased coin flip, distributions like the ones below!
 
 <div align="center"><div id="includedContent"></div></div>
 
@@ -145,7 +126,7 @@ function sortTable(n) {
   table = document.getElementById("myTable");
   switching = true;
   //Set the sorting direction to ascending:
-  dir = "desc"; 
+  dir = "desc";
   /*Make a loop that will continue until
   no switching has been done:*/
   while (switching) {
@@ -183,7 +164,7 @@ function sortTable(n) {
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
       //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
+      switchcount ++;
     } else {
       /*If no switching has been done AND the direction is "asc",
       set the direction to "desc" and run the while loop again.*/
@@ -200,7 +181,7 @@ function sortTableNumber(n) {
   table = document.getElementById("myTable");
   switching = true;
   //Set the sorting direction to ascending:
-  dir = "desc"; 
+  dir = "desc";
   /*Make a loop that will continue until
   no switching has been done:*/
   while (switching) {
@@ -238,7 +219,7 @@ function sortTableNumber(n) {
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
       //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
+      switchcount ++;
     } else {
       /*If no switching has been done AND the direction is "asc",
       set the direction to "desc" and run the while loop again.*/

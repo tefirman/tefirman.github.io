@@ -2,35 +2,17 @@
 layout: post
 title:  "When Red Becomes Purple"
 date:   2018-11-23
-excerpt: "Colorado's 6th Congressional District is a perfect example of why every turf matters..."
-image: "/images/DougCoPurple.png"
+description: "Colorado's 6th Congressional District is a perfect example of why every turf matters..."
+image: /assets/img/posts/DougCoPurple.png
+categories: [Politics]
+tags: [colorado, elections]
 ---
-
-<head>
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:creator" content="@tefirman51">
-<meta name="twitter:site" content="@tefirman51">
-<meta name="twitter:title" content="When Red Becomes Purple">
-<meta name="twitter:description" content="Colorado's 6th Congressional District is a perfect example of why every turf matters...">
-<meta name="twitter:image:src" content="https://tefirman.github.io/images/DougCoPurple.png">
-<meta name="twitter:image:width" content="280">
-<meta name="twitter:image:height" content="150">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141691742-7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-141691742-7');
-</script>
-</head>
 
 Canvassing in any scenario is uncomfortable. Canvassing for a Democratic candidate in a historically Republican district is panic-attack-inducing. But in any campaign, it's a necessary component. So when my partner and I began volunteering for the Douglas County portion of Jason Crow's congressional campaign in Colorado's 6th district (CO-6), it seemed like a daunting but worthy challenge. Given the chaotic state of our democracy, a little more is required of average Americans. We are called to endure the occasional door slam to find the few individuals who remain undecided, who aren't sure where to vote, who need a little extra motivation to even vote at all. We are called to tolerate the surly "leave me alone"'s to ensure that the voice of every citizen is heard in our society.
 
 These efforts were particularly necessary in the region that we were assigned by the Crow campaign. In the <a href="https://www.douglas.co.us/elections/historical-election-data/">three previous House races in Douglas County</a>, Democrats have won exactly zero precincts and lost by an average of more than 26 percentage points. With this level of incumbency advantage, we had our work cut out for us, but other indicators left a whiff of possibility in the air. Unprecedented <a href="https://www.opensecrets.org/overview/">individual contribution levels</a> of Democrats across the country (including <a href="https://www.opensecrets.org/races/candidates?cycle=2018&id=CO06&spec=N">this one</a>) provided a significant advantage and could have suggested a grass roots mobilization of previously silent Democrats across the country. Midterm elections are <a href="https://fivethirtyeight.com/features/trumps-approval-rating-is-up-republican-house-chances-are-down-does-that-make-any-sense/">always difficult for the party controlling the White House</a>, and with the <a href="https://projects.fivethirtyeight.com/trump-approval-ratings/?ex_cid=rrpromo">considerable unpopularity of President Trump</a>, the fact that the Republican incumbent Mike Coffman <a href="https://projects.fivethirtyeight.com/congress-trump-score/mike-coffman/">voted with Trump 96% of the time</a> was a major selling point to independent voters. And having a moderate candidate with a military background as an Army Ranger and a progressive stance on gun violence in a region deeply effected by several tragic shootings in recent years would definitely make a difference. So in the days leading up to the election, when Jason Crow's aides would jokingly ask "you gonna win us DougCo?", I understood the sarcasm but confidently replied, "we'll win a few precincts for sure."
 
-<span class="image right"><img src="{{ "/images/DougCoHistory.png" | absolute_url }}" alt="" /></span>As results came pouring in, this prediction turned out to be an understatement. Jason Crow went on to take thirteen precincts in Douglas County and only lost the county by six percentage points. Losing in any fashion may not sound like an uplifting fact, but the 22.0% jump from losing by 27.9% in 2016 to only 5.9% in 2018 is the largest gain out of all the counties in the district (Adams: 16.4%, Arapahoe: 19.8%).
+<span class="image right"><img src="/assets/img/posts/DougCoHistory.png" alt="" /></span>As results came pouring in, this prediction turned out to be an understatement. Jason Crow went on to take thirteen precincts in Douglas County and only lost the county by six percentage points. Losing in any fashion may not sound like an uplifting fact, but the 22.0% jump from losing by 27.9% in 2016 to only 5.9% in 2018 is the largest gain out of all the counties in the district (Adams: 16.4%, Arapahoe: 19.8%).
 
 <style>
 table {
@@ -61,7 +43,7 @@ tr:nth-child(even) {
 <h3>Recent House Races in the DougCo Portion of CO-6</h3>
 <table id="myTable">
   <tr height="50">
-   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
     <th onclick="sortTableNumber(0)">Year</th>
     <th onclick="sortTable(1)">Dem. Candidate</th>
     <th onclick="sortTableNumber(2)">Vote %</th>
@@ -104,7 +86,7 @@ function sortTable(n) {
   table = document.getElementById("myTable");
   switching = true;
   //Set the sorting direction to ascending:
-  dir = "desc"; 
+  dir = "desc";
   /*Make a loop that will continue until
   no switching has been done:*/
   while (switching) {
@@ -142,7 +124,7 @@ function sortTable(n) {
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
       //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
+      switchcount ++;
     } else {
       /*If no switching has been done AND the direction is "asc",
       set the direction to "desc" and run the while loop again.*/
@@ -159,7 +141,7 @@ function sortTableNumber(n) {
   table = document.getElementById("myTable");
   switching = true;
   //Set the sorting direction to ascending:
-  dir = "desc"; 
+  dir = "desc";
   /*Make a loop that will continue until
   no switching has been done:*/
   while (switching) {
@@ -197,7 +179,7 @@ function sortTableNumber(n) {
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
       //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
+      switchcount ++;
     } else {
       /*If no switching has been done AND the direction is "asc",
       set the direction to "desc" and run the while loop again.*/
@@ -210,12 +192,12 @@ function sortTableNumber(n) {
 }
 </script>
 
-<span class="image left"><img src="{{ "/images/DougCoDownTheBallot.png" | absolute_url }}" alt="" /></span>So what happened to Douglas County voters? Why the sudden purple hue? Races further down the ballot give us some insight into why the citizens of Douglas County voted the way they did, and we see that these results don't quite fit the "blue wave" narrative that everyone is so fond of using. Across the board, Democrats did get a bump compared to previous years because of all the factors listed above, but some of that advantage disappears down the ballot. The higher profile races with national implications, i.e. the House and Governor's races, only had a Republican edge of 5.9% while the race for Attorney General ballooned up to 13.5%. This could suggest that voters wanted to rebuke the White House while keeping local government conservative.
+<span class="image left"><img src="/assets/img/posts/DougCoDownTheBallot.png" alt="" /></span>So what happened to Douglas County voters? Why the sudden purple hue? Races further down the ballot give us some insight into why the citizens of Douglas County voted the way they did, and we see that these results don't quite fit the "blue wave" narrative that everyone is so fond of using. Across the board, Democrats did get a bump compared to previous years because of all the factors listed above, but some of that advantage disappears down the ballot. The higher profile races with national implications, i.e. the House and Governor's races, only had a Republican edge of 5.9% while the race for Attorney General ballooned up to 13.5%. This could suggest that voters wanted to rebuke the White House while keeping local government conservative.
 
 <h3>Races Down the Ballot in the DougCo Portion of CO-6</h3>
 <table id="myTable2">
   <tr height="50">
-   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
     <th onclick="sortTable2(0)">Position</th>
     <th onclick="sortTableNumber2(1)">Republican Vote %</th>
     <th onclick="sortTableNumber2(2)">Democrat Vote %</th>
@@ -259,7 +241,7 @@ function sortTable2(n) {
   table = document.getElementById("myTable2");
   switching = true;
   //Set the sorting direction to ascending:
-  dir = "desc"; 
+  dir = "desc";
   /*Make a loop that will continue until
   no switching has been done:*/
   while (switching) {
@@ -297,7 +279,7 @@ function sortTable2(n) {
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
       //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
+      switchcount ++;
     } else {
       /*If no switching has been done AND the direction is "asc",
       set the direction to "desc" and run the while loop again.*/
@@ -314,7 +296,7 @@ function sortTableNumber2(n) {
   table = document.getElementById("myTable2");
   switching = true;
   //Set the sorting direction to ascending:
-  dir = "desc"; 
+  dir = "desc";
   /*Make a loop that will continue until
   no switching has been done:*/
   while (switching) {
@@ -352,7 +334,7 @@ function sortTableNumber2(n) {
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
       //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
+      switchcount ++;
     } else {
       /*If no switching has been done AND the direction is "asc",
       set the direction to "desc" and run the while loop again.*/
@@ -370,7 +352,7 @@ So if the <a href="https://fivethirtyeight.com/features/the-suburbs-all-kinds-of
 <h3> Demographically, Geographically, and Politically Similar Districts to CO-6</h3>
 <table id="myTable3">
   <tr height="50">
-   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
     <th onclick="sortTable3(0)">District</th>
     <th onclick="sortTableNumber3(1)">2016 Margin of Defeat (%)</th>
     <th onclick="sortTableNumber3(2)">2018 Margin of Victory (%)</th>
@@ -408,7 +390,7 @@ function sortTable3(n) {
   table = document.getElementById("myTable3");
   switching = true;
   //Set the sorting direction to ascending:
-  dir = "desc"; 
+  dir = "desc";
   /*Make a loop that will continue until
   no switching has been done:*/
   while (switching) {
@@ -446,7 +428,7 @@ function sortTable3(n) {
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
       //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
+      switchcount ++;
     } else {
       /*If no switching has been done AND the direction is "asc",
       set the direction to "desc" and run the while loop again.*/
@@ -463,7 +445,7 @@ function sortTableNumber3(n) {
   table = document.getElementById("myTable3");
   switching = true;
   //Set the sorting direction to ascending:
-  dir = "desc"; 
+  dir = "desc";
   /*Make a loop that will continue until
   no switching has been done:*/
   while (switching) {
@@ -501,7 +483,7 @@ function sortTableNumber3(n) {
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
       //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
+      switchcount ++;
     } else {
       /*If no switching has been done AND the direction is "asc",
       set the direction to "desc" and run the while loop again.*/
@@ -517,10 +499,5 @@ function sortTableNumber3(n) {
 Two and a half weeks of door-knocking, organizing, and getting out the vote felt far more like two and a half months. It would normally be difficult to imagine how people would have survived the entire campaign, but the energy and passion for change of the volunteers that came to make a difference had to have something to do with it. There's no way you make it through an entire campaign without neighborhood leaders like Darien and Kathy, without expert phone-bankers like Connie, without unstoppable doorknockers like Brian and Sam, and without energy boosts from seasoned campaign veterans like my partner, Ashley (of course I was going to shamelessly brag about my wife at some point during this article). Jason Crow and his team ran a hell of a campaign, but if there's anyone to credit with this win, it's the citizens of Colorado's 6th district that gave their time, sweat, and effort to the idea that change can materialize anywhere. More than anything, that is what it takes to turn red into purple.
 
 <h6>All election results presented here are unofficial as of November 23rd, 2018 and a spreadsheet containing all relevant data is available <a href="https://github.com/tefirman/StatisticalStumbles/blob/master/DouglasCounty_AllResults.xlsx">here</a> on <a href="https://github.com/tefirman">my GitHub page</a>.
-
-
-
-
-
 
 

@@ -2,48 +2,28 @@
 layout: post
 title:  "Centennial State<br>Political Geography"
 date:   2019-07-18
-excerpt: "Let's take a comprehensive look at the divergent political geography of Colorado and its effect on the 2020 Senate race..."
-image: "/images/CO_Maps_Wide.png"
+description: "Let's take a comprehensive look at the divergent political geography of Colorado and its effect on the 2020 Senate race..."
+image: /assets/img/posts/CO_Maps_Wide.png
+categories: [Politics]
+tags: [colorado, elections, mapping]
 ---
 
-<head>
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:creator" content="@tefirman51">
-<meta name="twitter:site" content="@tefirman51">
-<meta name="twitter:title" content="Centennial State Political Geography">
-<meta name="twitter:description" content="Let's take a comprehensive look at the divergent political geography of Colorado and its effect on the 2020 Senate race...">
-<meta name="twitter:image:src" content="https://tefirman.github.io/images/CO_Maps_Wide.png">
-<meta name="twitter:image:width" content="280">
-<meta name="twitter:image:height" content="150">
-
-<script src="/assets/js/jquery.min.js"></script> 
-<script> 
-$(function(){
-  $("#includedContent").load("/images/PrecinctPartisanLeanCO.html"); 
-});
-</script>
-<script> 
-$(function(){
-  $("#includedContent2").load("/images/PrecinctTrumpEffectCO.html"); 
-});
-</script>
-<script> 
-$(function(){
-  $("#includedContent3").load("/images/FlippablePrecinctsCO.html"); 
-});
-</script> 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141691742-13"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-141691742-13');
+$(function(){
+  $("#includedContent").load("/assets/img/posts/PrecinctPartisanLeanCO.html");
+});
 </script>
-</head>
-
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+<script>
+$(function(){
+  $("#includedContent2").load("/assets/img/posts/PrecinctTrumpEffectCO.html");
+});
+</script>
+<script>
+$(function(){
+  $("#includedContent3").load("/assets/img/posts/FlippablePrecinctsCO.html");
+});
+</script>
 
 Colorado has been <a href="https://en.wikipedia.org/wiki/Politics_of_Colorado">considered purple since the 90's</a>, but has been <a href="https://www.5280.com/2018/11/colorado-is-still-a-very-purple-state-at-least-for-now/">steadily turning blue in recent years</a>. So why is the <a href="https://fivethirtyeight.com/features/its-early-but-colorados-cory-gardner-has-a-tough-road-to-re-election-in-2020/">upcoming Senate race</a> between incumbent Republican Senator Cory Gardner and his hypothetical Democratic opponent still something the citizenry should pay attention to? For starters, the Senate is an unfair playing field, so we should care about every race. The way Senators are apportioned provides <a href="https://tefirman.github.io/blog/UnequalRepresentation/">disproportionate power to citizens of certain states</a>, even more so than the electoral college, so every seat is important. But perhaps a more interesting reason is that the divergent political geography of the Centennial State makes the potential outcome of this race much foggier. In order to illustrate this, I set out to map the behavior of political partisanship throughout the state of Colorado.
 
@@ -195,7 +175,7 @@ function sortTable(n) {
   table = document.getElementById("myTable");
   switching = true;
   //Set the sorting direction to ascending:
-  dir = "desc"; 
+  dir = "desc";
   /*Make a loop that will continue until
   no switching has been done:*/
   while (switching) {
@@ -233,7 +213,7 @@ function sortTable(n) {
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
       //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
+      switchcount ++;
     } else {
       /*If no switching has been done AND the direction is "asc",
       set the direction to "desc" and run the while loop again.*/
@@ -250,7 +230,7 @@ function sortTableNumber(n) {
   table = document.getElementById("myTable");
   switching = true;
   //Set the sorting direction to ascending:
-  dir = "desc"; 
+  dir = "desc";
   /*Make a loop that will continue until
   no switching has been done:*/
   while (switching) {
@@ -288,7 +268,7 @@ function sortTableNumber(n) {
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
       //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
+      switchcount ++;
     } else {
       /*If no switching has been done AND the direction is "asc",
       set the direction to "desc" and run the while loop again.*/
@@ -301,7 +281,7 @@ function sortTableNumber(n) {
 }
 </script>
 
-All of these factors aside, I do think Mike Johnston would make an excellent Senator for Colorado. <a href="https://www.youtube.com/watch?v=xlyBfInS7ec">To paraphrase the wise (albeit fictional) Sam Seaborn</a>, education is the silver bullet and <a href="https://www.chalkbeat.org/posts/co/2010/05/12/effectiveness-bill-advances-in-house/">Johnston's record</a> <a href="https://www.denverpost.com/2013/04/29/colorado-governor-signs-bill-for-illegal-immigrants-in-state-tuition/">in that department</a> is <a href="https://www.westword.com/news/colorado-gubernatorial-candidate-mike-johnston-is-trying-to-build-bridges-in-bridge-burning-times-10459600">second to none</a>. I will note that he may want to tread lightly on that subject considering the <a href="https://www.cpr.org/2018/11/07/colorado-amendment-73-tax-increase-for-public-education-has-failed/">recent results of Colorado Amendment 73</a>, which would have increased public education funding via higher income, corporate, and property taxes. In the flippable precincts mentioned above, <a href="/images/PrecinctAmendment73YesPctCO.html">only 44.2% of voters</a> voted in favor of the amendment. I’m not saying don’t tout your education credentials, just don’t rely entirely on that issue, especially if it’s paired with a tax increase.
+All of these factors aside, I do think Mike Johnston would make an excellent Senator for Colorado. <a href="https://www.youtube.com/watch?v=xlyBfInS7ec">To paraphrase the wise (albeit fictional) Sam Seaborn</a>, education is the silver bullet and <a href="https://www.chalkbeat.org/posts/co/2010/05/12/effectiveness-bill-advances-in-house/">Johnston's record</a> <a href="https://www.denverpost.com/2013/04/29/colorado-governor-signs-bill-for-illegal-immigrants-in-state-tuition/">in that department</a> is <a href="https://www.westword.com/news/colorado-gubernatorial-candidate-mike-johnston-is-trying-to-build-bridges-in-bridge-burning-times-10459600">second to none</a>. I will note that he may want to tread lightly on that subject considering the <a href="https://www.cpr.org/2018/11/07/colorado-amendment-73-tax-increase-for-public-education-has-failed/">recent results of Colorado Amendment 73</a>, which would have increased public education funding via higher income, corporate, and property taxes. In the flippable precincts mentioned above, <a href="/images/PrecinctAmendment73YesPctCO.html">only 44.2% of voters</a> voted in favor of the amendment. I'm not saying don't tout your education credentials, just don't rely entirely on that issue, especially if it's paired with a tax increase.
 
 Regardless of who ends up being the Democratic nominee, Cory Gardner <a href="https://www.denverpost.com/2019/03/14/cory-gardner-endorsement-mistake/">has not acted with Coloradoans' best interests in mind</a>, <a href="https://www.washingtonpost.com/powerpost/thats-the-model-cory-gardner-stands-up-to-president-trump/2018/01/05/b3b9b2b6-f17b-11e7-b3bf-ab90a706e175_story.html?utm_term=.50900054ae3f">despite his best efforts as of late</a>. Senator Gardner has voted <a href="https://www.denverpost.com/2017/07/29/cory-gardner-health-care-obamacare-repeal-vote/">to repeal health coverage for over 400,000 Coloradoans</a>, <a href="https://www.denverpost.com/2019/03/14/cory-gardner-trump-border-wall-immigration/">uphold President Trump's wasteful and xenophobic border wall</a>, <a href="http://www.cpr.org/2016/06/21/4-gun-control-measures-fail-how-colorados-senators-voted/">oppose common-sense gun laws</a>, and <a href="https://itep.org/trumpgopplanco/">provide 60% of the state's tax cuts to the richest 1% of its citizens</a>. A change needs to be made, and if the Democratic candidate can deftly navigate the unique political geography of Colorado, this historically purple state may just turn blue.
 
